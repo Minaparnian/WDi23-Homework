@@ -8,8 +8,8 @@ const bank = {
 	savings: 0,
 	
 	getTotal() {
-		this.checking + this.savings;
-
+		return this.checking + this.savings;
+        // whtas return means here?
 	},
 	//equivalent to
 	//this is the shorthand of deposit: function (){}
@@ -21,26 +21,29 @@ const bank = {
 
 	withdraw(account, amount) {
 
-        
-       if (amount >= this[account]) {
+		if (amount <= this[account]) {
 
-       	   this [account] = 0;
+			this[account] -= parseFloat(amount) ;
+
+     } else if (amount >= 0 && amount <= this.getTotal()) {  
+       // if (amount >= this[account]) {
+        
+       	   
+           this.savings = this.getTotal() - amount;
+           this.checking = 0;
+
+
        	   
        
        } else {
 
-		   this[account] -= parseFloat(amount) 
+		   this[account] = 0;
+		   alert('There is no enough money in your account');
 		}
-	}
 
-	// color(changeColor, defaultColor) {
+	},
 
-	// if (this[account] = 0) {
 
- //       	  return changeColor;
- //      } 	   
-       
- //    }
       
  };//bank
 
@@ -55,6 +58,18 @@ const render = function () {
 	$('#checking-balance').text('$' + bank.checking);
 	$('#savings-balance').text('$' + bank.savings);
 
+	if (bank.checking === 0) { //whats different between = and === and == here.
+		$('#checking-balance').css("background-color", "red");
+		//$('#checking-balance').addClass('zero');
+	} else {
+		$('#checking-balance').css("background-color", "grey");
+		//$('#checking-balance').addClass('zero');
+	}
+    if (bank.savings === 0) {
+		$('#savings-balance').css("background-color", "red");
+	} else {
+		$('#savings-balance').css("background-color", "grey");
+	}
 }
 
 
@@ -71,11 +86,8 @@ $(document).ready(function () {
 
 $('#checking-withdraw').on('click', function () {
 	const amount = $('#checking-amount').val();
-	// const changeColor = $('#checking').css("background-color", "red");
-	// const defaultColor = $('#checking').css("background-color", "grey");
     bank.withdraw('checking', amount);
-    // bank.color(changeColor, defaultColor);
-	render();
+    render();
 
 });
 
@@ -90,11 +102,8 @@ $('#savings-deposit').on('click', function() {
 
 $('#savings-withdraw').on('click', function () {
 	const amount = $('#savings-amount').val();
-	// const changeColor = $('#savings').css("background-color", "red");
-	// const defaultColor = $('#savings').css("background-color", "grey");
     bank.withdraw('savings', amount);
-    // bank.color(changeColor, defaultColor);
-	render();
+    render();
 
 });
 
