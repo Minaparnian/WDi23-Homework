@@ -1,33 +1,31 @@
 @import url('https://fonts.googleapis.com/css?family=Bowlby+One+SC');
 
-body {
-	background-color: #A6A6A6;
 
-}
 /*.....................................
 nav
 */
 
 
-h1 {
+/*h1 {
 	font-family: 'Bowlby One SC', cursive;
-	background-color: #636266;
+	background-color: #636266; turn off backgroun color and put it for nav to refuse the gap between image and nav.
 	color: #ffffff;
-	height: 50px;
+	height: 50px;it was a problem about my h1 was outside of the box.
 	padding: 20px;
 	margin: 0;
 	font-size: 80px;
 	text-align: center;
-}
+}*/
 
 nav a {
+
 	text-decoration: none;
-	background-color: rgba(255, 255, 255, .5);
+	background-color: rgb(239, 227, 31);
 	padding: 1em;
 	color: #636266;
 	position: relative;
 	left: 64%;
-	top: 50px;
+	top: 5px;;
 	margin: 5px;
 
 
@@ -47,48 +45,21 @@ main
 
 img {
 	width: 100%;
+	margin-top: 20px;
 }
+
+img:hover {
+     opacity: 1;
+	-webkit-animation: flash 1.5s;
+	animation: flash 1.5s;
+
+ }
 p {	
 	color: white;
-	padding: 10px;
+	padding: 4px;
 	text-align: justify;
 }
 
-.box1 {
-	height: 400px;
-	width: 250px;
-	border: 1px solid black;
-	display: inline-block;
-	padding: 0 40px 0 0;
-	background-color: rgba(255, 255, 255, .1);
-
-
-}
-.box2 {
-	height: 400px;
-	width: 250px;
-	border: 1px solid black;
-	display: inline-block;
-	padding: 0 40px 0 40px;
-	background-color: rgba(255, 255, 255, .1);
-}
-
-.box3 {
-	height: 400px;
-	width: 250px;
-	border: 1px solid black;
-	display: inline-block;
-	padding: 0 0 0 40px;
-	background-color: rgba(255, 255, 255, .1);
-}
-
-.boxes {
-
-	background-color: black;
-	padding: 50px 0 0 160px;
-
-
-}
 
 main a {
 	text-decoration: none;
@@ -103,19 +74,37 @@ page2 container
 */
 
 
-.body2 {
-	background-color: #eadc47;
+h1 {
+	font-family: 'Bowlby One SC', cursive;
+	font-size: 85px;
+	margin-left: 3em;
+	
+
 }
 
 
-.container2 {
+.mainContainer {
+	/*height: 100%;We dont nee consider height for the main container*/
+	max-width: 500px;
+	position: relative;
+}
+.containeryellow2 {
+
+	height: 1029px;
+	width: 817px;
+	background-color: rgb(239, 227, 31);
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index: -1;
+}
+
+
+.p2 {
 	background-color: rgba(0, 0, 0, .2);
-	height: 1200px;
+	height: 700px;
 	width: 850px;
 	margin: 0 auto;
-
-}
-.p2 {
 	font-size: 16px;
 	line-height: 35px;
 	text-align: justify;
@@ -123,5 +112,103 @@ page2 container
 }
 
 .p2:hover {
+	color: #636266
+}
+
+
+
+/*---------------------------------------------------------------------
+page3 container
+*/
+
+.body3 {
+	height: 800px;
+}
+
+h1 {
+	font-family: 'Bowlby One SC', cursive;
+	font-size: 50px;
+	position: relative;
+	left: 80px;
+	
+
+}
+
+
+.container3 {
+	background-color: rgba(0, 0, 0, .2);
+	height: 400px;
+	width: 850px;
+	margin: 0 auto;
+
+}
+
+
+.containeryellow {
+
+	height: 1493px;
+	width: 817px;
+	background-color: rgb(239, 227, 31);
+	position: relative;
+	bottom: 1143px;
+	left: 455px;
+	z-index: -1;
+}
+
+
+
+
+/*---------------------------------------------------------------------
+page4 container
+*/
+
+
+.body4	{
+	height: 800px;
+}
+
+h1 {
+	font-family: 'Bowlby One SC', cursive;
+	font-size: 30px;
+	position: relative;
+	left: 80px;
+	
+
+}
+
+h1:hover {
+
+}
+
+.container4 {
+	background-color: rgba(0, 0, 0, .2);
+	height: 1000px;
+	width: 850px;
+	margin: 0 auto;
+
+}
+
+
+.containeryellow {
+
+	height: 1493px;
+	width: 817px;
+	background-color: rgb(239, 227, 31);
+	position: relative;
+	bottom: 1143px;
+	left: 455px;
+	z-index: -1;
+}
+
+
+ul {
+	color: white;
+	font-size: 16px;
+	line-height: 35px;
+	text-align: justify;
+	padding: 2em;
+}
+
+ul:hover {
 	color: #636266
 }

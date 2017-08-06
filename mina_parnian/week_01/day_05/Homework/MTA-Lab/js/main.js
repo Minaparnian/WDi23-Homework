@@ -49,12 +49,16 @@ let lineL = ["8th", "6th", "Union Square","3th", "1st"]
 let line6 = ["Grand Central", "33rd", "28th-6", "23rd-6","Unio Square", "Astor Palace", "Grand Total"];
 
 
-let planTrip = function (lineA, getOn, lineB, getOff) {
+let planTrip = function (lineA, getOn, getOff) {
 
-		
-    for (let i = 0; i < lineA.length - 2; i++ ) {
+	let getOnIndex = indexOf(getOn);
+	let getOffIndex = indexOf(getOff);
+	let countStopLines = getOffIndex - getOnIndex;
 
-    		console.log(`Get on the train on ${lineA[i]} stop`);
+	
+    for (let i = 0; i < lineA.length - 2; i++ ) { //go through the lineN array
+          
+  
 
     	}
     }
@@ -64,7 +68,7 @@ let planTrip = function (lineA, getOn, lineB, getOff) {
 	
 
 
-planTrip(lineN, "Times Square", line6, "33rd");
+planTrip(lineN, "Times Square", "Union Square");
 
 
 
