@@ -1,0 +1,14 @@
+<h1>Origins</h1>
+
+<ul>
+<% @origins.each do |origin| %>
+<li>
+  <a href="/origins/<%= origin.id %>">
+
+   <%= origin.name %>
+  </a>
+
+</li>
+
+<% end %>
+</ul>

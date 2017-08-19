@@ -41,29 +41,39 @@ Bonus #3: When the cat reaches the middle of the screen, replace the img with an
 
 
 let cat = document.getElementsByTagName('img')[0];
+let cat2 = document.getElementsByTagName('img')[1];
 
 cat.style.position = 'absolute';
 cat.style.left = '0px';
+cat2.style.position = 'absolute';
+cat2.style.left = '0px';
+cat2.style.top = '400px';
 
-let catWalk = function () {
+let catWalkBlack = function () {
 	let oldLeft = parseInt(cat.style.left);
 	let newRight = oldLeft + 1;
 	cat.style.left = newRight + 'px';
 
-if (newRight < '500px'){
+if (newRight > 500){
+   newRight = 500;
 
-catStop();
 
 }
 };
 
 let catStop = function() {
-	
+	clearInterval(timerId);
+}
+
+let catWalkBrown = function () {
+	let oldLeft = parseInt(cat2.style.left);
+	let newRight = oldLeft + 1;
+	cat2.style.left = newRight + 'px';
 }
 
 
-
-setInterval(catWalk, 10);
+setInterval(catWalkBlack, 10);
+setInterval(catWalkBrown, 10);
 
 // let catWalkToRight = function () {
 // 	let oldRight = parseInt(cat.style.left);

@@ -1,0 +1,12 @@
+<h2><%= @origin['name'] %></h2>
+<h3><%= @origin['information'] %></h3>
+
+
+<% unless @origin['image'].nil? %>
+   <img class="feature" src="<%= @origin['image'] %>" alt="<%= @origin['name'] %>" />
+ <% end %>
+
+ <div class="controls">
+   <a href="/origins/<%= @origin['id']%>/delete">Delete</a>
+   <a href="/origins/<%= @origin['id'] %>/edit">Edit</a>
+ </div>

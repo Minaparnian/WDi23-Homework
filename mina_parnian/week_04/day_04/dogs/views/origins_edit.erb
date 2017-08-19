@@ -1,0 +1,9 @@
+<h2>Edit Origin</h2>
+
+<form action="/origins/<%= @origin.id %>" method="post">
+  <input type="text" name="name" value="<%= @origin.name %>" placeholder="Origin name">
+  <input type="text" name="information" value="<%= @origin.information %>" placeholder="Origin information">
+  <input type="url" name="image" value="<%= @origin.image %>" placeholder="http://...">
+
+  <button>Edit</button>
+</form>

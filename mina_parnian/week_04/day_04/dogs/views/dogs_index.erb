@@ -1,0 +1,19 @@
+<h1>My favourite dogs</h1>
+
+<ul>
+<% @dogs.each do |dog| %>
+<li>
+  <a href="/dogs/<%= dog['id'] %>">
+
+   <%= dog['color'] %>
+   
+  <!-- dog breed: <%= dog['breed'] %>
+  dog sex: <%= dog['sex'] %>
+  dog image: <%= dog['image'] %> -->
+   <!-- <%= dog['breed'] %> -->
+  </a>
+
+</li>
+
+<% end %>
+</ul>

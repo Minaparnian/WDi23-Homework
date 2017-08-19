@@ -59,16 +59,16 @@ const render = function () {
 	$('#savings-balance').text('$' + bank.savings);
 
 	if (bank.checking === 0) { //whats different between = and === and == here.
-		$('#checking-balance').css("background-color", "red");
+		$('#checking-balance').css("background-color", "#F52F4F");
 		//$('#checking-balance').addClass('zero');
 	} else {
-		$('#checking-balance').css("background-color", "grey");
+		$('#checking-balance').css("background-color", "#E3E3E3");
 		//$('#checking-balance').addClass('zero');
 	}
     if (bank.savings === 0) {
-		$('#savings-balance').css("background-color", "red");
+		$('#savings-balance').css("background-color", "#F52F4F");
 	} else {
-		$('#savings-balance').css("background-color", "grey");
+		$('#savings-balance').css("background-color", "#E3E3E3");
 	}
 }
 

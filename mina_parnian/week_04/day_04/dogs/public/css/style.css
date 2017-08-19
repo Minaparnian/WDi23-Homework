@@ -1,0 +1,33 @@
+body {
+  font-family: 'Righteous', cursive;
+}
+
+nav {
+
+}
+
+.group-dogs {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  z-index: -1;
+
+}
+
+h1 {
+  text-align: center;
+}
+
+
+a {
+  text-decoration: none;
+  padding-right: 20px;
+  padding-left: 20px;
+
+
+}
+
+
+form {
+  margin: 0 auto;
+}

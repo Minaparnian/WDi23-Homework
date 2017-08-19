@@ -1,0 +1,9 @@
+<h2>Edit Dog</h2>
+
+<form action="/dogs/<%= @dog['id'] %>" method="post">
+  <input type="text" name="color" value="<%= @dog.color %>" placeholder="Dog color">
+  <input type="text" name="breed" value="<%= @dog.breed %>" placeholder="Dog breed">
+  <input type="url" name="image" value="<%= @dog.image %>" placeholder="http://...">
+
+  <button>Edit</button>
+</form>
