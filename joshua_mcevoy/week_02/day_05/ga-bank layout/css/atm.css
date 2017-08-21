@@ -1,0 +1,255 @@
+@import url(http://fonts.googleapis.com/css?family=Oleo+Script);
+@import url(http://fonts.googleapis.com/css?family=Ruluko);
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300');
+
+body {
+  background-color: #7BB3C9;
+  font-family: 'Roboto', sans-serif;
+}
+
+h1{
+  font-size: 22px;
+  font-weight: 300;
+  margin-bottom: -8px;
+}
+
+p {
+  margin-bottom: 15px;
+  color: #B0AFAF;
+}
+
+#availableFundsLabel {
+  margin-bottom: 10px;
+  color: #B0AFAF;
+}
+
+#checking {
+  margin-bottom: 10px;
+}
+
+#checking-balance {
+  margin-top: 10px;
+  margin-bottom: 3px;
+  /*text-align: right;*/
+}
+
+#checkingExpandButton {
+  float: left;
+}
+
+#content {
+  margin: 0 auto;
+  width: 488px;
+  background-color: #7BB3C9;
+}
+
+#currentFundsLabel {
+  margin-top: 10px;
+  margin-bottom: 3px;
+}
+
+#logo {
+  text-align: center;
+}
+
+#nav {
+  margin: 50px 0px;
+}
+
+#savings {
+
+}
+
+#savingsExpandButton {
+  float: left;
+}
+
+#slideChecking {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: inline-block;
+}
+
+#slideSavings {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: inline-block;
+}
+
+#slideSavingsAmount {
+  display: inline-block;
+}
+
+#slideSavingsDeposit {
+  display: inline-block;
+}
+
+#slideSavingsWithdraw{
+  display: inline-block;
+}
+
+#slideCheckingAmount {
+  display: inline-block;
+}
+
+#slideCheckingDeposit {
+  display: inline-block;
+}
+
+#slideCheckingWithdraw {
+  display: inline-block;
+}
+
+#totalBalance {
+  margin-bottom: 10px;
+  color: #B0AFAF;
+}
+
+#title {
+  color: #ED4337;
+  font-family: 'Oleo Script', cursive;
+  font-size: 50px;
+  text-align: center;
+}
+
+.account {
+  background-color: #F5F5F5;
+  border: 1px solid #676767;
+  box-shadow: 0px 0px 5px #676767;
+}
+
+.accountHead {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+  font-size: 12px;
+  margin-top: -10px;
+  margin-bottom: -10px;
+  padding-left: 10px;
+}
+
+.alert {
+    padding: 20px;
+    background-color: #f44336;
+    color: white;
+}
+
+.amount {
+  margin-left: 10px;
+  margin-right: 8px;
+  vertical-align: middle;
+  padding-left: 6px;
+  font-family: 'Roboto', sans-serif;
+  height: 30px;
+  border: none;
+  display: inline-block;
+}
+
+.balance {
+  font-size: 16px;
+  margin-left: 10px;
+}
+
+.bordered {
+  background-color: #E3E2E5;
+}
+
+.buttons {
+  background-color: #fc0;
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+  color: #231f20;
+  display: inline-block;
+  border: none;
+  height: 34px;
+  min-width: 150px;
+  padding: 0 26px 34px 26px;
+  vertical-align: middle;
+  border-radius: 24px;
+  line-height: 36px;
+  text-align: center;
+  /*box-sizing: border-box;*/
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.clear {
+  clear: both;
+}
+
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.closebtn:hover {
+    color: black;
+}
+
+.expandButton {
+  background-color: #E3E2E5;
+  font-family: 'Roboto', sans-serif;
+  font-size: 31px;
+  color: #B0AFAF;
+  display: inline-block;
+  border: none;
+  height: 39px;
+  margin-left: 2px;
+  padding-top: 8px;
+  padding-bottom: 51px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+.expandContainer {
+  display: inline-block;
+}
+
+.faImage {
+  display: inline-block;
+}
+
+/*.filler {
+  width: 100px;
+}*/
+
+.labels {
+  margin-left: 10px;
+  font-size: 16px;
+}
+
+.labelsContainer {
+  display: inline-block;
+  /*text-align: right;*/
+}
+
+.left {
+  width: 40px;
+  float: left;
+  margin-right: 7px;
+  margin-top: 2px;
+}
+
+.line {
+  height: 1px;
+  background-color: #CCCBCB;
+  margin: 0px 10px;
+}
+
+.rigth{
+  width: 50px;
+  /*float: right;*/
+}
+
+.zero {
+  background-color: #F52F4F;
+  color: #FFF;
+}

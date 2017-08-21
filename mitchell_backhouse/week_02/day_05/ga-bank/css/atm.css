@@ -11,24 +11,33 @@
   margin: 50px 0px;
 }
 
+#logo {
+  margin: 0 auto;
+  display: inline-block;
+}
+
 #title {
+  display: inline-block;
   color: #F52F4F;
   font-family: 'Oleo Script', cursive;
   font-size: 50px;
 }
 
 #checking {
-  float: left;
+  display: inline-block;
+  /*float: left;*/
 }
 
 #savings {
-  float: right;
+  display: inline-block;
+  /*float: right;*/
 }
 
 .account {
   background-color: #6C9A74;
   border: 1px solid #295A33;
   padding: 10px;
+  margin: 8px;
 }
 
 .balance {
@@ -46,4 +55,53 @@
 .zero {
   background-color: #F52F4F;
   color: #FFF;
+}
+
+.hidden {
+  display: none;
+}
+
+.transactions {
+  margin: 0 auto;
+  width: 685px;
+  border: 1px solid #295A33;
+}
+
+table {
+  border-collapse: collapse;
+}
+.itemDeposit {
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  background-color: #6C9A74;
+}
+
+.itemWithdraw {
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  background-color: #F52F4F;
+}
+
+#reset {
+  position: fixed;
+  display: inline-block;
+  top: 2px;
+  left: 2px;
+  padding: 5px;
+  background-color: black;
+  color: white;
+  border: 1px solid red;
+}
+
+#toggleHidden {
+  position: fixed;
+  display: inline-block;
+  top: 31px;
+  left: 2px;
+  padding: 5px;
+  background-color: black;
+  color: white;
+  border: 1px solid red;
 }

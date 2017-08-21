@@ -65,8 +65,9 @@ const catObject = {
   },
 
   dancingCat: function () {
-    catImage.src = "http://rs220.pbsrc.com/albums/dd152/LissyRose/dancing_cat.gif?w=280&h=210&fit=crop";
-    clearInterval(catObject.danceTimerOne);
+
+    // catImage.src = "http://rs220.pbsrc.com/albums/dd152/LissyRose/dancing_cat.gif?w=280&h=210&fit=crop";
+    // clearInterval(catObject.danceTimerOne);
     //make cat dance for 10 secs
   },
 

@@ -58,11 +58,19 @@ const guessLetter = function (guess){
 guessLetter('X');
 guessLetter('F');
 guessLetter('X');
+<<<<<<< HEAD
 guessLetter('F');
 guessLetter('O');
 guessLetter('Y');
 guessLetter('N');
 guessLetter('J');
+=======
+// guessLetter('F');
+// guessLetter('O');
+// guessLetter('Y');
+// guessLetter('N');
+// guessLetter('J');
+>>>>>>> 6450ee61d3759bd91b9be11ac85463bdbe263fc7
 
 /////////////////////// HANGMAN
 

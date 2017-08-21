@@ -23,6 +23,13 @@
 // The N line has the following stops: Times Square, 34th, 28th, 23rd, Union Square, and 8th
 // The L line has the following stops: 8th, 6th, Union Square, 3rd, and 1st
 // The 6 line has the following stops: Grand Central, 33rd, 28th, 23rd, Union Square, and Astor Place.
+
+const subwaySystem = {
+  N: ["Times Square", "N 34th", "N 28th", "N 23rd", "Union Square", "N 8th"],
+  L: ["L 8th", "L 6th", "Union Square", "L 3rd", "L 1st"],
+  6: ["6 Grand Central", "6 33rd", "6 28th", "6 23rd", "Union Square", "6 Astor Place"]
+}
+
 // All 3 subway lines intersect at Union Square, but there are no other intersection points. (For example, this means the 28th stop on the N line
 //is different than the 28th street stop on the 6 line, so you'll have to differentiate this when you name your stops in the arrays.)
 // Tell the user the number of stops AND the stops IN ORDER that they will pass through or change at.
@@ -134,11 +141,11 @@ if (onLine === offLine) {
   let onStops = [];
   let offStops = [];
   if (onStopUnionSIndex > onStopIndex) {
-    for (let i = onStopIndex+1; i < onStopUnionSIndex+1; i++){
+    for (let i = onStopIndex; i < onStopUnionSIndex+1; i++){
       onStops.push(subwaySystem[onLineStation][i]);
     }
   } else {
-    for (let i = onStopIndex-1; i > onStopUnionSIndex-1; i--){
+    for (let i = onStopIndex; i > onStopUnionSIndex-1; i--){
       onStops.push(subwaySystem[onLineStation][i]);
     }
   }
@@ -163,9 +170,6 @@ return finalStatement;
 MTAProgram("N", "N 8th", "N", "Times Square");
 MTAProgram("N", "N 8th", "L", "L 8th");
 MTAProgram("6", "6 Astor Place", "N", "Times Square");
-MTAProgram("L", "L 1st", "N", "Times Square");
-
-MTAProgram("N", "Times Square", "6", "6 33rd");
 
 
 // Work out how you would do it on paper first! Then start to explain that process in Javascript.

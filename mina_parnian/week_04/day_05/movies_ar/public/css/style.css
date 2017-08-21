@@ -1,0 +1,127 @@
+body {
+  font-family: 'Lobster Two', cursive;
+}
+
+h1 {
+  color: #092561;
+  font-size: 50px;
+  text-align: center;
+
+}
+ marquee {
+   color: #ced6e7;
+ }
+.home-img {
+  /* Set rules to fill background */
+  min-height: 100%;
+  min-width: 1024px;
+
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: auto;
+
+  /* Set up positioning */
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+a {
+  text-decoration: none;
+  color: #ced6e7;
+  padding: 20px;
+  font-size: 25px;
+}
+
+.movie-list {
+  display: inline-table;
+  background-color: #092561;
+  height: 20px;
+  width: 250px;
+  padding: 10px;
+  margin: 10px;
+
+}
+
+.movie-list-container {
+  width: 980px;
+  position: fixed;
+  top: 25%;
+  left: 250px;
+}
+
+.feature {
+  height: 500px;
+  width: 300px;
+  position: fixed;
+  top: 20%;
+  left: 35%;
+  text-align: center;
+
+
+ }
+
+
+.movie-info {
+position: absolute;
+top: 120px;
+left: 250px;
+
+}
+
+
+.form-position {
+  text-align: center;
+}
+
+input {
+  height: 50px;
+  width: 180px;
+  background-color: #ced6e2;
+  font-size: 12px;
+  text-align: center;
+
+
+}
+
+button {
+  height: 55px;
+  width: 180px;
+  border-radius: 0 20px 20px 0;
+  background-color: #ced6e2;
+}
+
+button:hover {
+  background-color: #092561;
+  color: white;
+
+}
+
+input:hover {
+  background-color: #092561;
+  color: white;
+}
+
+
+.controls {
+  position: fixed;
+  bottom: 40px;
+}
+
+
+.new-back-img  {
+  /* Set rules to fill background */
+  min-height: 100%;
+  min-width: 1024px;
+
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: auto;
+
+  /* Set up positioning */
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}

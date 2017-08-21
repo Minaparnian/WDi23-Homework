@@ -1,0 +1,12 @@
+<h1>All movies</h1>
+
+<div class="movie-list-container" id="animated">
+<% @movies.each do |movie| %>
+<div class ="movie-list">
+  <a href="/movies/<%= movie.id %>" >
+  <%= movie.name %>
+</a>
+</div>
+
+<% end %>
+</div>

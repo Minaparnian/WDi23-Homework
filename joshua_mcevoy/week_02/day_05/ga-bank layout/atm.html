@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>ATM</title>
+  <link rel="stylesheet" href="css/atm.css">
+  <script src="js/jquery.js"></script>
+  <script src="js/atm.js"></script>
+</head>
+<body>
+
+
+
+    <div id="nav">
+      <div id="logo"><img src="img/ga.png" alt="Bank of GA"/></div>
+      <div id="title">Bank of GA</div>
+    </div>
+
+    <div id="content">
+
+    <div class="account" id="checking">
+      <div class="accountHead" id="checkingHead">
+        <img class="faImage left" src="img/CC1.png" alt="credit card">
+        <h1>Checking account</h1>
+        <p>038-025 1211 0437</p>
+      </div>
+      <div class="bordered" id="checkingBordered">
+        <div class="">
+          <div class="labelsContainer">
+            <div class="filler"></div>
+            <div class="labels" id="currentFundsLabel">Current funds</div>
+            <div class="labels" id="availableFundsLabel">Available funds</div>
+          </div>
+          <div class="labelsContainer">
+            <div class="balance" id="checking-balance">$0</div>
+            <div class="balance" id="totalBalanceChecking">$0</div>
+          </div>
+          <div class="line"></div>
+          <div class="expandContainer">
+            <div class="functionBar">
+              <input class="expandButton" id="checkingExpandButton" type="button" value="|||">
+              <div id="slideChecking">
+                <div id="slideCheckingAmount">
+                  <input class="amount hidden" id="checking-amount" type="number" placeholder="enter an amount" />
+                </div>
+                <div id="slideCheckingDeposit">
+                  <input class="buttons hidden" id="checking-deposit" type="button" value="Deposit" />
+                </div>
+                <div id="slideCheckingWithdraw">
+                  <input class="buttons hidden" id="checking-withdraw" type="button" value="Withdraw" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="account" id="savings">
+      <div class="accountHead" id="savingsHead">
+        <img class="faImage left" src="img/CC1.png" alt="credit card">
+        <h1>Savings account</h1>
+        <p>038-025 1231 0528</p>
+      </div>
+      <div class="bordered" id="savingsBordered">
+        <div class="labelsContainer">
+          <div class="filler"></div>
+          <div class="labels" id="currentFundsLabel">Current funds</div>
+          <div class="labels" id="availableFundsLabel">Available funds</div>
+        </div>
+        <div class="labelsContainer">
+          <div class="balance" id="savings-balance">$0</div>
+          <div class="balance" id="totalBalanceSavings">$0</div>
+        </div>
+        <div class="line"></div>
+        <div class="expandContainer">
+
+          <div class="functionBar">
+            <input class="expandButton" id="savingsExpandButton" type="button" value="|||">
+            <div id="slideSavings">
+              <div id="slideSavingsAmount">
+                <input class="amount" id="savings-amount" type="number" placeholder="enter an amount" />
+              </div>
+              <div id="slideSavingsDeposit">
+                <input class="buttons" id="savings-deposit" type="button" value="Deposit" />
+              </div>
+              <div id="slideSavingsWithdraw">
+                <input class="buttons" id="savings-withdraw" type="button" value="Withdraw" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="clear"></div>
+
+  </div>
+
+</body>
+</html>

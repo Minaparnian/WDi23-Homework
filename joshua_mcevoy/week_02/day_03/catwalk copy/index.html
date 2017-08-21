@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8" />
+
+  <title>Cat Walk</title>
+ </head>
+ <body>
+
+  <img id="walkingCat" style="position:absolute;" src="http://www.anniemation.com/clip_art/images/cat-walk.gif">
+
+<script type = "text/javascript">
+  window.onload = function(){
+
+  var game = new Phaser.Game(1000, 600, Phaser.Canvas,'');
+  game.state.add('Boot', Game.Boot);
+  game.state.add('Preloader', Game.Preloader);
+  game.state.add('MainMenu', Game.MainMenu);
+  game.state.add('Level1', Game.Level1);
+  game.state.start('Boot');
+  }
+</script>
+
+<script src="Katastic/phaser.min.js"></script>
+<script src="Katastic/Boot.js"></script>
+<script src="Katastic/Preloader.js"></script>
+<script src="Katastic/MainMenu.js"></script>
+<script src="Katastic/Level1.js"></script>
+<script src="js/main.js"></script>
+
+ </body>
+</html>

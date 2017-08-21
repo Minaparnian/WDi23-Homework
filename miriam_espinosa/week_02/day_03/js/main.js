@@ -18,4 +18,4 @@ cat.style.left ='0px';
 
  };
 
- setInterval(catWalk, 10);
+ setInterval(catWalk, 1);

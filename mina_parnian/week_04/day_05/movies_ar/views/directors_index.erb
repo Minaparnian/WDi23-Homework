@@ -1,0 +1,12 @@
+<h1>All Directors</h1>
+
+<div class="movie-list-container">
+<% @directors.each do |director| %>
+<div class ="movie-list">
+  <a href="/directors/<%= director.id %>" >
+  <%= director.name %>
+</a>
+</div>
+
+<% end %>
+</div>

@@ -1,0 +1,14 @@
+<h1>Edit</h1>
+
+
+<div class="form-position">
+<form action="/directors/<%= @director['id'] %>" method="post">
+  <input type="text" name="name" value="<%= @director.name %>" placeholder="Director Name">
+  <input type="text" name="born" value="<%= @director.born %>" placeholder="Born">
+  <input type="text" name="movie" value="<%= @director.movie %>" placeholder="Related Movie">
+  <input type="text" name="upcoming" value="<%= @director.upcoming %>" placeholder="Upcoming Movies">
+  <input type="url" class="all-image-size" name="image" value="<%= @director['image'] %>" placeholder="http://...">
+
+  <button>Update</button>
+</form>
+</div>

@@ -21,7 +21,11 @@ const guessLetter = function (guess){
   for (let i = 0; i < arrayHold.length; i++){
     if ( guess === arrayHold[i] ){
       arrayGuess.push(guess);
+<<<<<<< HEAD
       lettersLeft--;
+=======
+      lettersLeft -= 1;
+>>>>>>> 6450ee61d3759bd91b9be11ac85463bdbe263fc7
       console.log(`${guess} is one of the letters!`);
       console.log(`Guesses so far ${arrayGuess}`);
       console.log(`there are ${lettersLeft} letters still to guess.`);
