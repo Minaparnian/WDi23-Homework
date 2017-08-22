@@ -1,0 +1,24 @@
+<div class="charName"><%= @hero.name %></div>
+<div class="charRating"><span>RATING:</span><%= print_rating(@hero.rating)%></div>
+<div class="charEdit"><a href="/heroes/<%= @hero.id %>/edit">Edit Hero</a></div> 
+
+<div class="charPublisher">PUBLISHED BY: <%= @hero.publisher.name %></div>
+
+<div class="charDescription">
+    <span>Description</span>
+    <br />
+    <%= @hero.description.html_safe %>
+    <br />
+</div>
+
+<div class="charPowers">
+    <span>Powers</span>
+    <br />
+    <%= @hero.powers %>
+    <br />
+</div>
+
+<br />
+<form action="/heroes/<%= @hero.id %>/delete">
+    <button type="submit" class="deleteChar" onclick="return confirm('Are you sure?');">Delete Hero</button>
+</form>

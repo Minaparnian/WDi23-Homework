@@ -1,0 +1,10 @@
+<h2><%= @state.name %></h2>
+
+<% unless @state.image.nil? %>
+<img class="feature" src="<%= @state.image%>" alt="<%= @state.name %>" />
+<% end %>
+
+<div class="controls">
+  <a href="/places/<%= @state.id %>/edit"> Edit</a>
+  <a href="/places/<%= @state.id %>/delete">Delete</a>
+</div>

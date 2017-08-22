@@ -1,0 +1,29 @@
+<table width="798px">
+    
+        <% @publishers.each do |p| %>
+            <tr>
+                <th with="350px"><%= p.name %></th>
+                <th></th>
+            </tr>
+            <tr>
+                    <td>Hero</td>
+                    <td>Villain</td>
+            </tr>
+            <tr>
+                <td>
+                    <% p.heroes.each do |h| %>
+                        <a href="/heroes/<%= h.id %>"><%= h.name %></a><br />
+                    <% end %>
+                </td>
+                <td>
+                    <% p.villains.each do |v| %>
+                        <a href="/villains/<%= v.id %>"><%= v.name %></a><br />
+                    <% end %>
+                </td>
+            </tr>
+            <tr>
+                <td><br /></td>
+                <td></td>
+            </tr>
+        <% end %>
+</table>

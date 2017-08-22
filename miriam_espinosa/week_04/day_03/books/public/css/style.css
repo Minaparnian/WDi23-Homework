@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css?family=Dosis:400,700|Shadows+Into+Light');
+
+
+body {
+  height: 100%;
+  background-image: url(https://ae01.alicdn.com/kf/HTB18yb5JVXXXXbjXXXXq6xXFXXXh/Photo-Backdrops-Children-Vinyl-Photo-Props-for-Studio-font-b-Photography-b-font-font-b-Background.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+  color: white;
+  font-family: 'Shadows Into Light', cursive;
+  font-family: 'Dosis', sans-serif;
+  text-align: center;
+}
+
+nav {
+  color: white;
+}

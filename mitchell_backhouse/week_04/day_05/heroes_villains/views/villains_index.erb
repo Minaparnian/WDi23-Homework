@@ -1,0 +1,19 @@
+
+<table>
+    <tr>
+        <th width="250px">Villain</th>
+        <th width="250px">Rating</th>
+        <th width="250px">Publisher</th>
+    </tr>
+
+<% @villains.each do |villain| %>
+    <tr>
+        <td><a href="/villains/<%= villain.id %>"><%= villain.name %></a></td>
+        <td><%= print_rating villain.rating %></td>
+        <td><%= villain.publisher.name %></td>
+    </tr>
+<% end %>
+
+</table>
+<a href="/villains/new" class="charNew" >New Villain</a>
+

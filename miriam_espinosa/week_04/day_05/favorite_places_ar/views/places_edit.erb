@@ -1,0 +1,9 @@
+<h2>Edit Favorite Place</h2>
+
+<form action="/places/<%= @place['id'] %>" method="post">
+  <input type="text" name="name" value="<%= @place['name'] %>" placeholder="Place name">
+  <input type="url" name="image" value="<%= @place['image'] %>" placeholder="http://...">
+
+  <button> Update place</button>
+
+</form>

@@ -1,0 +1,11 @@
+<h2><%= @place['name'] %></h2>
+<h3>State: <em><%= @place['state'] %></em></h3>
+
+<% unless @place['image'].nil? %>
+<img class="feature" src="<%= @place['image'] %>" alt="<%= @place['name'] %>" />
+<% end %>
+
+<div class="controls">
+  <a href="/places/<%= @place['id'] %>/edit"> Edit</a>
+  <a href="/places/<%= @place['id'] %>/delete">Delete</a>
+</div>

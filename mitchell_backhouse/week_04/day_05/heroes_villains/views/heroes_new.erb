@@ -1,0 +1,37 @@
+<h3>Heroes NEW</h3>
+
+<form action="/heroes" method="POST">
+    <label for="name">Name</label>
+    <input type="text" name="name" required>
+
+
+    <label for="desription">Description</label>
+    <input type="text" name="description">
+
+    <label for="powers">Powers</label>
+    <input type="text" name="powers">
+
+    <label for="rating">Rating</label>
+    <select id="rating" name="rating">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+    </select>
+
+    <br />
+    <label for="publisher">Publisher</label>
+    <select id="publisher" name="publisher_id">
+        <option value="1"><%= @publishers[0].name %></option>
+        <option value="2"><%= @publishers[1].name %></option>
+    </select>
+    <br />
+    <button class="charNew">Submit</button>
+
+</form>

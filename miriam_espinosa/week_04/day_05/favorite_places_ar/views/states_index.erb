@@ -1,0 +1,11 @@
+<h1>All States</h1>
+
+<ul>
+  <% @state.each do |state| %>
+  <li>
+    <a href="/states/<%= state.id %>">
+      <%= state.name%>
+    </a>
+  </li>
+  <% end %>
+</ul>

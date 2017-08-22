@@ -1,0 +1,36 @@
+<h2>Edit Hero</h2>
+<form action="/heroes/<%= @hero.id %>" method="POST">
+    <label for="name">Name</label>
+    <input type="text" name="name" value="<%= @hero.name %>">
+
+
+    <label for="desription">Description</label>
+    <input type="text" name="description" value="<%= @hero.description %>">
+
+    <label for="powers">Powers</label>
+    <input type="text" name="powers" value="<%= @hero.powers %>">
+
+    <label for="rating">Rating</label>
+    <select id="rating" name="rating">
+        <option value="1"<%= "selected" if @hero.rating == 1 %>>1</option>
+        <option value="2"<%= "selected" if @hero.rating == 2 %>>2</option>
+        <option value="3"<%= "selected" if @hero.rating == 3 %>>3</option>
+        <option value="4"<%= "selected" if @hero.rating == 4 %>>4</option>
+        <option value="5"<%= "selected" if @hero.rating == 5 %>>5</option>
+        <option value="6"<%= "selected" if @hero.rating == 6 %>>6</option>
+        <option value="7"<%= "selected" if @hero.rating == 7 %>>7</option>
+        <option value="8"<%= "selected" if @hero.rating == 8 %>>8</option>
+        <option value="9"<%= "selected" if @hero.rating == 9 %>>9</option>
+        <option value="10"<%= "selected" if @hero.rating == 10 %>>10</option>
+    </select>
+
+    <br />
+    <label for="publisher">Publisher</label>
+    <select id="publisher" name="publisher_id" >
+        <option value="1"<%= "selected" if @hero.publisher_id == 1 %>><%= @publishers[0].name %></option>
+        <option value="2"<%= "selected" if @hero.publisher_id == 2 %>><%= @publishers[1].name %></option>
+    </select>
+    <br />
+    <button class="charNew">Update HERO</button>
+
+</form>

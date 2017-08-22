@@ -1,0 +1,9 @@
+<h2>Edit State</h2>
+
+<form action="/states/<%= @state.id %>" method="post">
+  <input type="text" name="name" value="<%= @state.name %>" placeholder="State name">
+  <input type="url" name="image" value="<%= @state.image %>" placeholder="http://...">
+
+  <button> Update state</button>
+
+</form>

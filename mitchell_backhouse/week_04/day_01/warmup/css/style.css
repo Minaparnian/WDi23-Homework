@@ -1,0 +1,14 @@
+body {
+  background-color: black; 
+}
+
+.hidden {
+  display: none;
+  width: 100px;
+  height: 100px;
+}
+
+.word {
+  display: inline-block;
+  position: fixed;
+}

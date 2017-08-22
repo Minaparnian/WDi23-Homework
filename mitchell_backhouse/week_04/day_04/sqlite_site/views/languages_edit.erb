@@ -1,0 +1,33 @@
+<h2>Edit Language</h2>
+
+<form action="/languages/<%= @language['id'] %>" method="post">
+    <label for="name">Name</label>
+    <input type="text" name="name" placeholder="What is this mysterious language called?" value="<%= @language['name'] %>" required>
+    <br />
+
+    <label for="creator">Creator</label>
+    <input type="text" name="creator" placeholder="The person that made this thing" value="<%= @language['creator'] %>" required>
+    <br />
+
+    <label for="year_developed">Year Created</label>
+    <input type="number" name="year_developed" placeholder="YYYY" value="<%= @language['year_developed'] %>" required>
+    <br />
+
+    <label for="year_abandoned">Year Abandoned</label>
+    <input type="number" name="year_abandoned" placeholder="YYYY" value="<%= @language['year_abandoned'] %>">
+    <br />
+
+    <label for="current_version">Current Version</label>
+    <input type="text" name="current_version" placeholder="X.XX.XXX" value="<%= @language['current_version'] %>" >
+    <br />
+    
+    <label for="logo">Logo</label>
+    <input type="text" name="logo" placeholder="http://www..." value="<%= @language['logo'] %>" >
+    <br />
+
+    <label for="description">Description</label>
+    <textarea name="description" rows="10" cols="50" placeholder="Sit down and tell me a tale" value="<%= @language['description'] %>" ></textarea>
+    <br />
+
+    <button>Edit Language</button>
+</form>

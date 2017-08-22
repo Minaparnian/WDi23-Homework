@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css?family=Monoton|Orbitron');
+
+body {
+    margin: 0;
+    background-color: black;
+    color: white;
+    border: 5px solid white;
+    display: flex;
+    min-height: 98vh;
+    font-family: 'Orbitron', sans-serif;
+    background: url('/media/background.jpg');
+}
+
+nav {
+    text-align: center;
+}
+
+nav a {
+    font-family: 'Monoton', cursive;
+    font-size: 30px;
+    text-decoration: none;
+    color: white;
+    padding: 0 20px 0 20px;
+}
+
+nav a:hover {
+    color: orange;
+}
+
+h1 {
+    padding-left: 20px;
+}
+
+.container {
+    width: 800px;
+    margin: 0 auto;
+    border-radius: 10px;
+    border: 5px dashed #FF00DD;
+    box-sizing: border-box;
+    padding: 15px;
+    background-color: rgba(0,0,0,0.7);
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table img.bin {
+    height: 30px;
+    color: red;
+    filter: invert(1);
+}
+
+table img {
+    height: 30px;
+    color: red;
+}
+
+table img:hover {
+    filter: invert(0.5);
+}
+
+tr td {
+    text-align: center;
+    font-size: 14px;
+    padding: 10px 0 10px 0;
+}
+
+tr td a {
+    text-decoration: none;
+    color: yellow;
+}
+
+tr th {
+    padding-bottom: 10px;
+}
+
+a.newLink {
+    display: inline-block;
+    padding: 10px;
+    margin-top: 20px;
+    text-decoration: none;
+    color: white;
+    border: 2px dashed #00EDFF;
+    border-radius: 5px;
+}
+a.newLink:hover {
+    background-color: #F9FF00;
+    color: black;
+}
+
+.tableLang {
+    color: white;
+    border: 1px dashed white;
+}
+
+input {
+    height: 20px;
+    width: 400px;
+}
+
+form label {
+    display: inline-block;
+    width: 200px;
+    height: 30px;
+}
+
+textarea {
+    width: 405px;
+    height: 100px;
+    border-radius: 10px;
+}
+
+button {
+    background-color: black;
+    display: inline-block;
+    padding: 10px;
+    margin-top: 20px;
+    text-decoration: none;
+    color: white;
+    border: 2px dashed #00EDFF;
+    border-radius: 5px;
+}
+
+button:hover {
+    color: black;
+    background-color: #00FF06;
+}

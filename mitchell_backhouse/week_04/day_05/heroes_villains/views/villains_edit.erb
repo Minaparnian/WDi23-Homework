@@ -1,0 +1,36 @@
+<h2>Edit Villain</h2>
+<form action="/villains/<%= @villain.id %>" method="POST">
+    <label for="name">Name</label>
+    <input type="text" name="name" value="<%= @villain.name %>">
+
+
+    <label for="desription">Description</label>
+    <input type="text" name="description" value="<%= @villain.description %>">
+
+    <label for="powers">Powers</label>
+    <input type="text" name="powers" value="<%= @villain.powers %>">
+
+    <label for="rating">Rating</label>
+    <select id="rating" name="rating">
+        <option value="1"<%= "selected" if @villain.rating == 1 %>>1</option>
+        <option value="2"<%= "selected" if @villain.rating == 2 %>>2</option>
+        <option value="3"<%= "selected" if @villain.rating == 3 %>>3</option>
+        <option value="4"<%= "selected" if @villain.rating == 4 %>>4</option>
+        <option value="5"<%= "selected" if @villain.rating == 5 %>>5</option>
+        <option value="6"<%= "selected" if @villain.rating == 6 %>>6</option>
+        <option value="7"<%= "selected" if @villain.rating == 7 %>>7</option>
+        <option value="8"<%= "selected" if @villain.rating == 8 %>>8</option>
+        <option value="9"<%= "selected" if @villain.rating == 9 %>>9</option>
+        <option value="10"<%= "selected" if @villain.rating == 10 %>>10</option>
+    </select>
+
+    <br />
+    <label for="publisher">Publisher</label>
+    <select id="publisher" name="publisher_id" >
+        <option value="1"<%= "selected" if @villain.publisher_id == 1 %>><%= @publishers[0].name %></option>
+        <option value="2"<%= "selected" if @villain.publisher_id == 2 %>><%= @publishers[1].name %></option>
+    </select>
+    <br />
+    <button class="charNew">Update VILLAIN</button>
+
+</form>

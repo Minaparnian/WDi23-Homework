@@ -1,0 +1,27 @@
+<p>Show all languages</p>
+
+<table>
+    <tr>
+        <th>Logo</th>
+        <th>Name</th>
+        <th>Creator</th>
+        <th>Year Created</th>
+        <th>Year Abandoned</th>
+        <th>Current Version</th>
+        <th>Description</th>
+    </tr>
+    <% @languages.each do |language| %>
+        <tr class="tableLang">
+            <td><img src="<%= language['logo'] %>" /></td>
+            <td><a href="/languages/<%= language['id'] %>"><%= language['name'] %></a></td>
+            <td><%= language['creator'] %></td>
+            <td><%= language['year_developed'] %></td>
+            <td><%= language['year_abandoned'] %></td>
+            <td><%= language['current_version'] %></td>
+            <td><%= language['description'] %></td>
+            <td><a href="/languages/<%= language['id'] %>/delete"
+                   onclick="return confirm('Are you sure?')"><img src="/media/bin.png" class="bin" /></a></td>
+        </tr>
+    <% end %>
+</table>
+<a href="/languages/new" class="newLink" >Create New Entry</a>

@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+
+body {
+    background-color: rgba(30, 30, 30, 1);
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    padding-left: 20px;
+}
+
+p {
+    padding-left: 20px;
+}
+
+header {
+    height: 80px;
+    background-color: white;
+    color: rgba(30, 30, 30, 1);
+    padding: 0 20px 0 20px;
+}
+
+header a {
+    text-decoration: none;
+    color: black;
+}
+
+nav {
+    height: 30px;
+    color: rgba(30, 30, 30, 1);
+    text-align: center;
+}
+
+nav a {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+    padding: 0 30px 0 30px;
+}
+
+nav a:hover {
+    background-color: white;
+    color: rgba(30, 30, 30, 1);
+}
+
+nav a.selected {
+    background-color: #ff00d0;
+    padding: 0 30px 0 30px;
+}
+
+h1 {
+    margin: 0;
+    padding: 20px 0 0 0;
+}
+
+p {
+    color: white;
+}
+
+img {
+    position: absolute;
+    display: inline-block;
+}
+
+label {
+    display: inline-block;
+    width: 200px;
+
+}
+
+input {
+    display: inline-block;
+    width: 500px;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+table {
+    margin-top: 30px;
+}
+
+table tr {
+    text-align: center;
+}
+
+table td {
+    vertical-align: top;
+}
+
+table a {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    border: 1px solid white;
+    padding: 5px;
+    width: 220px;
+}
+
+.container {
+    box-sizing: border-box;
+    margin: 0 auto;
+    /*padding: 0 20px 0 20px;*/
+    width: 800px;
+    height: 100vh;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    background-color: rgba(30, 30, 30, 1);
+    z-index: 99999;
+}
+
+/*button {*/
+    /*display: inline-block;*/
+    /*background-color: rgba(30, 30, 30, 1);*/
+    /*color: white;*/
+    /*padding: 10px;*/
+    /*width: 200px;*/
+    /*border: 1px dashed white;*/
+    /*border-radius: 10px;*/
+/*}*/
+
+/*button:hover {*/
+    /*background-color: rgba(30, 30, 30, 1);*/
+    /*color: white;*/
+/*}*/
+
+.deleteChar {
+    width: 798px;
+    background-color: white;
+    border: 1px solid white;
+    height: 30px;
+}
+.deleteChar:hover {
+    background-color: rgba(255, 0, 0, 1);
+    border: 1px solid red;
+    color: white;
+}
+
+.back1 {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%);
+    width: 50vw;
+    height: 40vh;
+    border-right: 1px solid white;
+    border-bottom: 1px solid white;
+    border-left: 1px solid white;
+    z-index: -1;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.back2 {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%);
+    width: 60vw;
+    height: 30vh;
+    border-right: 1px solid white;
+    border-bottom: 1px solid white;
+    border-left: 1px solid white;
+    z-index: -1;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.back3 {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%);
+    width: 70vw;
+    height: 20vh;
+    border-right: 1px solid white;
+    border-bottom: 1px solid white;
+    border-left: 1px solid white;
+    z-index: -1;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.charName {
+    margin-top: 20px;
+    margin-left: 20px;
+    display: inline-block;
+    font-size: 30px;
+    width: 360px;
+}
+
+.charRating {
+    display: inline-block;
+    width: 230px;
+}
+
+.charRating span {
+    padding-right: 20px;
+}
+
+.charNew {
+    margin-top: 20px;
+    display: inline-block;
+    width: 796px;
+    border: 1px solid; white;
+    text-align: center;
+    height: 26px;
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+    background-color: white;
+}
+
+.charNew:hover {
+    background-color: #ff00d0;
+    color: white;
+}
+
+.charEdit {
+    display: inline-block;
+    width: 150px;
+    border: 1px solid; white;
+    text-align: center;
+    height: 26px;
+}
+
+.charEdit a {
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+}
+
+.charEdit a:hover {
+    color: #ff00d0;
+}
+
+.charDescription {
+    margin-top: 30px;
+    margin-left: 20px;
+    font-size: 16px;
+}
+
+.charDescription span {
+    font-size: 24px;
+}
+
+.charPowers {
+    margin-top: 30px;
+    margin-left: 20px;
+    font-size: 16px;
+}
+
+.charPowers span {
+    font-size: 24px;
+}
+
+.charPublisher {
+    display: block;
+    margin-left: 20px;
+}
+
+label {
+    padding-left: 20px;
+}
+
+select {
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
