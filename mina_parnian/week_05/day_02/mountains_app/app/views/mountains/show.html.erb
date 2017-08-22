@@ -1,0 +1,15 @@
+<h1> <%= @mountain.name %></h1>
+
+<p> Height: <%= @mountain.height %></p>
+<p> Place: <%= @mountain.place %></p>
+
+<% unless @mountain.image.nil? %>
+<%=  image_tag @mountain.image, :class => 'feature' %>
+<% end %>
+
+<div class="controls">
+  <%= button_to "Delete mountain", mountain_delete_path(@mountain.id) %>
+
+  <%= link_to "Edit", mountain_edit_path(@mountain.id) %>
+
+</div>
