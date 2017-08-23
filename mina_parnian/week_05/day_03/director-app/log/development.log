@@ -1,0 +1,2124 @@
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateDirector (20170823070225)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "directors" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" text, "nationality" text, "dob" text, "image" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170823070225"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2017-08-23 07:05:02.367302"], ["updated_at", "2017-08-23 07:05:02.367302"]]
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateDirector (20170823070225)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.6ms)[0m  [1m[35mDROP TABLE "directors"[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20170823070225"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateDirector (20170823070225)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "directors" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" text, "nationality" text, "dob" text, "years_active" text, "image" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170823070225"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.3ms)[0m  [1m[32mINSERT INTO "directors" ("name", "nationality", "dob", "years_active", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "James Cameron"], ["nationality", "Canadian"], ["dob", "1954/08/16"], ["years_active", "1975-present"], ["image", "http://1.bp.blogspot.com/-ogHcP4ohPtY/UUajomEYgsI/AAAAAAAAAHg/LoWcd7fUeBA/s1600/James+Cameron.jpg"], ["created_at", "2017-08-23 09:01:12.467983"], ["updated_at", "2017-08-23 09:01:12.467983"]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/" for 127.0.0.1 at 2017-08-23 21:05:43 +1000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (uninitialized constant DorectorsController):
+  
+activesupport (5.1.3) lib/active_support/inflector/methods.rb:269:in `const_get'
+activesupport (5.1.3) lib/active_support/inflector/methods.rb:269:in `block in constantize'
+activesupport (5.1.3) lib/active_support/inflector/methods.rb:267:in `each'
+activesupport (5.1.3) lib/active_support/inflector/methods.rb:267:in `inject'
+activesupport (5.1.3) lib/active_support/inflector/methods.rb:267:in `constantize'
+actionpack (5.1.3) lib/action_dispatch/http/request.rb:82:in `controller_class'
+actionpack (5.1.3) lib/action_dispatch/routing/route_set.rb:43:in `controller'
+actionpack (5.1.3) lib/action_dispatch/routing/route_set.rb:29:in `serve'
+actionpack (5.1.3) lib/action_dispatch/journey/router.rb:46:in `block in serve'
+actionpack (5.1.3) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.3) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.3) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.3) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.3) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.3) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.3) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.3) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/index" for 127.0.0.1 at 2017-08-23 21:06:45 +1000
+  
+ActionController::RoutingError (No route matches [GET] "/index"):
+  
+actionpack (5.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.3) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.3) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2017-08-23 21:06:51 +1000
+  
+ActionController::RoutingError (uninitialized constant DorectorsController):
+  
+activesupport (5.1.3) lib/active_support/inflector/methods.rb:269:in `const_get'
+activesupport (5.1.3) lib/active_support/inflector/methods.rb:269:in `block in constantize'
+activesupport (5.1.3) lib/active_support/inflector/methods.rb:267:in `each'
+activesupport (5.1.3) lib/active_support/inflector/methods.rb:267:in `inject'
+activesupport (5.1.3) lib/active_support/inflector/methods.rb:267:in `constantize'
+actionpack (5.1.3) lib/action_dispatch/http/request.rb:82:in `controller_class'
+actionpack (5.1.3) lib/action_dispatch/routing/route_set.rb:43:in `controller'
+actionpack (5.1.3) lib/action_dispatch/routing/route_set.rb:29:in `serve'
+actionpack (5.1.3) lib/action_dispatch/journey/router.rb:46:in `block in serve'
+actionpack (5.1.3) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.3) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.3) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.3) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.3) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.3) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.3) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.3) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2017-08-23 21:08:30 +1000
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/admin/Mina/.rvm/gems/ruby-2.4.0/gems/railties-5.1.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/admin/Mina/.rvm/gems/ruby-2.4.0/gems/railties-5.1.3/lib/rails/templates/rails/welcome/index.html.erb (2.7ms)
+Completed 200 OK in 9ms (Views: 5.6ms)
+
+
+Started GET "/index" for 127.0.0.1 at 2017-08-23 21:08:37 +1000
+  
+ActionController::RoutingError (No route matches [GET] "/index"):
+  
+actionpack (5.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.3) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.3) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/director" for 127.0.0.1 at 2017-08-23 21:08:45 +1000
+  
+ActionController::RoutingError (uninitialized constant DirectorController):
+  
+activesupport (5.1.3) lib/active_support/inflector/methods.rb:269:in `const_get'
+activesupport (5.1.3) lib/active_support/inflector/methods.rb:269:in `block in constantize'
+activesupport (5.1.3) lib/active_support/inflector/methods.rb:267:in `each'
+activesupport (5.1.3) lib/active_support/inflector/methods.rb:267:in `inject'
+activesupport (5.1.3) lib/active_support/inflector/methods.rb:267:in `constantize'
+actionpack (5.1.3) lib/action_dispatch/http/request.rb:82:in `controller_class'
+actionpack (5.1.3) lib/action_dispatch/routing/route_set.rb:43:in `controller'
+actionpack (5.1.3) lib/action_dispatch/routing/route_set.rb:29:in `serve'
+actionpack (5.1.3) lib/action_dispatch/journey/router.rb:46:in `block in serve'
+actionpack (5.1.3) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.3) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.3) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.3) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.3) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.3) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.3) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.3) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/directors" for 127.0.0.1 at 2017-08-23 21:08:48 +1000
+  
+ActionController::RoutingError (No route matches [GET] "/directors"):
+  
+actionpack (5.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.3) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.3) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/index" for 127.0.0.1 at 2017-08-23 21:09:00 +1000
+  
+ActionController::RoutingError (No route matches [GET] "/index"):
+  
+actionpack (5.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.3) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.3) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "directors"[0m
+  [1m[36mDirector Load (0.4ms)[0m  [1m[34mSELECT  "directors".* FROM "directors" ORDER BY "directors"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mDirector Load (0.2ms)[0m  [1m[34mSELECT  "directors".* FROM "directors" ORDER BY "directors"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/director" for 127.0.0.1 at 2017-08-23 21:49:00 +1000
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/director"):
+  
+actionpack (5.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.3) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.3) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/directors" for 127.0.0.1 at 2017-08-23 21:49:06 +1000
+Processing by DirectorsController#index as HTML
+  Rendering directors/index.html.erb within layouts/application
+  [1m[36mDirector Load (0.5ms)[0m  [1m[34mSELECT "directors".* FROM "directors"[0m
+  Rendered directors/index.html.erb within layouts/application (15.6ms)
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 1.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `strftme' for "1954/08/16":String):
+    4:   <%= image_tag director.image, :class => "thumb" %>
+    5:   <li>Name: <%= director.name %></li>
+    6:   <li>Nationality: <%= director.nationality %></li>
+    7:   <li>Date of birth: <%= director.dob.strftme "%d %m %Y" %></li>
+    8:   <li>Years_active: <%= director.years_active  %></li>
+    9:   <% end %>
+   10: 
+  
+app/views/directors/index.html.erb:7:in `block in _app_views_directors_index_html_erb___3676479236116008616_70289000363840'
+app/views/directors/index.html.erb:3:in `_app_views_directors_index_html_erb___3676479236116008616_70289000363840'
+Started GET "/directors" for 127.0.0.1 at 2017-08-23 21:49:58 +1000
+Processing by DirectorsController#index as HTML
+  Rendering directors/index.html.erb within layouts/application
+  [1m[36mDirector Load (0.2ms)[0m  [1m[34mSELECT "directors".* FROM "directors"[0m
+  Rendered directors/index.html.erb within layouts/application (6.0ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `strftime' for "1954/08/16":String
+Did you mean?  strip):
+    4:   <%= image_tag director.image, :class => "thumb" %>
+    5:   <li>Name: <%= director.name %></li>
+    6:   <li>Nationality: <%= director.nationality %></li>
+    7:   <li>Date of birth: <%= director.dob.strftime "%d %m %Y" %></li>
+    8:   <li>Years_active: <%= director.years_active  %></li>
+    9:   <% end %>
+   10: 
+  
+app/views/directors/index.html.erb:7:in `block in _app_views_directors_index_html_erb___3676479236116008616_70288999883720'
+app/views/directors/index.html.erb:3:in `_app_views_directors_index_html_erb___3676479236116008616_70288999883720'
+Started GET "/directors" for 127.0.0.1 at 2017-08-23 21:51:07 +1000
+Processing by DirectorsController#index as HTML
+  Rendering directors/index.html.erb within layouts/application
+  [1m[36mDirector Load (0.2ms)[0m  [1m[34mSELECT "directors".* FROM "directors"[0m
+  Rendered directors/index.html.erb within layouts/application (6.3ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `strftime' for "1954/08/16":String
+Did you mean?  strip):
+    4:   <%= image_tag director.image, :class => "thumb" %>
+    5:   <li>Name: <%= director.name %></li>
+    6:   <li>Nationality: <%= director.nationality %></li>
+    7:   <li>Date of birth: <%= director.dob.strftime "%A %e %B, %Y" %></li>
+    8:   <li>Years_active: <%= director.years_active  %></li>
+    9:   <% end %>
+   10: 
+  
+app/views/directors/index.html.erb:7:in `block in _app_views_directors_index_html_erb___3676479236116008616_70289007076180'
+app/views/directors/index.html.erb:3:in `_app_views_directors_index_html_erb___3676479236116008616_70289007076180'
+Started GET "/directors" for 127.0.0.1 at 2017-08-23 21:54:05 +1000
+Processing by DirectorsController#index as HTML
+  Rendering directors/index.html.erb within layouts/application
+  [1m[36mDirector Load (0.6ms)[0m  [1m[34mSELECT "directors".* FROM "directors"[0m
+  Rendered directors/index.html.erb within layouts/application (196.3ms)
+Completed 500 Internal Server Error in 207ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `artist' for #<#<Class:0x007fdaddcbd918>:0x007fdade8cf850>):
+    4:   <%= image_tag director.image, :class => "thumb" %>
+    5:   <li>Name: <%= director.name %></li>
+    6:   <li>Nationality: <%= director.nationality %></li>
+    7:   <li>Date of birth: <%= director.dob.strftime "%A %e %B, %Y" unless artist.dob.nil? %></li>
+    8:   <li>Years_active: <%= director.years_active  %></li>
+    9:   <% end %>
+   10: 
+  
+app/views/directors/index.html.erb:7:in `block in _app_views_directors_index_html_erb___3676479236116008616_70289006698800'
+app/views/directors/index.html.erb:3:in `_app_views_directors_index_html_erb___3676479236116008616_70289006698800'
+Started GET "/directors" for 127.0.0.1 at 2017-08-23 21:54:31 +1000
+Processing by DirectorsController#index as HTML
+  Rendering directors/index.html.erb within layouts/application
+  [1m[36mDirector Load (0.2ms)[0m  [1m[34mSELECT "directors".* FROM "directors"[0m
+  Rendered directors/index.html.erb within layouts/application (8.8ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `strftime' for "1954/08/16":String
+Did you mean?  strip):
+    4:   <%= image_tag director.image, :class => "thumb" %>
+    5:   <li>Name: <%= director.name %></li>
+    6:   <li>Nationality: <%= director.nationality %></li>
+    7:   <li>Date of birth: <%= director.dob.strftime "%A %e %B, %Y" unless director.dob.nil? %></li>
+    8:   <li>Years_active: <%= director.years_active  %></li>
+    9:   <% end %>
+   10: 
+  
+app/views/directors/index.html.erb:7:in `block in _app_views_directors_index_html_erb___3676479236116008616_70288970626040'
+app/views/directors/index.html.erb:3:in `_app_views_directors_index_html_erb___3676479236116008616_70288970626040'
+Started GET "/directors" for 127.0.0.1 at 2017-08-23 22:00:57 +1000
+Processing by DirectorsController#index as HTML
+  Rendering directors/index.html.erb within layouts/application
+  [1m[36mDirector Load (0.2ms)[0m  [1m[34mSELECT "directors".* FROM "directors"[0m
+  Rendered directors/index.html.erb within layouts/application (5.8ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `strftime' for "1954/08/16":String
+Did you mean?  strip):
+    4:   <%= image_tag director.image, :class => "thumb" %>
+    5:   <li>Name: <%= director.name %></li>
+    6:   <li>Nationality: <%= director.nationality %></li>
+    7:   <li>Date of birth: <%= director.dob.strftime "%A %e %B, %Y" %></li>
+    8:   <li>Years_active: <%= director.years_active  %></li>
+    9: </ul>
+   10:   <% end %>
+  
+app/views/directors/index.html.erb:7:in `block in _app_views_directors_index_html_erb___3676479236116008616_70288976616940'
+app/views/directors/index.html.erb:2:in `_app_views_directors_index_html_erb___3676479236116008616_70288976616940'
+Started GET "/directors" for 127.0.0.1 at 2017-08-23 22:01:33 +1000
+Processing by DirectorsController#index as HTML
+  Rendering directors/index.html.erb within layouts/application
+  [1m[36mDirector Load (0.2ms)[0m  [1m[34mSELECT "directors".* FROM "directors"[0m
+  Rendered directors/index.html.erb within layouts/application (6.5ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `strftime' for "1954/08/16":String
+Did you mean?  strip):
+    4:   <%= image_tag director.image, :class => "thumb" %>
+    5:   <li>Name: <%= director.name %></li>
+    6:   <li>Nationality: <%= director.nationality %></li>
+    7:   <li>Date of birth: <%= director.dob.strftime "%A %e %B, %Y" %></li>
+    8:   <li>Years_active: <%= director.years_active  %></li>
+    9: </ul>
+   10:   <% end %>
+  
+app/views/directors/index.html.erb:7:in `block in _app_views_directors_index_html_erb___3676479236116008616_70288975828200'
+app/views/directors/index.html.erb:2:in `_app_views_directors_index_html_erb___3676479236116008616_70288975828200'
+Started GET "/directors" for 127.0.0.1 at 2017-08-23 22:01:35 +1000
+Processing by DirectorsController#index as HTML
+  Rendering directors/index.html.erb within layouts/application
+  [1m[36mDirector Load (0.2ms)[0m  [1m[34mSELECT "directors".* FROM "directors"[0m
+  Rendered directors/index.html.erb within layouts/application (7.3ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `strftime' for "1954/08/16":String
+Did you mean?  strip):
+    4:   <%= image_tag director.image, :class => "thumb" %>
+    5:   <li>Name: <%= director.name %></li>
+    6:   <li>Nationality: <%= director.nationality %></li>
+    7:   <li>Date of birth: <%= director.dob.strftime "%A %e %B, %Y" %></li>
+    8:   <li>Years_active: <%= director.years_active  %></li>
+    9: </ul>
+   10:   <% end %>
+  
+app/views/directors/index.html.erb:7:in `block in _app_views_directors_index_html_erb___3676479236116008616_70288972485300'
+app/views/directors/index.html.erb:2:in `_app_views_directors_index_html_erb___3676479236116008616_70288972485300'
+Started GET "/directors" for 127.0.0.1 at 2017-08-23 22:05:57 +1000
+Processing by DirectorsController#index as HTML
+  Rendering directors/index.html.erb within layouts/application
+  [1m[36mDirector Load (1.5ms)[0m  [1m[34mSELECT "directors".* FROM "directors"[0m
+  Rendered directors/index.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 577ms (Views: 562.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/directors" for 127.0.0.1 at 2017-08-23 22:06:34 +1000
+Processing by DirectorsController#index as HTML
+  Rendering directors/index.html.erb within layouts/application
+  [1m[36mDirector Load (0.5ms)[0m  [1m[34mSELECT "directors".* FROM "directors"[0m
+  Rendered directors/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 45ms (Views: 41.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/directors" for 127.0.0.1 at 2017-08-23 22:07:46 +1000
+Processing by DirectorsController#index as HTML
+  Rendering directors/index.html.erb within layouts/application
+  [1m[36mDirector Load (0.2ms)[0m  [1m[34mSELECT "directors".* FROM "directors"[0m
+  Rendered directors/index.html.erb within layouts/application (6.5ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `strftime' for "1954/08/16":String
+Did you mean?  strip):
+    4:   <%= image_tag director.image, :class => "thumb" %>
+    5:   <li>Name: <%= director.name %></li>
+    6:   <li>Nationality: <%= director.nationality %></li>
+    7:   <li>Date of birth: <%= director.dob.strftime "%A %e %B, %Y" %></li>
+    8:   <li>Years_active: <%= director.years_active  %></li>
+    9: </ul>
+   10:   <% end %>
+  
+app/views/directors/index.html.erb:7:in `block in _app_views_directors_index_html_erb___3676479236116008616_70289027854320'
+app/views/directors/index.html.erb:2:in `_app_views_directors_index_html_erb___3676479236116008616_70289027854320'
+Started GET "/directors" for 127.0.0.1 at 2017-08-23 22:11:16 +1000
+Processing by DirectorsController#index as HTML
+  Rendering directors/index.html.erb within layouts/application
+  [1m[36mDirector Load (0.2ms)[0m  [1m[34mSELECT "directors".* FROM "directors"[0m
+  Rendered directors/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 46ms (Views: 41.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/directors" for 127.0.0.1 at 2017-08-23 22:11:41 +1000
+Processing by DirectorsController#index as HTML
+  Rendering directors/index.html.erb within layouts/application
+  [1m[36mDirector Load (0.2ms)[0m  [1m[34mSELECT "directors".* FROM "directors"[0m
+  Rendered directors/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 43ms (Views: 40.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/directors" for 127.0.0.1 at 2017-08-23 22:14:31 +1000
+Processing by DirectorsController#index as HTML
+  Rendering directors/index.html.erb within layouts/application
+  [1m[36mDirector Load (0.2ms)[0m  [1m[34mSELECT "directors".* FROM "directors"[0m
+  Rendered directors/index.html.erb within layouts/application (7.5ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `strftime' for "1954/08/16":String
+Did you mean?  strip):
+    4:   <%= image_tag director.image, :class => "thumb" %>
+    5:   <li>Name: <%= director.name %></li>
+    6:   <li>Nationality: <%= director.nationality %></li>
+    7:   <li>Date of birth: <%= director.dob.strftime "%B %d, %Y" %></li>
+    8:   <li>Years_active: <%= director.years_active  %></li>
+    9: </ul>
+   10:   <% end %>
+  
+app/views/directors/index.html.erb:7:in `block in _app_views_directors_index_html_erb___3676479236116008616_70289019361700'
+app/views/directors/index.html.erb:2:in `_app_views_directors_index_html_erb___3676479236116008616_70289019361700'
+Started GET "/directors" for 127.0.0.1 at 2017-08-23 22:22:57 +1000
+Processing by DirectorsController#index as HTML
+  Rendering directors/index.html.erb within layouts/application
+  [1m[36mDirector Load (0.2ms)[0m  [1m[34mSELECT "directors".* FROM "directors"[0m
+  Rendered directors/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 24ms (Views: 21.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/directors" for 127.0.0.1 at 2017-08-23 22:27:27 +1000
+Processing by DirectorsController#index as HTML
+  Rendering directors/index.html.erb within layouts/application
+  [1m[36mDirector Load (0.2ms)[0m  [1m[34mSELECT "directors".* FROM "directors"[0m
+  Rendered directors/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 19ms (Views: 16.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/directors" for 127.0.0.1 at 2017-08-23 22:27:29 +1000
+Processing by DirectorsController#index as HTML
+  Rendering directors/index.html.erb within layouts/application
+  [1m[36mDirector Load (0.2ms)[0m  [1m[34mSELECT "directors".* FROM "directors"[0m
+  Rendered directors/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 28ms (Views: 24.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/directors" for 127.0.0.1 at 2017-08-23 22:27:30 +1000
+Processing by DirectorsController#index as HTML
+  Rendering directors/index.html.erb within layouts/application
+  [1m[36mDirector Load (0.3ms)[0m  [1m[34mSELECT "directors".* FROM "directors"[0m
+  Rendered directors/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 35ms (Views: 30.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/directors" for 127.0.0.1 at 2017-08-23 22:33:29 +1000
+Processing by DirectorsController#index as HTML
+  Rendering directors/index.html.erb within layouts/application
+  [1m[36mDirector Load (0.2ms)[0m  [1m[34mSELECT "directors".* FROM "directors"[0m
+  Rendered directors/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 27ms (Views: 24.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/directors/1" for 127.0.0.1 at 2017-08-23 22:33:30 +1000
+Processing by DirectorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering directors/show.html.erb within layouts/application
+  Rendered directors/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 34ms (Views: 24.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/directors/1" for 127.0.0.1 at 2017-08-23 22:33:49 +1000
+Processing by DirectorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering directors/show.html.erb within layouts/application
+  Rendered directors/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 28ms (Views: 22.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/directors" for 127.0.0.1 at 2017-08-23 22:34:25 +1000
+Processing by DirectorsController#index as HTML
+  Rendering directors/index.html.erb within layouts/application
+  [1m[36mDirector Load (0.2ms)[0m  [1m[34mSELECT "directors".* FROM "directors"[0m
+  Rendered directors/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 25ms (Views: 22.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/directors/routes" for 127.0.0.1 at 2017-08-23 22:34:32 +1000
+Processing by DirectorsController#show as HTML
+  Parameters: {"id"=>"routes"}
+  Rendering directors/show.html.erb within layouts/application
+  Rendered directors/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 25ms (Views: 22.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/routes" for 127.0.0.1 at 2017-08-23 22:34:36 +1000
+  
+ActionController::RoutingError (No route matches [GET] "/routes"):
+  
+actionpack (5.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.3) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.3) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/routes" for 127.0.0.1 at 2017-08-23 22:38:47 +1000
+  
+ActionController::RoutingError (No route matches [GET] "/routes"):
+  
+actionpack (5.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.3) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.3) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/directors" for 127.0.0.1 at 2017-08-23 22:38:50 +1000
+Processing by DirectorsController#index as HTML
+  Rendering directors/index.html.erb within layouts/application
+  [1m[36mDirector Load (0.2ms)[0m  [1m[34mSELECT "directors".* FROM "directors"[0m
+  Rendered directors/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 24ms (Views: 20.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/directors/1" for 127.0.0.1 at 2017-08-23 22:38:52 +1000
+Processing by DirectorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering directors/show.html.erb within layouts/application
+  Rendered directors/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 27ms (Views: 21.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/directors/1" for 127.0.0.1 at 2017-08-23 22:46:33 +1000
+Processing by DirectorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDirector Load (0.5ms)[0m  [1m[34mSELECT  "directors".* FROM "directors" WHERE "directors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering directors/show.html.erb within layouts/application
+  Rendered directors/show.html.erb within layouts/application (3.3ms)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 1.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    1: <h1><%= @director.name %></h1>
+    2: 
+    3: <% @directors.each do |director| %>
+    4: <ul>
+    5:   <%= image_tag @director.image, :class => "feature" %>
+    6:   <li>Name: <%= link_to @director.name, @director %></li>
+  
+app/views/directors/show.html.erb:3:in `_app_views_directors_show_html_erb__329212036536181032_70289008717120'
+Started GET "/directors/1" for 127.0.0.1 at 2017-08-23 22:47:07 +1000
+Processing by DirectorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDirector Load (0.1ms)[0m  [1m[34mSELECT  "directors".* FROM "directors" WHERE "directors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering directors/show.html.erb within layouts/application
+  Rendered directors/show.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.1ms)
+
+
+  
+SyntaxError (/Users/admin/Mina/Desktop/WDi23-Homework/mina_parnian/week_05/day_03/director-app/app/views/directors/show.html.erb:13: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+                ^):
+  
+app/views/directors/show.html.erb:13: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/directors/1" for 127.0.0.1 at 2017-08-23 22:47:16 +1000
+Processing by DirectorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDirector Load (0.1ms)[0m  [1m[34mSELECT  "directors".* FROM "directors" WHERE "directors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering directors/show.html.erb within layouts/application
+  Rendered directors/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 32ms (Views: 29.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/directors/1" for 127.0.0.1 at 2017-08-23 22:47:40 +1000
+Processing by DirectorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDirector Load (0.2ms)[0m  [1m[34mSELECT  "directors".* FROM "directors" WHERE "directors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering directors/show.html.erb within layouts/application
+  Rendered directors/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 27ms (Views: 23.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/directors" for 127.0.0.1 at 2017-08-23 22:47:50 +1000
+Processing by DirectorsController#index as HTML
+  Rendering directors/index.html.erb within layouts/application
+  [1m[36mDirector Load (0.2ms)[0m  [1m[34mSELECT "directors".* FROM "directors"[0m
+  Rendered directors/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 20ms (Views: 17.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/directors/1" for 127.0.0.1 at 2017-08-23 22:47:53 +1000
+Processing by DirectorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDirector Load (0.1ms)[0m  [1m[34mSELECT  "directors".* FROM "directors" WHERE "directors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering directors/show.html.erb within layouts/application
+  Rendered directors/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 26ms (Views: 20.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/directors/1" for 127.0.0.1 at 2017-08-23 22:50:08 +1000
+Processing by DirectorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDirector Load (0.2ms)[0m  [1m[34mSELECT  "directors".* FROM "directors" WHERE "directors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering directors/show.html.erb within layouts/application
+  Rendered directors/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 34ms (Views: 26.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/directors/1" for 127.0.0.1 at 2017-08-23 22:50:25 +1000
+Processing by DirectorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDirector Load (0.1ms)[0m  [1m[34mSELECT  "directors".* FROM "directors" WHERE "directors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering directors/show.html.erb within layouts/application
+  Rendered directors/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 29ms (Views: 26.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/directors/1" for 127.0.0.1 at 2017-08-23 22:53:59 +1000
+Processing by DirectorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDirector Load (0.2ms)[0m  [1m[34mSELECT  "directors".* FROM "directors" WHERE "directors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering directors/show.html.erb within layouts/application
+  Rendered directors/show.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (Invalid CSS after "  max-width": expected ";", was ": 860px;"):
+    4:     <title>DirectorApp</title>
+    5:     <%= csrf_meta_tags %>
+    6: 
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    9:   </head>
+   10: 
+  
+app/assets/stylesheets/directors.scss:3
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb___769932004581959761_70289008137700'
+Started GET "/directors/1" for 127.0.0.1 at 2017-08-23 22:55:24 +1000
+Processing by DirectorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDirector Load (0.1ms)[0m  [1m[34mSELECT  "directors".* FROM "directors" WHERE "directors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering directors/show.html.erb within layouts/application
+  Rendered directors/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 43ms (Views: 39.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/directors" for 127.0.0.1 at 2017-08-23 22:55:39 +1000
+Processing by DirectorsController#index as HTML
+  Rendering directors/index.html.erb within layouts/application
+  [1m[36mDirector Load (0.2ms)[0m  [1m[34mSELECT "directors".* FROM "directors"[0m
+  Rendered directors/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 26ms (Views: 20.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/directors/1" for 127.0.0.1 at 2017-08-23 22:55:44 +1000
+Processing by DirectorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDirector Load (0.2ms)[0m  [1m[34mSELECT  "directors".* FROM "directors" WHERE "directors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering directors/show.html.erb within layouts/application
+  Rendered directors/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 32ms (Views: 25.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/directors/1" for 127.0.0.1 at 2017-08-23 22:56:05 +1000
+Processing by DirectorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDirector Load (0.3ms)[0m  [1m[34mSELECT  "directors".* FROM "directors" WHERE "directors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering directors/show.html.erb within layouts/application
+  Rendered directors/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 32ms (Views: 24.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/directors" for 127.0.0.1 at 2017-08-23 22:58:42 +1000
+Processing by DirectorsController#index as HTML
+  Rendering directors/index.html.erb within layouts/application
+  [1m[36mDirector Load (0.2ms)[0m  [1m[34mSELECT "directors".* FROM "directors"[0m
+  Rendered directors/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 31ms (Views: 28.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/directors/1" for 127.0.0.1 at 2017-08-23 22:58:44 +1000
+Processing by DirectorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDirector Load (0.2ms)[0m  [1m[34mSELECT  "directors".* FROM "directors" WHERE "directors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering directors/show.html.erb within layouts/application
+  Rendered directors/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 27ms (Views: 21.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/directors/1" for 127.0.0.1 at 2017-08-23 23:01:15 +1000
+Processing by DirectorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDirector Load (0.1ms)[0m  [1m[34mSELECT  "directors".* FROM "directors" WHERE "directors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering directors/show.html.erb within layouts/application
+  Rendered directors/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 26ms (Views: 22.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/directors/1" for 127.0.0.1 at 2017-08-23 23:01:16 +1000
+Processing by DirectorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDirector Load (0.2ms)[0m  [1m[34mSELECT  "directors".* FROM "directors" WHERE "directors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering directors/show.html.erb within layouts/application
+  Rendered directors/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 26ms (Views: 22.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/directors/1" for 127.0.0.1 at 2017-08-23 23:01:32 +1000
+Processing by DirectorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDirector Load (0.1ms)[0m  [1m[34mSELECT  "directors".* FROM "directors" WHERE "directors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering directors/show.html.erb within layouts/application
+  Rendered directors/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 39ms (Views: 36.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/directors/1" for 127.0.0.1 at 2017-08-23 23:02:23 +1000
+Processing by DirectorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDirector Load (0.1ms)[0m  [1m[34mSELECT  "directors".* FROM "directors" WHERE "directors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering directors/show.html.erb within layouts/application
+  Rendered directors/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 24ms (Views: 20.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/directors" for 127.0.0.1 at 2017-08-23 23:02:28 +1000
+Processing by DirectorsController#index as HTML
+  Rendering directors/index.html.erb within layouts/application
+  [1m[36mDirector Load (0.3ms)[0m  [1m[34mSELECT "directors".* FROM "directors"[0m
+  Rendered directors/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 26ms (Views: 21.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/directors" for 127.0.0.1 at 2017-08-23 23:02:40 +1000
+Processing by DirectorsController#index as HTML
+  Rendering directors/index.html.erb within layouts/application
+  [1m[36mDirector Load (0.2ms)[0m  [1m[34mSELECT "directors".* FROM "directors"[0m
+  Rendered directors/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 52ms (Views: 49.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/directors/1" for 127.0.0.1 at 2017-08-23 23:02:42 +1000
+Processing by DirectorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDirector Load (0.2ms)[0m  [1m[34mSELECT  "directors".* FROM "directors" WHERE "directors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering directors/show.html.erb within layouts/application
+  Rendered directors/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 30ms (Views: 22.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/directors/1" for 127.0.0.1 at 2017-08-23 23:02:52 +1000
+Processing by DirectorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDirector Load (0.1ms)[0m  [1m[34mSELECT  "directors".* FROM "directors" WHERE "directors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering directors/show.html.erb within layouts/application
+  Rendered directors/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 22ms (Views: 19.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/directors" for 127.0.0.1 at 2017-08-23 23:03:06 +1000
+Processing by DirectorsController#index as HTML
+  Rendering directors/index.html.erb within layouts/application
+  [1m[36mDirector Load (0.3ms)[0m  [1m[34mSELECT "directors".* FROM "directors"[0m
+  Rendered directors/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 30ms (Views: 26.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/directors/1" for 127.0.0.1 at 2017-08-23 23:07:54 +1000
+Processing by DirectorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDirector Load (0.9ms)[0m  [1m[34mSELECT  "directors".* FROM "directors" WHERE "directors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering directors/show.html.erb within layouts/application
+  Rendered directors/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 29ms (Views: 25.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-23 23:07:56 +1000
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/admin/Mina/.rvm/gems/ruby-2.4.0/gems/railties-5.1.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/admin/Mina/.rvm/gems/ruby-2.4.0/gems/railties-5.1.3/lib/rails/templates/rails/welcome/index.html.erb (2.6ms)
+Completed 200 OK in 9ms (Views: 5.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-23 23:07:56 +1000
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/admin/Mina/.rvm/gems/ruby-2.4.0/gems/railties-5.1.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/admin/Mina/.rvm/gems/ruby-2.4.0/gems/railties-5.1.3/lib/rails/templates/rails/welcome/index.html.erb (3.0ms)
+Completed 200 OK in 9ms (Views: 5.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/directors/directors_path" for 127.0.0.1 at 2017-08-23 23:08:01 +1000
+Processing by DirectorsController#show as HTML
+  Parameters: {"id"=>"directors_path"}
+  [1m[36mDirector Load (0.6ms)[0m  [1m[34mSELECT  "directors".* FROM "directors" WHERE "directors"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 3ms (ActiveRecord: 0.6ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Director with 'id'=directors_path):
+  
+app/controllers/directors_controller.rb:13:in `show'
+Started GET "/directors/1" for 127.0.0.1 at 2017-08-23 23:08:10 +1000
+Processing by DirectorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDirector Load (0.1ms)[0m  [1m[34mSELECT  "directors".* FROM "directors" WHERE "directors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering directors/show.html.erb within layouts/application
+  Rendered directors/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 48ms (Views: 45.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/directors/new_director_path" for 127.0.0.1 at 2017-08-23 23:08:12 +1000
+Processing by DirectorsController#show as HTML
+  Parameters: {"id"=>"new_director_path"}
+  [1m[36mDirector Load (0.1ms)[0m  [1m[34mSELECT  "directors".* FROM "directors" WHERE "directors"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.1ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Director with 'id'=new_director_path):
+  
+app/controllers/directors_controller.rb:13:in `show'
+Started GET "/directors/1" for 127.0.0.1 at 2017-08-23 23:08:16 +1000
+Processing by DirectorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDirector Load (0.1ms)[0m  [1m[34mSELECT  "directors".* FROM "directors" WHERE "directors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering directors/show.html.erb within layouts/application
+  Rendered directors/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 22ms (Views: 18.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/directors/directors_path" for 127.0.0.1 at 2017-08-23 23:08:19 +1000
+Processing by DirectorsController#show as HTML
+  Parameters: {"id"=>"directors_path"}
+  [1m[36mDirector Load (0.2ms)[0m  [1m[34mSELECT  "directors".* FROM "directors" WHERE "directors"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 1ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Director with 'id'=directors_path):
+  
+app/controllers/directors_controller.rb:13:in `show'
+Started GET "/directors/1" for 127.0.0.1 at 2017-08-23 23:08:21 +1000
+Processing by DirectorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDirector Load (0.1ms)[0m  [1m[34mSELECT  "directors".* FROM "directors" WHERE "directors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering directors/show.html.erb within layouts/application
+  Rendered directors/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 21ms (Views: 18.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-23 23:08:22 +1000
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/admin/Mina/.rvm/gems/ruby-2.4.0/gems/railties-5.1.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/admin/Mina/.rvm/gems/ruby-2.4.0/gems/railties-5.1.3/lib/rails/templates/rails/welcome/index.html.erb (3.5ms)
+Completed 200 OK in 12ms (Views: 6.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-23 23:08:22 +1000
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/admin/Mina/.rvm/gems/ruby-2.4.0/gems/railties-5.1.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/admin/Mina/.rvm/gems/ruby-2.4.0/gems/railties-5.1.3/lib/rails/templates/rails/welcome/index.html.erb (2.9ms)
+Completed 200 OK in 8ms (Views: 5.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/director" for 127.0.0.1 at 2017-08-23 23:08:49 +1000
+  
+ActionController::RoutingError (No route matches [GET] "/director"):
+  
+actionpack (5.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.3) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.3) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/directors/1" for 127.0.0.1 at 2017-08-23 23:08:54 +1000
+Processing by DirectorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDirector Load (0.6ms)[0m  [1m[34mSELECT  "directors".* FROM "directors" WHERE "directors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering directors/show.html.erb within layouts/application
+  Rendered directors/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 39ms (Views: 19.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-23 23:08:57 +1000
+  
+ActionController::RoutingError (uninitialized constant DorectorsController):
+  
+activesupport (5.1.3) lib/active_support/inflector/methods.rb:269:in `const_get'
+activesupport (5.1.3) lib/active_support/inflector/methods.rb:269:in `block in constantize'
+activesupport (5.1.3) lib/active_support/inflector/methods.rb:267:in `each'
+activesupport (5.1.3) lib/active_support/inflector/methods.rb:267:in `inject'
+activesupport (5.1.3) lib/active_support/inflector/methods.rb:267:in `constantize'
+actionpack (5.1.3) lib/action_dispatch/http/request.rb:82:in `controller_class'
+actionpack (5.1.3) lib/action_dispatch/routing/route_set.rb:43:in `controller'
+actionpack (5.1.3) lib/action_dispatch/routing/route_set.rb:29:in `serve'
+actionpack (5.1.3) lib/action_dispatch/journey/router.rb:46:in `block in serve'
+actionpack (5.1.3) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.3) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.3) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.3) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.3) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.3) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.3) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.3) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/directors/1" for 127.0.0.1 at 2017-08-23 23:09:06 +1000
+Processing by DirectorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDirector Load (0.1ms)[0m  [1m[34mSELECT  "directors".* FROM "directors" WHERE "directors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering directors/show.html.erb within layouts/application
+  Rendered directors/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 20ms (Views: 17.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-23 23:09:09 +1000
+  
+ActionController::RoutingError (uninitialized constant DorectorsController):
+  
+activesupport (5.1.3) lib/active_support/inflector/methods.rb:269:in `const_get'
+activesupport (5.1.3) lib/active_support/inflector/methods.rb:269:in `block in constantize'
+activesupport (5.1.3) lib/active_support/inflector/methods.rb:267:in `each'
+activesupport (5.1.3) lib/active_support/inflector/methods.rb:267:in `inject'
+activesupport (5.1.3) lib/active_support/inflector/methods.rb:267:in `constantize'
+actionpack (5.1.3) lib/action_dispatch/http/request.rb:82:in `controller_class'
+actionpack (5.1.3) lib/action_dispatch/routing/route_set.rb:43:in `controller'
+actionpack (5.1.3) lib/action_dispatch/routing/route_set.rb:29:in `serve'
+actionpack (5.1.3) lib/action_dispatch/journey/router.rb:46:in `block in serve'
+actionpack (5.1.3) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.3) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.3) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.3) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.3) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.3) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.3) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.3) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2017-08-23 23:09:29 +1000
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/admin/Mina/.rvm/gems/ruby-2.4.0/gems/railties-5.1.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/admin/Mina/.rvm/gems/ruby-2.4.0/gems/railties-5.1.3/lib/rails/templates/rails/welcome/index.html.erb (3.0ms)
+Completed 200 OK in 11ms (Views: 6.5ms)
+
+
+Started GET "/index" for 127.0.0.1 at 2017-08-23 23:09:37 +1000
+  
+ActionController::RoutingError (No route matches [GET] "/index"):
+  
+actionpack (5.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.3) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.3) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/index" for 127.0.0.1 at 2017-08-23 23:10:27 +1000
+  
+ActionController::RoutingError (No route matches [GET] "/index"):
+  
+actionpack (5.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.3) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.3) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/directors" for 127.0.0.1 at 2017-08-23 23:10:36 +1000
+Processing by DirectorsController#index as HTML
+  Rendering directors/index.html.erb within layouts/application
+  [1m[36mDirector Load (0.3ms)[0m  [1m[34mSELECT "directors".* FROM "directors"[0m
+  Rendered directors/index.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 35ms (Views: 27.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-23 23:10:39 +1000
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/admin/Mina/.rvm/gems/ruby-2.4.0/gems/railties-5.1.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/admin/Mina/.rvm/gems/ruby-2.4.0/gems/railties-5.1.3/lib/rails/templates/rails/welcome/index.html.erb (3.6ms)
+Completed 200 OK in 14ms (Views: 7.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-23 23:10:39 +1000
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/admin/Mina/.rvm/gems/ruby-2.4.0/gems/railties-5.1.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/admin/Mina/.rvm/gems/ruby-2.4.0/gems/railties-5.1.3/lib/rails/templates/rails/welcome/index.html.erb (3.5ms)
+Completed 200 OK in 9ms (Views: 6.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/directors" for 127.0.0.1 at 2017-08-23 23:10:43 +1000
+Processing by DirectorsController#index as HTML
+  Rendering directors/index.html.erb within layouts/application
+  [1m[36mDirector Load (0.2ms)[0m  [1m[34mSELECT "directors".* FROM "directors"[0m
+  Rendered directors/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 22ms (Views: 18.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/directors" for 127.0.0.1 at 2017-08-23 23:10:45 +1000
+Processing by DirectorsController#index as HTML
+  Rendering directors/index.html.erb within layouts/application
+  [1m[36mDirector Load (0.2ms)[0m  [1m[34mSELECT "directors".* FROM "directors"[0m
+  Rendered directors/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 26ms (Views: 21.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/directors" for 127.0.0.1 at 2017-08-23 23:10:46 +1000
+Processing by DirectorsController#index as HTML
+  Rendering directors/index.html.erb within layouts/application
+  [1m[36mDirector Load (0.2ms)[0m  [1m[34mSELECT "directors".* FROM "directors"[0m
+  Rendered directors/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 35ms (Views: 29.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/directors" for 127.0.0.1 at 2017-08-23 23:10:47 +1000
+Processing by DirectorsController#index as HTML
+  Rendering directors/index.html.erb within layouts/application
+  [1m[36mDirector Load (0.2ms)[0m  [1m[34mSELECT "directors".* FROM "directors"[0m
+  Rendered directors/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 38ms (Views: 32.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/directors/new" for 127.0.0.1 at 2017-08-23 23:10:48 +1000
+Processing by DirectorsController#new as HTML
+  Rendering directors/new.html.erb within layouts/application
+  Rendered directors/new.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 28ms (Views: 20.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/directors" for 127.0.0.1 at 2017-08-23 23:10:50 +1000
+Processing by DirectorsController#index as HTML
+  Rendering directors/index.html.erb within layouts/application
+  [1m[36mDirector Load (0.2ms)[0m  [1m[34mSELECT "directors".* FROM "directors"[0m
+  Rendered directors/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 36ms (Views: 30.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/directors/new" for 127.0.0.1 at 2017-08-23 23:10:51 +1000
+Processing by DirectorsController#new as HTML
+  Rendering directors/new.html.erb within layouts/application
+  Rendered directors/new.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 29ms (Views: 23.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/directors" for 127.0.0.1 at 2017-08-23 23:10:54 +1000
+Processing by DirectorsController#index as HTML
+  Rendering directors/index.html.erb within layouts/application
+  [1m[36mDirector Load (0.3ms)[0m  [1m[34mSELECT "directors".* FROM "directors"[0m
+  Rendered directors/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 30ms (Views: 23.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/directors/new" for 127.0.0.1 at 2017-08-23 23:10:55 +1000
+Processing by DirectorsController#new as HTML
+  Rendering directors/new.html.erb within layouts/application
+  Rendered directors/new.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 31ms (Views: 25.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/directors" for 127.0.0.1 at 2017-08-23 23:10:56 +1000
+Processing by DirectorsController#index as HTML
+  Rendering directors/index.html.erb within layouts/application
+  [1m[36mDirector Load (0.4ms)[0m  [1m[34mSELECT "directors".* FROM "directors"[0m
+  Rendered directors/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 30ms (Views: 23.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/directors/new" for 127.0.0.1 at 2017-08-23 23:10:56 +1000
+Processing by DirectorsController#new as HTML
+  Rendering directors/new.html.erb within layouts/application
+  Rendered directors/new.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 29ms (Views: 23.8ms | ActiveRecord: 0.0ms)
+
+
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/directors/new" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-23 23:18:05 +1000[0m
+[[1m[30mDEBUG[0m[0m]   [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+[INFO ] [35m===[0m Processing by [35mDirectorsController#new[0m as [33mHTML[0m
+[INFO ]   Rendering directors/new.html.erb within layouts/application
+[INFO ] [30m  Rendered [1mdirectors/new.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m1.3ms[0m
+[INFO ] Completed [32m200 OK[0m in 226ms [30m(Views: 199.3ms | ActiveRecord: 0.9ms)[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/directors" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-23 23:18:07 +1000[0m
+[INFO ] [35m===[0m Processing by [35mDirectorsController#index[0m as [33mHTML[0m
+[INFO ]   Rendering directors/index.html.erb within layouts/application
+[[1m[30mDEBUG[0m[0m]   [1m[36mDirector Load (3.0ms)[0m  [1m[34mSELECT "directors".* FROM "directors"[0m
+[INFO ] [30m  Rendered [1mdirectors/index.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m31.1ms[0m
+[INFO ] Completed [32m200 OK[0m in 61ms [30m(Views: 51.0ms | ActiveRecord: 3.5ms)[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/directors/new" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-23 23:18:08 +1000[0m
+[INFO ] [35m===[0m Processing by [35mDirectorsController#new[0m as [33mHTML[0m
+[INFO ]   Rendering directors/new.html.erb within layouts/application
+[INFO ] [30m  Rendered [1mdirectors/new.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m0.9ms[0m
+[INFO ] Completed [32m200 OK[0m in 29ms [30m(Views: 24.1ms | ActiveRecord: 0.0ms)[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/directors/new" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-23 23:22:02 +1000[0m
+[INFO ] [35m===[0m Processing by [35mDirectorsController#new[0m as [33mHTML[0m
+[INFO ]   Rendering directors/new.html.erb within layouts/application
+[INFO ] [30m  Rendered [1mdirectors/new.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m18.8ms[0m
+[INFO ] Completed [32m200 OK[0m in 54ms [30m(Views: 50.7ms | ActiveRecord: 0.0ms)[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/directors/new" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-23 23:29:12 +1000[0m
+[INFO ] [35m===[0m Processing by [35mDirectorsController#new[0m as [33mHTML[0m
+[INFO ]   Rendering directors/new.html.erb within layouts/application
+[INFO ] [30m  Rendered [1mdirectors/new.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m8.0ms[0m
+[INFO ] Completed [32m200 OK[0m in 46ms [30m(Views: 43.0ms | ActiveRecord: 0.0ms)[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/directors/new" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-23 23:33:02 +1000[0m
+[INFO ] [35m===[0m Processing by [35mDirectorsController#new[0m as [33mHTML[0m
+[INFO ]   Rendering directors/new.html.erb within layouts/application
+[INFO ] [30m  Rendered [1mdirectors/new.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m2.9ms[0m
+[INFO ] Completed [31m500 Internal Server Error[0m in 13ms [30m(ActiveRecord: 0.0ms)[0m
+[[41m[37mFATAL[0m[0m] [31mSyntaxError (/Users/admin/Mina/Desktop/WDi23-Homework/mina_parnian/week_05/day_03/director-app/app/views/directors/new.html.erb:15: syntax error, unexpected tSTRING_BEG, expecting ')'
+buffer.append=( f.label :dob "Date of birth");@output_buffer
+                              ^):[0m
+[[41m[37mFATAL[0m[0m] [31mapp/views/directors/new.html.erb:15: syntax error, unexpected tSTRING_BEG, expecting ')'[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/directors/new" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-23 23:33:09 +1000[0m
+[INFO ] [35m===[0m Processing by [35mDirectorsController#new[0m as [33mHTML[0m
+[INFO ]   Rendering directors/new.html.erb within layouts/application
+[INFO ] [30m  Rendered [1mdirectors/new.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m2.3ms[0m
+[INFO ] Completed [32m200 OK[0m in 26ms [30m(Views: 24.0ms | ActiveRecord: 0.0ms)[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/directors/new" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-23 23:34:02 +1000[0m
+[INFO ] [35m===[0m Processing by [35mDirectorsController#new[0m as [33mHTML[0m
+[INFO ]   Rendering directors/new.html.erb within layouts/application
+[INFO ] [30m  Rendered [1mdirectors/new.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m2.3ms[0m
+[INFO ] Completed [32m200 OK[0m in 23ms [30m(Views: 18.6ms | ActiveRecord: 0.0ms)[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/directors/new" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-23 23:36:40 +1000[0m
+[INFO ] [35m===[0m Processing by [35mDirectorsController#new[0m as [33mHTML[0m
+[INFO ]   Rendering directors/new.html.erb within layouts/application
+[INFO ] [30m  Rendered [1mdirectors/new.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m3.6ms[0m
+[INFO ] Completed [32m200 OK[0m in 55ms [30m(Views: 51.8ms | ActiveRecord: 0.0ms)[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/directors/new" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-23 23:37:02 +1000[0m
+[INFO ] [35m===[0m Processing by [35mDirectorsController#new[0m as [33mHTML[0m
+[INFO ]   Rendering directors/new.html.erb within layouts/application
+[INFO ] [30m  Rendered [1mdirectors/new.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m2.4ms[0m
+[INFO ] Completed [32m200 OK[0m in 45ms [30m(Views: 42.4ms | ActiveRecord: 0.0ms)[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/directors/new" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-23 23:38:51 +1000[0m
+[INFO ] [35m===[0m Processing by [35mDirectorsController#new[0m as [33mHTML[0m
+[INFO ]   Rendering directors/new.html.erb within layouts/application
+[INFO ] [30m  Rendered [1mdirectors/new.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m3.2ms[0m
+[INFO ] Completed [32m200 OK[0m in 41ms [30m(Views: 38.8ms | ActiveRecord: 0.0ms)[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/directors/new" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-23 23:42:25 +1000[0m
+[INFO ] [35m===[0m Processing by [35mDirectorsController#new[0m as [33mHTML[0m
+[INFO ]   Rendering directors/new.html.erb within layouts/application
+[INFO ] [30m  Rendered [1mdirectors/new.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m2.9ms[0m
+[INFO ] Completed [32m200 OK[0m in 55ms [30m(Views: 51.8ms | ActiveRecord: 0.0ms)[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/directors/new" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-23 23:43:34 +1000[0m
+[INFO ] [35m===[0m Processing by [35mDirectorsController#new[0m as [33mHTML[0m
+[INFO ]   Rendering directors/new.html.erb within layouts/application
+[INFO ] [30m  Rendered [1mdirectors/new.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m3.3ms[0m
+[INFO ] Completed [32m200 OK[0m in 28ms [30m(Views: 25.4ms | ActiveRecord: 0.0ms)[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/directors/new" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-23 23:43:52 +1000[0m
+[INFO ] [35m===[0m Processing by [35mDirectorsController#new[0m as [33mHTML[0m
+[INFO ]   Rendering directors/new.html.erb within layouts/application
+[INFO ] [30m  Rendered [1mdirectors/new.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m2.5ms[0m
+[INFO ] Completed [32m200 OK[0m in 25ms [30m(Views: 22.0ms | ActiveRecord: 0.0ms)[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/directors" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-23 23:43:53 +1000[0m
+[INFO ] [35m===[0m Processing by [35mDirectorsController#index[0m as [33mHTML[0m
+[INFO ]   Rendering directors/index.html.erb within layouts/application
+[[1m[30mDEBUG[0m[0m]   [1m[36mDirector Load (0.2ms)[0m  [1m[34mSELECT "directors".* FROM "directors"[0m
+[INFO ] [30m  Rendered [1mdirectors/index.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m2.5ms[0m
+[INFO ] Completed [32m200 OK[0m in 28ms [30m(Views: 23.5ms | ActiveRecord: 0.2ms)[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/directors/new" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-23 23:43:54 +1000[0m
+[INFO ] [35m===[0m Processing by [35mDirectorsController#new[0m as [33mHTML[0m
+[INFO ]   Rendering directors/new.html.erb within layouts/application
+[INFO ] [30m  Rendered [1mdirectors/new.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m2.4ms[0m
+[INFO ] Completed [32m200 OK[0m in 33ms [30m(Views: 27.7ms | ActiveRecord: 0.0ms)[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/directors/new" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-23 23:44:54 +1000[0m
+[INFO ] [35m===[0m Processing by [35mDirectorsController#new[0m as [33mHTML[0m
+[INFO ]   Rendering directors/new.html.erb within layouts/application
+[INFO ] [30m  Rendered [1mdirectors/new.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m3.3ms[0m
+[INFO ] Completed [32m200 OK[0m in 24ms [30m(Views: 21.5ms | ActiveRecord: 0.0ms)[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/directors/new" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-23 23:57:30 +1000[0m
+[INFO ] [35m===[0m Processing by [35mDirectorsController#new[0m as [33mHTML[0m
+[INFO ]   Rendering directors/new.html.erb within layouts/application
+[INFO ] [30m  Rendered [1mdirectors/new.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m2.3ms[0m
+[INFO ] Completed [32m200 OK[0m in 21ms [30m(Views: 18.8ms | ActiveRecord: 0.0ms)[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/directors/new" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-23 23:57:36 +1000[0m
+[INFO ] [35m===[0m Processing by [35mDirectorsController#new[0m as [33mHTML[0m
+[INFO ]   Rendering directors/new.html.erb within layouts/application
+[INFO ] [30m  Rendered [1mdirectors/new.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m2.3ms[0m
+[INFO ] Completed [32m200 OK[0m in 23ms [30m(Views: 19.7ms | ActiveRecord: 0.0ms)[0m
+[INFO ] [1m[32mPOST   [0m[0m[1m[37m "/directors" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 00:05:41 +1000[0m
+[[41m[37mFATAL[0m[0m] [31mSyntaxError (/Users/admin/Mina/Desktop/WDi23-Homework/mina_parnian/week_05/day_03/director-app/app/controllers/directors_controller.rb:24: syntax error, unexpected end-of-input, expecting keyword_end):[0m
+[[41m[37mFATAL[0m[0m] [31mapp/controllers/directors_controller.rb:24: syntax error, unexpected end-of-input, expecting keyword_end[0m
+[INFO ] [1m[32mPOST   [0m[0m[1m[37m "/directors" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 00:08:22 +1000[0m
+[INFO ] [35m===[0m Processing by [35mDirectorsController#create[0m as [33mHTML[0m
+[INFO ]   Parameters: {"utf8"=>"✓", "authenticity_token"=>"bm5ggDU8lC/AsTAhRy0ZkGbrGaqY7UIF5i38fG/VCVwxncpSPb9EKDMFGaXsOD1fHu+cg4IUqTPUuXnNuv3L3A==", "director"=>{"name"=>"", "nationality"=>"", "dob"=>"", "years_active"=>"", "image"=>""}, "commit"=>"Create Director"}
+[INFO ] Completed [31m500 Internal Server Error[0m in 2ms [30m[0m
+[[41m[37mFATAL[0m[0m] [31mRuntimeError (<ActionController::Parameters {"utf8"=>"✓", "authenticity_token"=>"bm5ggDU8lC/AsTAhRy0ZkGbrGaqY7UIF5i38fG/VCVwxncpSPb9EKDMFGaXsOD1fHu+cg4IUqTPUuXnNuv3L3A==", "director"=>{"name"=>"", "nationality"=>"", "dob"=>"", "years_active"=>"", "image"=>""}, "commit"=>"Create Director", "controller"=>"directors", "action"=>"create"} permitted: false>):[0m
+[[41m[37mFATAL[0m[0m] [31mapp/controllers/directors_controller.rb:11:in `create'[0m
+[INFO ] [1m[32mPOST   [0m[0m[1m[37m "/directors" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 00:11:48 +1000[0m
+[INFO ] [35m===[0m Processing by [35mDirectorsController#create[0m as [33mHTML[0m
+[INFO ]   Parameters: {"utf8"=>"✓", "authenticity_token"=>"bm5ggDU8lC/AsTAhRy0ZkGbrGaqY7UIF5i38fG/VCVwxncpSPb9EKDMFGaXsOD1fHu+cg4IUqTPUuXnNuv3L3A==", "director"=>{"name"=>"", "nationality"=>"", "dob"=>"", "years_active"=>"", "image"=>""}, "commit"=>"Create Director"}
+[INFO ] Completed [31m500 Internal Server Error[0m in 4ms [30m[0m
+[[41m[37mFATAL[0m[0m] [31mNoMethodError (undefined method `create' for nil:NilClass):[0m
+[[41m[37mFATAL[0m[0m] [31mapp/controllers/directors_controller.rb:11:in `create'[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/directors/new" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 00:14:11 +1000[0m
+[INFO ] [35m===[0m Processing by [35mDirectorsController#new[0m as [33mHTML[0m
+[INFO ]   Rendering directors/new.html.erb within layouts/application
+[INFO ] [30m  Rendered [1mdirectors/new.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m0.8ms[0m
+[INFO ] Completed [31m500 Internal Server Error[0m in 28ms [30m(ActiveRecord: 1.2ms)[0m
+[[41m[37mFATAL[0m[0m] [31mSyntaxError (/Users/admin/Mina/Desktop/WDi23-Homework/mina_parnian/week_05/day_03/director-app/app/views/directors/new.html.erb:15: syntax error, unexpected ':', expecting ')'
+.label :dob, "Date of birth" :placeholder "1954/08/16");@out
+                              ^):[0m
+[[41m[37mFATAL[0m[0m] [31mapp/views/directors/new.html.erb:15: syntax error, unexpected ':', expecting ')'[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/directors/new" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 00:14:14 +1000[0m
+[INFO ] [35m===[0m Processing by [35mDirectorsController#new[0m as [33mHTML[0m
+[INFO ]   Rendering directors/new.html.erb within layouts/application
+[INFO ] [30m  Rendered [1mdirectors/new.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m0.8ms[0m
+[INFO ] Completed [31m500 Internal Server Error[0m in 9ms [30m(ActiveRecord: 0.0ms)[0m
+[[41m[37mFATAL[0m[0m] [31mSyntaxError (/Users/admin/Mina/Desktop/WDi23-Homework/mina_parnian/week_05/day_03/director-app/app/views/directors/new.html.erb:15: syntax error, unexpected ':', expecting ')'
+.label :dob, "Date of birth" :placeholder "1954/08/16");@out
+                              ^):[0m
+[[41m[37mFATAL[0m[0m] [31mapp/views/directors/new.html.erb:15: syntax error, unexpected ':', expecting ')'[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/directors/new" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 00:14:39 +1000[0m
+[INFO ] [35m===[0m Processing by [35mDirectorsController#new[0m as [33mHTML[0m
+[INFO ]   Rendering directors/new.html.erb within layouts/application
+[INFO ] [30m  Rendered [1mdirectors/new.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m0.9ms[0m
+[INFO ] Completed [31m500 Internal Server Error[0m in 9ms [30m(ActiveRecord: 0.0ms)[0m
+[[41m[37mFATAL[0m[0m] [31mSyntaxError (/Users/admin/Mina/Desktop/WDi23-Homework/mina_parnian/week_05/day_03/director-app/app/views/directors/new.html.erb:15: syntax error, unexpected tSTRING_BEG, expecting ')'
+Date of birth", :placeholder "1954/08/16");@output_buffer.sa
+                              ^):[0m
+[[41m[37mFATAL[0m[0m] [31mapp/views/directors/new.html.erb:15: syntax error, unexpected tSTRING_BEG, expecting ')'[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/directors/new" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 00:14:47 +1000[0m
+[INFO ] [35m===[0m Processing by [35mDirectorsController#new[0m as [33mHTML[0m
+[INFO ]   Rendering directors/new.html.erb within layouts/application
+[INFO ] [30m  Rendered [1mdirectors/new.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m0.8ms[0m
+[INFO ] Completed [31m500 Internal Server Error[0m in 10ms [30m(ActiveRecord: 0.0ms)[0m
+[[41m[37mFATAL[0m[0m] [31mSyntaxError (/Users/admin/Mina/Desktop/WDi23-Homework/mina_parnian/week_05/day_03/director-app/app/views/directors/new.html.erb:15: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+"Date of birth", placeholder "1954/08/16");@output_buffer.sa
+                              ^):[0m
+[[41m[37mFATAL[0m[0m] [31mapp/views/directors/new.html.erb:15: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/directors/new" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 00:15:06 +1000[0m
+[INFO ] [35m===[0m Processing by [35mDirectorsController#new[0m as [33mHTML[0m
+[INFO ]   Rendering directors/new.html.erb within layouts/application
+[INFO ] [30m  Rendered [1mdirectors/new.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m5.4ms[0m
+[INFO ] Completed [32m200 OK[0m in 33ms [30m(Views: 30.8ms | ActiveRecord: 0.0ms)[0m
+[INFO ] [1m[32mPOST   [0m[0m[1m[37m "/directors" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 00:16:39 +1000[0m
+[INFO ] [35m===[0m Processing by [35mDirectorsController#create[0m as [33mHTML[0m
+[INFO ]   Parameters: {"utf8"=>"✓", "authenticity_token"=>"Hii9gkUxcbG5BOb7lwJ4Hy+2S5v7RRgvtwSabMuYPk1B2xdQTbKhtkqwz388F1zQV7LOsuG88xmFkB/dHrD8zQ==", "director"=>{"name"=>"John Woo", "nationality"=>"Chinese", "dob"=>"1954/08/16", "years_active"=>"1986-present", "image"=>"https://www.google.com.au/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=0ahUKEwjtmsHaxe3VAhUM9WMKHdVICP4QjBwIBA&url=http%3A%2F%2Fwww.chinadaily.com.cn%2Fworld%2Fimages%2Fattachement%2Fjpg%2Fsite1%2F20160302%2Fd8cb8a5155b01840833601.jpg&psig=AFQjCNGNsABWyNrTbs1BeFoFcvtA9m3m3w&ust=1503584176990467"}, "commit"=>"Create Director"}
+[INFO ] Completed [31m500 Internal Server Error[0m in 2ms [30m(ActiveRecord: 0.0ms)[0m
+[[41m[37mFATAL[0m[0m] [31mNoMethodError (undefined method `create' for nil:NilClass):[0m
+[[41m[37mFATAL[0m[0m] [31mapp/controllers/directors_controller.rb:11:in `create'[0m
+[INFO ] [1m[32mPOST   [0m[0m[1m[37m "/directors" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 00:16:58 +1000[0m
+[INFO ] [35m===[0m Processing by [35mDirectorsController#create[0m as [33mHTML[0m
+[INFO ]   Parameters: {"utf8"=>"✓", "authenticity_token"=>"Hii9gkUxcbG5BOb7lwJ4Hy+2S5v7RRgvtwSabMuYPk1B2xdQTbKhtkqwz388F1zQV7LOsuG88xmFkB/dHrD8zQ==", "director"=>{"name"=>"John Woo", "nationality"=>"Chinese", "dob"=>"1954/08/16", "years_active"=>"1986-present", "image"=>"https://www.google.com.au/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=0ahUKEwjtmsHaxe3VAhUM9WMKHdVICP4QjBwIBA&url=http%3A%2F%2Fwww.chinadaily.com.cn%2Fworld%2Fimages%2Fattachement%2Fjpg%2Fsite1%2F20160302%2Fd8cb8a5155b01840833601.jpg&psig=AFQjCNGNsABWyNrTbs1BeFoFcvtA9m3m3w&ust=1503584176990467"}, "commit"=>"Create Director"}
+[[1m[30mDEBUG[0m[0m]   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[[1m[30mDEBUG[0m[0m]   [1m[35mSQL (1.4ms)[0m  [1m[32mINSERT INTO "directors" ("name", "nationality", "dob", "years_active", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "John Woo"], ["nationality", "Chinese"], ["dob", "1954/08/16"], ["years_active", "1986-present"], ["image", "https://www.google.com.au/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=0ahUKEwjtmsHaxe3VAhUM9WMKHdVICP4QjBwIBA&url=http%3A%2F%2Fwww.chinadaily.com.cn%2Fworld%2Fimages%2Fattachement%2Fjpg%2Fsite1%2F20160302%2Fd8cb8a5155b01840833601.jpg&psig=AFQjCNGNsABWyNrTbs1BeFoFcvtA9m3m3w&ust=1503584176990467"], ["created_at", "2017-08-23 14:16:58.546513"], ["updated_at", "2017-08-23 14:16:58.546513"]]
+[[1m[30mDEBUG[0m[0m]   [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+[INFO ] Redirected to http://localhost:3000/directors/2
+[INFO ] Completed [32m302 Found[0m in 26ms [30m(ActiveRecord: 3.1ms)[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/directors/2" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 00:16:58 +1000[0m
+[INFO ] [35m===[0m Processing by [35mDirectorsController#show[0m as [33mHTML[0m
+[INFO ]   Parameters: {"id"=>"2"}
+[[1m[30mDEBUG[0m[0m]   [1m[36mDirector Load (0.3ms)[0m  [1m[34mSELECT  "directors".* FROM "directors" WHERE "directors"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[INFO ]   Rendering directors/show.html.erb within layouts/application
+[INFO ] [30m  Rendered [1mdirectors/show.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m1.2ms[0m
+[INFO ] Completed [32m200 OK[0m in 56ms [30m(Views: 35.8ms | ActiveRecord: 0.3ms)[0m
+[INFO ] [1m[32mPOST   [0m[0m[1m[37m "/directors" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 00:17:41 +1000[0m
+[INFO ] [35m===[0m Processing by [35mDirectorsController#create[0m as [33mHTML[0m
+[INFO ]   Parameters: {"utf8"=>"✓", "authenticity_token"=>"Hii9gkUxcbG5BOb7lwJ4Hy+2S5v7RRgvtwSabMuYPk1B2xdQTbKhtkqwz388F1zQV7LOsuG88xmFkB/dHrD8zQ==", "director"=>{"name"=>"John Woo", "nationality"=>"Chinese", "dob"=>"1954/08/16", "years_active"=>"1986-present", "image"=>"http://www.chinadaily.com.cn/world/images/attachement/jpg/site1/20160302/d8cb8a5155b01840833601.jpg"}, "commit"=>"Create Director"}
+[[1m[30mDEBUG[0m[0m]   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[[1m[30mDEBUG[0m[0m]   [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "directors" ("name", "nationality", "dob", "years_active", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "John Woo"], ["nationality", "Chinese"], ["dob", "1954/08/16"], ["years_active", "1986-present"], ["image", "http://www.chinadaily.com.cn/world/images/attachement/jpg/site1/20160302/d8cb8a5155b01840833601.jpg"], ["created_at", "2017-08-23 14:17:41.899524"], ["updated_at", "2017-08-23 14:17:41.899524"]]
+[[1m[30mDEBUG[0m[0m]   [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+[INFO ] Redirected to http://localhost:3000/directors/3
+[INFO ] Completed [32m302 Found[0m in 6ms [30m(ActiveRecord: 1.9ms)[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/directors/3" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 00:17:41 +1000[0m
+[INFO ] [35m===[0m Processing by [35mDirectorsController#show[0m as [33mHTML[0m
+[INFO ]   Parameters: {"id"=>"3"}
+[[1m[30mDEBUG[0m[0m]   [1m[36mDirector Load (0.3ms)[0m  [1m[34mSELECT  "directors".* FROM "directors" WHERE "directors"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[INFO ]   Rendering directors/show.html.erb within layouts/application
+[INFO ] [30m  Rendered [1mdirectors/show.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m0.7ms[0m
+[INFO ] Completed [32m200 OK[0m in 30ms [30m(Views: 24.6ms | ActiveRecord: 0.2ms)[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/directors/3" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 00:27:27 +1000[0m
+[INFO ] [35m===[0m Processing by [35mDirectorsController#show[0m as [33mHTML[0m
+[INFO ]   Parameters: {"id"=>"3"}
+[[1m[30mDEBUG[0m[0m]   [1m[36mDirector Load (0.2ms)[0m  [1m[34mSELECT  "directors".* FROM "directors" WHERE "directors"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[INFO ]   Rendering directors/show.html.erb within layouts/application
+[INFO ] [30m  Rendered [1mdirectors/show.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m0.7ms[0m
+[INFO ] Completed [31m500 Internal Server Error[0m in 11ms [30m(ActiveRecord: 0.2ms)[0m
+[[41m[37mFATAL[0m[0m] [31mSyntaxError (/Users/admin/Mina/Desktop/WDi23-Homework/mina_parnian/week_05/day_03/director-app/app/views/directors/show.html.erb:10: syntax error, unexpected tIVAR, expecting ')'
+to "Delete Director" @director, :method => :delete );@output
+                              ^
+/Users/admin/Mina/Desktop/WDi23-Homework/mina_parnian/week_05/day_03/director-app/app/views/directors/show.html.erb:10: syntax error, unexpected =>, expecting &. or :: or '[' or '.'
+irector" @director, :method => :delete );@output_buffer.safe
+                              ^):[0m
+[[41m[37mFATAL[0m[0m] [31mapp/views/directors/show.html.erb:10: syntax error, unexpected tIVAR, expecting ')'
+app/views/directors/show.html.erb:10: syntax error, unexpected =>, expecting &. or :: or '[' or '.'[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/directors/3" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 00:28:42 +1000[0m
+[INFO ] [35m===[0m Processing by [35mDirectorsController#show[0m as [33mHTML[0m
+[INFO ]   Parameters: {"id"=>"3"}
+[[1m[30mDEBUG[0m[0m]   [1m[36mDirector Load (0.2ms)[0m  [1m[34mSELECT  "directors".* FROM "directors" WHERE "directors"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[INFO ]   Rendering directors/show.html.erb within layouts/application
+[INFO ] [30m  Rendered [1mdirectors/show.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m0.7ms[0m
+[INFO ] Completed [31m500 Internal Server Error[0m in 11ms [30m(ActiveRecord: 0.2ms)[0m
+[[41m[37mFATAL[0m[0m] [31mSyntaxError (/Users/admin/Mina/Desktop/WDi23-Homework/mina_parnian/week_05/day_03/director-app/app/views/directors/show.html.erb:11: syntax error, unexpected tIVAR, expecting ')'
+to "Delete Director" @director, :method => :delete );@output
+                              ^
+/Users/admin/Mina/Desktop/WDi23-Homework/mina_parnian/week_05/day_03/director-app/app/views/directors/show.html.erb:11: syntax error, unexpected =>, expecting &. or :: or '[' or '.'
+irector" @director, :method => :delete );@output_buffer.safe
+                              ^):[0m
+[[41m[37mFATAL[0m[0m] [31mapp/views/directors/show.html.erb:11: syntax error, unexpected tIVAR, expecting ')'
+app/views/directors/show.html.erb:11: syntax error, unexpected =>, expecting &. or :: or '[' or '.'[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/directors/3" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 00:29:19 +1000[0m
+[INFO ] [35m===[0m Processing by [35mDirectorsController#show[0m as [33mHTML[0m
+[INFO ]   Parameters: {"id"=>"3"}
+[[1m[30mDEBUG[0m[0m]   [1m[36mDirector Load (0.1ms)[0m  [1m[34mSELECT  "directors".* FROM "directors" WHERE "directors"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[INFO ]   Rendering directors/show.html.erb within layouts/application
+[INFO ] [30m  Rendered [1mdirectors/show.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m0.6ms[0m
+[INFO ] Completed [31m500 Internal Server Error[0m in 9ms [30m(ActiveRecord: 0.1ms)[0m
+[[41m[37mFATAL[0m[0m] [31mSyntaxError (/Users/admin/Mina/Desktop/WDi23-Homework/mina_parnian/week_05/day_03/director-app/app/views/directors/show.html.erb:11: syntax error, unexpected tIVAR, expecting ')'
+to "Delete director" @director, :method => :delete );@output
+                              ^
+/Users/admin/Mina/Desktop/WDi23-Homework/mina_parnian/week_05/day_03/director-app/app/views/directors/show.html.erb:11: syntax error, unexpected =>, expecting &. or :: or '[' or '.'
+irector" @director, :method => :delete );@output_buffer.safe
+                              ^):[0m
+[[41m[37mFATAL[0m[0m] [31mapp/views/directors/show.html.erb:11: syntax error, unexpected tIVAR, expecting ')'
+app/views/directors/show.html.erb:11: syntax error, unexpected =>, expecting &. or :: or '[' or '.'[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/directors/3" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 00:29:20 +1000[0m
+[INFO ] [35m===[0m Processing by [35mDirectorsController#show[0m as [33mHTML[0m
+[INFO ]   Parameters: {"id"=>"3"}
+[[1m[30mDEBUG[0m[0m]   [1m[36mDirector Load (0.1ms)[0m  [1m[34mSELECT  "directors".* FROM "directors" WHERE "directors"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[INFO ]   Rendering directors/show.html.erb within layouts/application
+[INFO ] [30m  Rendered [1mdirectors/show.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m0.6ms[0m
+[INFO ] Completed [31m500 Internal Server Error[0m in 9ms [30m(ActiveRecord: 0.1ms)[0m
+[[41m[37mFATAL[0m[0m] [31mSyntaxError (/Users/admin/Mina/Desktop/WDi23-Homework/mina_parnian/week_05/day_03/director-app/app/views/directors/show.html.erb:11: syntax error, unexpected tIVAR, expecting ')'
+to "Delete director" @director, :method => :delete );@output
+                              ^
+/Users/admin/Mina/Desktop/WDi23-Homework/mina_parnian/week_05/day_03/director-app/app/views/directors/show.html.erb:11: syntax error, unexpected =>, expecting &. or :: or '[' or '.'
+irector" @director, :method => :delete );@output_buffer.safe
+                              ^):[0m
+[[41m[37mFATAL[0m[0m] [31mapp/views/directors/show.html.erb:11: syntax error, unexpected tIVAR, expecting ')'
+app/views/directors/show.html.erb:11: syntax error, unexpected =>, expecting &. or :: or '[' or '.'[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/directors/3" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 00:31:50 +1000[0m
+[INFO ] [35m===[0m Processing by [35mDirectorsController#show[0m as [33mHTML[0m
+[INFO ]   Parameters: {"id"=>"3"}
+[[1m[30mDEBUG[0m[0m]   [1m[36mDirector Load (0.3ms)[0m  [1m[34mSELECT  "directors".* FROM "directors" WHERE "directors"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[INFO ]   Rendering directors/show.html.erb within layouts/application
+[INFO ] [30m  Rendered [1mdirectors/show.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m1.1ms[0m
+[INFO ] Completed [31m500 Internal Server Error[0m in 42ms [30m(ActiveRecord: 1.6ms)[0m
+[[41m[37mFATAL[0m[0m] [31mSyntaxError (/Users/admin/Mina/Desktop/WDi23-Homework/mina_parnian/week_05/day_03/director-app/app/views/directors/show.html.erb:11: syntax error, unexpected tIVAR, expecting ')'
+to "Delete director" @director, :method => :delete );@output
+                              ^
+/Users/admin/Mina/Desktop/WDi23-Homework/mina_parnian/week_05/day_03/director-app/app/views/directors/show.html.erb:11: syntax error, unexpected =>, expecting &. or :: or '[' or '.'
+irector" @director, :method => :delete );@output_buffer.safe
+                              ^):[0m
+[[41m[37mFATAL[0m[0m] [31mapp/views/directors/show.html.erb:11: syntax error, unexpected tIVAR, expecting ')'
+app/views/directors/show.html.erb:11: syntax error, unexpected =>, expecting &. or :: or '[' or '.'[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/directors/3" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 00:34:38 +1000[0m
+[INFO ] [35m===[0m Processing by [35mDirectorsController#show[0m as [33mHTML[0m
+[INFO ]   Parameters: {"id"=>"3"}
+[[1m[30mDEBUG[0m[0m]   [1m[36mDirector Load (0.2ms)[0m  [1m[34mSELECT  "directors".* FROM "directors" WHERE "directors"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[INFO ]   Rendering directors/show.html.erb within layouts/application
+[INFO ] [30m  Rendered [1mdirectors/show.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m1.3ms[0m
+[INFO ] Completed [32m200 OK[0m in 23ms [30m(Views: 19.6ms | ActiveRecord: 0.2ms)[0m
+[INFO ] [1m[32mDELETE [0m[0m[1m[37m "/directors/3" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 00:34:43 +1000[0m
+[INFO ] [35m===[0m Processing by [35mDirectorsController#destroy[0m as [33mHTML[0m
+[INFO ]   Parameters: {"authenticity_token"=>"n4PuGwAV0MN7+iZQDandOJ+bE0d7jFKoE2Pb2fg9W5bAcETJCJYAxIhOD9SmvPn355+WbmF1uZ4h915oLRWZFg==", "id"=>"3"}
+[INFO ] No template found for DirectorsController#destroy, rendering head :no_content
+[INFO ] Completed [32m204 No Content[0m in 94ms [30m(ActiveRecord: 0.0ms)[0m
+[INFO ] [1m[32mDELETE [0m[0m[1m[37m "/directors/3" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 00:34:45 +1000[0m
+[INFO ] [35m===[0m Processing by [35mDirectorsController#destroy[0m as [33mHTML[0m
+[INFO ]   Parameters: {"authenticity_token"=>"n4PuGwAV0MN7+iZQDandOJ+bE0d7jFKoE2Pb2fg9W5bAcETJCJYAxIhOD9SmvPn355+WbmF1uZ4h915oLRWZFg==", "id"=>"3"}
+[INFO ] No template found for DirectorsController#destroy, rendering head :no_content
+[INFO ] Completed [32m204 No Content[0m in 90ms [30m(ActiveRecord: 0.0ms)[0m
+[INFO ] [1m[32mDELETE [0m[0m[1m[37m "/directors/3" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 00:36:00 +1000[0m
+[INFO ] [35m===[0m Processing by [35mDirectorsController#destroy[0m as [33mHTML[0m
+[INFO ]   Parameters: {"authenticity_token"=>"n4PuGwAV0MN7+iZQDandOJ+bE0d7jFKoE2Pb2fg9W5bAcETJCJYAxIhOD9SmvPn355+WbmF1uZ4h915oLRWZFg==", "id"=>"3"}
+[INFO ] No template found for DirectorsController#destroy, rendering head :no_content
+[INFO ] Completed [32m204 No Content[0m in 95ms [30m(ActiveRecord: 0.0ms)[0m
+[INFO ] [1m[32mDELETE [0m[0m[1m[37m "/directors/3" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 00:36:01 +1000[0m
+[INFO ] [35m===[0m Processing by [35mDirectorsController#destroy[0m as [33mHTML[0m
+[INFO ]   Parameters: {"authenticity_token"=>"n4PuGwAV0MN7+iZQDandOJ+bE0d7jFKoE2Pb2fg9W5bAcETJCJYAxIhOD9SmvPn355+WbmF1uZ4h915oLRWZFg==", "id"=>"3"}
+[INFO ] No template found for DirectorsController#destroy, rendering head :no_content
+[INFO ] Completed [32m204 No Content[0m in 90ms [30m(ActiveRecord: 0.0ms)[0m
+[INFO ] [1m[32mDELETE [0m[0m[1m[37m "/directors/3" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 00:38:53 +1000[0m
+[INFO ] [35m===[0m Processing by [35mDirectorsController#destroy[0m as [33mHTML[0m
+[INFO ]   Parameters: {"authenticity_token"=>"n4PuGwAV0MN7+iZQDandOJ+bE0d7jFKoE2Pb2fg9W5bAcETJCJYAxIhOD9SmvPn355+WbmF1uZ4h915oLRWZFg==", "id"=>"3"}
+[INFO ] Completed [31m500 Internal Server Error[0m in 2ms [30m[0m
+[[41m[37mFATAL[0m[0m] [31mNoMethodError (undefined method `find' for nil:NilClass):[0m
+[[41m[37mFATAL[0m[0m] [31mapp/controllers/directors_controller.rb:23:in `destroy'[0m
+[INFO ] [1m[32mDELETE [0m[0m[1m[37m "/directors/3" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 00:39:09 +1000[0m
+[INFO ] [35m===[0m Processing by [35mDirectorsController#destroy[0m as [33mHTML[0m
+[INFO ]   Parameters: {"authenticity_token"=>"n4PuGwAV0MN7+iZQDandOJ+bE0d7jFKoE2Pb2fg9W5bAcETJCJYAxIhOD9SmvPn355+WbmF1uZ4h915oLRWZFg==", "id"=>"3"}
+[[1m[30mDEBUG[0m[0m]   [1m[36mDirector Load (0.1ms)[0m  [1m[34mSELECT  "directors".* FROM "directors" WHERE "directors"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[[1m[30mDEBUG[0m[0m]   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[[1m[30mDEBUG[0m[0m]   [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "directors" WHERE "directors"."id" = ?[0m  [["id", 3]]
+[[1m[30mDEBUG[0m[0m]   [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+[INFO ] Redirected to http://localhost:3000/directors/3
+[INFO ] Completed [32m302 Found[0m in 25ms [30m(ActiveRecord: 2.5ms)[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/directors/3" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 00:39:09 +1000[0m
+[INFO ] [35m===[0m Processing by [35mDirectorsController#show[0m as [33mHTML[0m
+[INFO ]   Parameters: {"id"=>"3"}
+[[1m[30mDEBUG[0m[0m]   [1m[36mDirector Load (0.1ms)[0m  [1m[34mSELECT  "directors".* FROM "directors" WHERE "directors"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[INFO ] Completed [33m404 Not Found[0m in 1ms [30m(ActiveRecord: 0.1ms)[0m
+[[41m[37mFATAL[0m[0m] [31mActiveRecord::RecordNotFound (Couldn't find Director with 'id'=3):[0m
+[[41m[37mFATAL[0m[0m] [31mapp/controllers/directors_controller.rb:19:in `show'[0m
+[INFO ] [1m[32mPOST   [0m[0m[1m[37m "/directors" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 00:39:46 +1000[0m
+[INFO ] [35m===[0m Processing by [35mDirectorsController#create[0m as [33mHTML[0m
+[INFO ]   Parameters: {"utf8"=>"✓", "authenticity_token"=>"Hii9gkUxcbG5BOb7lwJ4Hy+2S5v7RRgvtwSabMuYPk1B2xdQTbKhtkqwz388F1zQV7LOsuG88xmFkB/dHrD8zQ==", "director"=>{"name"=>"John Woo", "nationality"=>"Chinese", "dob"=>"1954/08/16", "years_active"=>"1986-present", "image"=>"http://www.chinadaily.com.cn/world/images/attachement/jpg/site1/20160302/d8cb8a5155b01840833601.jpg"}, "commit"=>"Create Director"}
+[[1m[30mDEBUG[0m[0m]   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[[1m[30mDEBUG[0m[0m]   [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "directors" ("name", "nationality", "dob", "years_active", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "John Woo"], ["nationality", "Chinese"], ["dob", "1954/08/16"], ["years_active", "1986-present"], ["image", "http://www.chinadaily.com.cn/world/images/attachement/jpg/site1/20160302/d8cb8a5155b01840833601.jpg"], ["created_at", "2017-08-23 14:39:46.973398"], ["updated_at", "2017-08-23 14:39:46.973398"]]
+[[1m[30mDEBUG[0m[0m]   [1m[35m (3.5ms)[0m  [1m[36mcommit transaction[0m
+[INFO ] Redirected to http://localhost:3000/directors/4
+[INFO ] Completed [32m302 Found[0m in 8ms [30m(ActiveRecord: 3.9ms)[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/directors/4" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 00:39:46 +1000[0m
+[INFO ] [35m===[0m Processing by [35mDirectorsController#show[0m as [33mHTML[0m
+[INFO ]   Parameters: {"id"=>"4"}
+[[1m[30mDEBUG[0m[0m]   [1m[36mDirector Load (0.2ms)[0m  [1m[34mSELECT  "directors".* FROM "directors" WHERE "directors"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+[INFO ]   Rendering directors/show.html.erb within layouts/application
+[INFO ] [30m  Rendered [1mdirectors/show.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m1.0ms[0m
+[INFO ] Completed [32m200 OK[0m in 21ms [30m(Views: 17.9ms | ActiveRecord: 0.2ms)[0m
+[INFO ] [1m[32mDELETE [0m[0m[1m[37m "/directors/4" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 00:39:51 +1000[0m
+[INFO ] [35m===[0m Processing by [35mDirectorsController#destroy[0m as [33mHTML[0m
+[INFO ]   Parameters: {"authenticity_token"=>"cRVXBWk91wQ1IfgAyawg/QJDeObPTOUyDXQ/bT9FA6gu5v3XYb4HA8aV0YRiuQQyekf9z9W1DgQ/4Lrc6m3BKA==", "id"=>"4"}
+[[1m[30mDEBUG[0m[0m]   [1m[36mDirector Load (0.1ms)[0m  [1m[34mSELECT  "directors".* FROM "directors" WHERE "directors"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+[[1m[30mDEBUG[0m[0m]   [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+[[1m[30mDEBUG[0m[0m]   [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "directors" WHERE "directors"."id" = ?[0m  [["id", 4]]
+[[1m[30mDEBUG[0m[0m]   [1m[35m (3.1ms)[0m  [1m[36mcommit transaction[0m
+[INFO ] Redirected to http://localhost:3000/directors/4
+[INFO ] Completed [32m302 Found[0m in 7ms [30m(ActiveRecord: 3.6ms)[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/directors/4" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 00:39:51 +1000[0m
+[INFO ] [35m===[0m Processing by [35mDirectorsController#show[0m as [33mHTML[0m
+[INFO ]   Parameters: {"id"=>"4"}
+[[1m[30mDEBUG[0m[0m]   [1m[36mDirector Load (0.2ms)[0m  [1m[34mSELECT  "directors".* FROM "directors" WHERE "directors"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+[INFO ] Completed [33m404 Not Found[0m in 2ms [30m(ActiveRecord: 0.2ms)[0m
+[[41m[37mFATAL[0m[0m] [31mActiveRecord::RecordNotFound (Couldn't find Director with 'id'=4):[0m
+[[41m[37mFATAL[0m[0m] [31mapp/controllers/directors_controller.rb:19:in `show'[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/directors" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 00:40:00 +1000[0m
+[INFO ] [35m===[0m Processing by [35mDirectorsController#index[0m as [33mHTML[0m
+[INFO ]   Rendering directors/index.html.erb within layouts/application
+[[1m[30mDEBUG[0m[0m]   [1m[36mDirector Load (0.3ms)[0m  [1m[34mSELECT "directors".* FROM "directors"[0m
+[INFO ] [30m  Rendered [1mdirectors/index.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m3.2ms[0m
+[INFO ] Completed [32m200 OK[0m in 31ms [30m(Views: 23.7ms | ActiveRecord: 0.3ms)[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/directors/new" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 00:40:04 +1000[0m
+[INFO ] [35m===[0m Processing by [35mDirectorsController#new[0m as [33mHTML[0m
+[INFO ]   Rendering directors/new.html.erb within layouts/application
+[INFO ] [30m  Rendered [1mdirectors/new.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m4.7ms[0m
+[INFO ] Completed [32m200 OK[0m in 38ms [30m(Views: 31.7ms | ActiveRecord: 0.0ms)[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/directors" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 00:40:06 +1000[0m
+[INFO ] [35m===[0m Processing by [35mDirectorsController#index[0m as [33mHTML[0m
+[INFO ]   Rendering directors/index.html.erb within layouts/application
+[[1m[30mDEBUG[0m[0m]   [1m[36mDirector Load (0.2ms)[0m  [1m[34mSELECT "directors".* FROM "directors"[0m
+[INFO ] [30m  Rendered [1mdirectors/index.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m2.3ms[0m
+[INFO ] Completed [32m200 OK[0m in 33ms [30m(Views: 27.1ms | ActiveRecord: 0.2ms)[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/directors/2" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 00:40:17 +1000[0m
+[INFO ] [35m===[0m Processing by [35mDirectorsController#show[0m as [33mHTML[0m
+[INFO ]   Parameters: {"id"=>"2"}
+[[1m[30mDEBUG[0m[0m]   [1m[36mDirector Load (0.3ms)[0m  [1m[34mSELECT  "directors".* FROM "directors" WHERE "directors"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[INFO ]   Rendering directors/show.html.erb within layouts/application
+[INFO ] [30m  Rendered [1mdirectors/show.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m1.2ms[0m
+[INFO ] Completed [32m200 OK[0m in 30ms [30m(Views: 23.9ms | ActiveRecord: 0.3ms)[0m
+[INFO ] [1m[32mDELETE [0m[0m[1m[37m "/directors/2" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 00:40:21 +1000[0m
+[INFO ] [35m===[0m Processing by [35mDirectorsController#destroy[0m as [33mHTML[0m
+[INFO ]   Parameters: {"authenticity_token"=>"KpCHWEdR3hC6Mkn7kQ2HFfg0fCfderq4d6kQ1Z2WIvB1Yy2KT9IOF0mGYH86GKPagDD5DseDUY5FPZVkSL7gcA==", "id"=>"2"}
+[[1m[30mDEBUG[0m[0m]   [1m[36mDirector Load (0.2ms)[0m  [1m[34mSELECT  "directors".* FROM "directors" WHERE "directors"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[[1m[30mDEBUG[0m[0m]   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[[1m[30mDEBUG[0m[0m]   [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "directors" WHERE "directors"."id" = ?[0m  [["id", 2]]
+[[1m[30mDEBUG[0m[0m]   [1m[35m (2.8ms)[0m  [1m[36mcommit transaction[0m
+[INFO ] Redirected to http://localhost:3000/directors/2
+[INFO ] Completed [32m302 Found[0m in 7ms [30m(ActiveRecord: 3.4ms)[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/directors/2" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 00:40:21 +1000[0m
+[INFO ] [35m===[0m Processing by [35mDirectorsController#show[0m as [33mHTML[0m
+[INFO ]   Parameters: {"id"=>"2"}
+[[1m[30mDEBUG[0m[0m]   [1m[36mDirector Load (0.3ms)[0m  [1m[34mSELECT  "directors".* FROM "directors" WHERE "directors"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[INFO ] Completed [33m404 Not Found[0m in 2ms [30m(ActiveRecord: 0.3ms)[0m
+[[41m[37mFATAL[0m[0m] [31mActiveRecord::RecordNotFound (Couldn't find Director with 'id'=2):[0m
+[[41m[37mFATAL[0m[0m] [31mapp/controllers/directors_controller.rb:19:in `show'[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/directors/2" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 00:40:54 +1000[0m
+[INFO ] [35m===[0m Processing by [35mDirectorsController#show[0m as [33mHTML[0m
+[INFO ]   Parameters: {"id"=>"2"}
+[[1m[30mDEBUG[0m[0m]   [1m[36mDirector Load (0.2ms)[0m  [1m[34mSELECT  "directors".* FROM "directors" WHERE "directors"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[INFO ] Completed [33m404 Not Found[0m in 9ms [30m(ActiveRecord: 1.1ms)[0m
+[[41m[37mFATAL[0m[0m] [31mActiveRecord::RecordNotFound (Couldn't find Director with 'id'=2):[0m
+[[41m[37mFATAL[0m[0m] [31mapp/controllers/directors_controller.rb:19:in `show'[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/directors" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 00:42:40 +1000[0m
+[INFO ] [35m===[0m Processing by [35mDirectorsController#index[0m as [33mHTML[0m
+[INFO ]   Rendering directors/index.html.erb within layouts/application
+[[1m[30mDEBUG[0m[0m]   [1m[36mDirector Load (0.1ms)[0m  [1m[34mSELECT "directors".* FROM "directors"[0m
+[INFO ] [30m  Rendered [1mdirectors/index.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m10.6ms[0m
+[INFO ] Completed [32m200 OK[0m in 33ms [30m(Views: 27.9ms | ActiveRecord: 1.0ms)[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/directors/new" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 00:42:43 +1000[0m
+[INFO ] [35m===[0m Processing by [35mDirectorsController#new[0m as [33mHTML[0m
+[INFO ]   Rendering directors/new.html.erb within layouts/application
+[INFO ] [30m  Rendered [1mdirectors/new.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m4.3ms[0m
+[INFO ] Completed [32m200 OK[0m in 30ms [30m(Views: 25.3ms | ActiveRecord: 0.0ms)[0m
+[INFO ] [1m[32mPOST   [0m[0m[1m[37m "/directors" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 00:43:33 +1000[0m
+[INFO ] [35m===[0m Processing by [35mDirectorsController#create[0m as [33mHTML[0m
+[INFO ]   Parameters: {"utf8"=>"✓", "authenticity_token"=>"3zVZvlx9Bw0N3YEunS4iTY3OwK4yZLaKPKui617DxZXTzq5y4sY5FQJrQNGWQrDmz4l6yA2dcoqO7Xglf9a5EA==", "director"=>{"name"=>"John Woo", "nationality"=>"Chinese", "dob"=>"1954/08/16", "years_active"=>"1986-present", "image"=>"http://www.chinadaily.com.cn/world/images/attachement/jpg/site1/20160302/d8cb8a5155b01840833601.jpg"}, "commit"=>"Create Director"}
+[[1m[30mDEBUG[0m[0m]   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[[1m[30mDEBUG[0m[0m]   [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "directors" ("name", "nationality", "dob", "years_active", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "John Woo"], ["nationality", "Chinese"], ["dob", "1954/08/16"], ["years_active", "1986-present"], ["image", "http://www.chinadaily.com.cn/world/images/attachement/jpg/site1/20160302/d8cb8a5155b01840833601.jpg"], ["created_at", "2017-08-23 14:43:33.704169"], ["updated_at", "2017-08-23 14:43:33.704169"]]
+[[1m[30mDEBUG[0m[0m]   [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+[INFO ] Redirected to http://localhost:3000/directors/5
+[INFO ] Completed [32m302 Found[0m in 6ms [30m(ActiveRecord: 1.3ms)[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/directors/5" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 00:43:33 +1000[0m
+[INFO ] [35m===[0m Processing by [35mDirectorsController#show[0m as [33mHTML[0m
+[INFO ]   Parameters: {"id"=>"5"}
+[[1m[30mDEBUG[0m[0m]   [1m[36mDirector Load (0.2ms)[0m  [1m[34mSELECT  "directors".* FROM "directors" WHERE "directors"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+[INFO ]   Rendering directors/show.html.erb within layouts/application
+[INFO ] [30m  Rendered [1mdirectors/show.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m1.1ms[0m
+[INFO ] Completed [32m200 OK[0m in 25ms [30m(Views: 21.3ms | ActiveRecord: 0.2ms)[0m
+[INFO ] [1m[32mDELETE [0m[0m[1m[37m "/directors/5" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 00:43:40 +1000[0m
+[[41m[37mFATAL[0m[0m] [31mAbstractController::ActionNotFound (The action 'destroy' could not be found for DirectorsController):[0m
+[[41m[37mFATAL[0m[0m] [31mactionpack (5.1.3) lib/abstract_controller/base.rb:119:in `process'
+actionview (5.1.3) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.3) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.3) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.3) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.3) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.3) lib/action_dispatch/journey/router.rb:46:in `block in serve'
+actionpack (5.1.3) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.3) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.3) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.3) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.3) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.3) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.3) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.3) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'[0m
+[INFO ] [1m[32mDELETE [0m[0m[1m[37m "/directors/5" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 00:44:52 +1000[0m
+[INFO ] [35m===[0m Processing by [35mDirectorsController#destroy[0m as [33mHTML[0m
+[INFO ]   Parameters: {"authenticity_token"=>"hwhbtKPDe09K7KcZhFzCJGTMp/PqKNc5nS6fg77GwefY+/Fmq0CrSLlYjp0vSebrHMgi2vDRPA+vuhoya+4DZw==", "id"=>"5"}
+[[1m[30mDEBUG[0m[0m]   [1m[36mDirector Load (0.1ms)[0m  [1m[34mSELECT  "directors".* FROM "directors" WHERE "directors"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+[[1m[30mDEBUG[0m[0m]   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[[1m[30mDEBUG[0m[0m]   [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "directors" WHERE "directors"."id" = ?[0m  [["id", 5]]
+[[1m[30mDEBUG[0m[0m]   [1m[35m (2.9ms)[0m  [1m[36mcommit transaction[0m
+[INFO ] Redirected to http://localhost:3000/directors
+[INFO ] Completed [32m302 Found[0m in 24ms [30m(ActiveRecord: 4.3ms)[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/directors" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 00:44:52 +1000[0m
+[INFO ] [35m===[0m Processing by [35mDirectorsController#index[0m as [33mHTML[0m
+[INFO ]   Rendering directors/index.html.erb within layouts/application
+[[1m[30mDEBUG[0m[0m]   [1m[36mDirector Load (0.2ms)[0m  [1m[34mSELECT "directors".* FROM "directors"[0m
+[INFO ] [30m  Rendered [1mdirectors/index.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m2.0ms[0m
+[INFO ] Completed [32m200 OK[0m in 21ms [30m(Views: 18.2ms | ActiveRecord: 0.2ms)[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/directors" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 00:44:56 +1000[0m
+[INFO ] [35m===[0m Processing by [35mDirectorsController#index[0m as [33mHTML[0m
+[INFO ]   Rendering directors/index.html.erb within layouts/application
+[[1m[30mDEBUG[0m[0m]   [1m[36mDirector Load (0.2ms)[0m  [1m[34mSELECT "directors".* FROM "directors"[0m
+[INFO ] [30m  Rendered [1mdirectors/index.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m2.0ms[0m
+[INFO ] Completed [32m200 OK[0m in 27ms [30m(Views: 22.8ms | ActiveRecord: 0.2ms)[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/directors/new" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 00:44:57 +1000[0m
+[INFO ] [35m===[0m Processing by [35mDirectorsController#new[0m as [33mHTML[0m
+[INFO ]   Rendering directors/new.html.erb within layouts/application
+[INFO ] [30m  Rendered [1mdirectors/new.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m3.5ms[0m
+[INFO ] Completed [32m200 OK[0m in 29ms [30m(Views: 24.8ms | ActiveRecord: 0.0ms)[0m
+[INFO ] [1m[32mPOST   [0m[0m[1m[37m "/directors" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 00:45:22 +1000[0m
+[INFO ] [35m===[0m Processing by [35mDirectorsController#create[0m as [33mHTML[0m
+[INFO ]   Parameters: {"utf8"=>"✓", "authenticity_token"=>"0HgxSRJvsTMP1i8Q648Nx3URjG1hrmApnb4qtiGqa2bcg8aFrNSPKwBg7u/g459sN1Y2C15XpCkv+PB4AL8X4w==", "director"=>{"name"=>"John Woo", "nationality"=>"Chinese", "dob"=>"1954/08/16", "years_active"=>"1986-present", "image"=>"http://www.chinadaily.com.cn/world/images/attachement/jpg/site1/20160302/d8cb8a5155b01840833601.jpg"}, "commit"=>"Create Director"}
+[[1m[30mDEBUG[0m[0m]   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[[1m[30mDEBUG[0m[0m]   [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "directors" ("name", "nationality", "dob", "years_active", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "John Woo"], ["nationality", "Chinese"], ["dob", "1954/08/16"], ["years_active", "1986-present"], ["image", "http://www.chinadaily.com.cn/world/images/attachement/jpg/site1/20160302/d8cb8a5155b01840833601.jpg"], ["created_at", "2017-08-23 14:45:22.867284"], ["updated_at", "2017-08-23 14:45:22.867284"]]
+[[1m[30mDEBUG[0m[0m]   [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+[INFO ] Redirected to http://localhost:3000/directors/6
+[INFO ] Completed [32m302 Found[0m in 6ms [30m(ActiveRecord: 1.5ms)[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/directors/6" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 00:45:22 +1000[0m
+[INFO ] [35m===[0m Processing by [35mDirectorsController#show[0m as [33mHTML[0m
+[INFO ]   Parameters: {"id"=>"6"}
+[[1m[30mDEBUG[0m[0m]   [1m[36mDirector Load (0.2ms)[0m  [1m[34mSELECT  "directors".* FROM "directors" WHERE "directors"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+[INFO ]   Rendering directors/show.html.erb within layouts/application
+[INFO ] [30m  Rendered [1mdirectors/show.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m1.0ms[0m
+[INFO ] Completed [32m200 OK[0m in 36ms [30m(Views: 33.3ms | ActiveRecord: 0.2ms)[0m
+[INFO ] [1m[32mDELETE [0m[0m[1m[37m "/directors/6" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 00:45:26 +1000[0m
+[INFO ] [35m===[0m Processing by [35mDirectorsController#destroy[0m as [33mHTML[0m
+[INFO ]   Parameters: {"authenticity_token"=>"0zOGUFvG3HtKoVQ8x/FtHwGmd8Crf0GQrXMGZVR/FnKMwCyCU0UMfLkVfbhs5EnQeaLy6bGGqqaf54PUgVfU8g==", "id"=>"6"}
+[[1m[30mDEBUG[0m[0m]   [1m[36mDirector Load (0.1ms)[0m  [1m[34mSELECT  "directors".* FROM "directors" WHERE "directors"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+[[1m[30mDEBUG[0m[0m]   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[[1m[30mDEBUG[0m[0m]   [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "directors" WHERE "directors"."id" = ?[0m  [["id", 6]]
+[[1m[30mDEBUG[0m[0m]   [1m[35m (3.5ms)[0m  [1m[36mcommit transaction[0m
+[INFO ] Redirected to http://localhost:3000/directors
+[INFO ] Completed [32m302 Found[0m in 7ms [30m(ActiveRecord: 4.0ms)[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/directors" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 00:45:26 +1000[0m
+[INFO ] [35m===[0m Processing by [35mDirectorsController#index[0m as [33mHTML[0m
+[INFO ]   Rendering directors/index.html.erb within layouts/application
+[[1m[30mDEBUG[0m[0m]   [1m[36mDirector Load (0.2ms)[0m  [1m[34mSELECT "directors".* FROM "directors"[0m
+[INFO ] [30m  Rendered [1mdirectors/index.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m1.9ms[0m
+[INFO ] Completed [32m200 OK[0m in 23ms [30m(Views: 20.0ms | ActiveRecord: 0.2ms)[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/directors" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 00:54:14 +1000[0m
+[INFO ] [35m===[0m Processing by [35mDirectorsController#index[0m as [33mHTML[0m
+[INFO ]   Rendering directors/index.html.erb within layouts/application
+[[1m[30mDEBUG[0m[0m]   [1m[36mDirector Load (0.2ms)[0m  [1m[34mSELECT "directors".* FROM "directors"[0m
+[INFO ] [30m  Rendered [1mdirectors/index.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m11.5ms[0m
+[INFO ] Completed [32m200 OK[0m in 33ms [30m(Views: 28.2ms | ActiveRecord: 1.3ms)[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/directors" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 00:54:16 +1000[0m
+[INFO ] [35m===[0m Processing by [35mDirectorsController#index[0m as [33mHTML[0m
+[INFO ]   Rendering directors/index.html.erb within layouts/application
+[[1m[30mDEBUG[0m[0m]   [1m[36mDirector Load (0.2ms)[0m  [1m[34mSELECT "directors".* FROM "directors"[0m
+[INFO ] [30m  Rendered [1mdirectors/index.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m1.6ms[0m
+[INFO ] Completed [32m200 OK[0m in 22ms [30m(Views: 18.6ms | ActiveRecord: 0.2ms)[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/directors/1" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 00:54:18 +1000[0m
+[INFO ] [35m===[0m Processing by [35mDirectorsController#show[0m as [33mHTML[0m
+[INFO ]   Parameters: {"id"=>"1"}
+[[1m[30mDEBUG[0m[0m]   [1m[36mDirector Load (0.2ms)[0m  [1m[34mSELECT  "directors".* FROM "directors" WHERE "directors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[INFO ]   Rendering directors/show.html.erb within layouts/application
+[INFO ] [30m  Rendered [1mdirectors/show.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m0.8ms[0m
+[INFO ] Completed [31m500 Internal Server Error[0m in 16ms [30m(ActiveRecord: 0.2ms)[0m
+[[41m[37mFATAL[0m[0m] [31mSyntaxError (/Users/admin/Mina/Desktop/WDi23-Homework/mina_parnian/week_05/day_03/director-app/app/views/directors/show.html.erb:11: syntax error, unexpected tIDENTIFIER, expecting ')'
+t Director" edit_director_path(@director) );@output_buffer.s
+                              ^):[0m
+[[41m[37mFATAL[0m[0m] [31mapp/views/directors/show.html.erb:11: syntax error, unexpected tIDENTIFIER, expecting ')'[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/directors/1" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 00:54:41 +1000[0m
+[INFO ] [35m===[0m Processing by [35mDirectorsController#show[0m as [33mHTML[0m
+[INFO ]   Parameters: {"id"=>"1"}
+[[1m[30mDEBUG[0m[0m]   [1m[36mDirector Load (0.2ms)[0m  [1m[34mSELECT  "directors".* FROM "directors" WHERE "directors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[INFO ]   Rendering directors/show.html.erb within layouts/application
+[INFO ] [30m  Rendered [1mdirectors/show.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m1.0ms[0m
+[INFO ] Completed [32m200 OK[0m in 34ms [30m(Views: 31.2ms | ActiveRecord: 0.2ms)[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/directors/1/edit" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 00:54:49 +1000[0m
+[INFO ] [35m===[0m Processing by [35mDirectorsController#edit[0m as [33mHTML[0m
+[INFO ]   Parameters: {"id"=>"1"}
+[INFO ]   Rendering directors/edit.html.erb within layouts/application
+[INFO ] [30m  Rendered [1mdirectors/edit.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m0.4ms[0m
+[INFO ] Completed [32m200 OK[0m in 26ms [30m(Views: 21.1ms | ActiveRecord: 0.0ms)[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/directors/1/edit" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 00:59:34 +1000[0m
+[INFO ] [35m===[0m Processing by [35mDirectorsController#edit[0m as [33mHTML[0m
+[INFO ]   Parameters: {"id"=>"1"}
+[[1m[30mDEBUG[0m[0m]   [1m[36mDirector Load (0.1ms)[0m  [1m[34mSELECT  "directors".* FROM "directors" WHERE "directors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[INFO ]   Rendering directors/edit.html.erb within layouts/application
+[INFO ] [30m  Rendered [1mdirectors/edit.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m2.9ms[0m
+[INFO ] Completed [32m200 OK[0m in 35ms [30m(Views: 19.7ms | ActiveRecord: 1.1ms)[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/directors/1/edit" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 01:08:14 +1000[0m
+[INFO ] [35m===[0m Processing by [35mDirectorsController#edit[0m as [33mHTML[0m
+[INFO ]   Parameters: {"id"=>"1"}
+[[1m[30mDEBUG[0m[0m]   [1m[36mDirector Load (0.6ms)[0m  [1m[34mSELECT  "directors".* FROM "directors" WHERE "directors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[INFO ]   Rendering directors/edit.html.erb within layouts/application
+[INFO ] [30m  Rendered [1mdirectors/_form.html.erb[0m[0m [30m2.4ms[0m
+[INFO ] [30m  Rendered [1mdirectors/edit.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m5.1ms[0m
+[INFO ] Completed [32m200 OK[0m in 31ms [30m(Views: 26.7ms | ActiveRecord: 0.6ms)[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/directors" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 01:08:15 +1000[0m
+[INFO ] [35m===[0m Processing by [35mDirectorsController#index[0m as [33mHTML[0m
+[INFO ]   Rendering directors/index.html.erb within layouts/application
+[[1m[30mDEBUG[0m[0m]   [1m[36mDirector Load (0.3ms)[0m  [1m[34mSELECT "directors".* FROM "directors"[0m
+[INFO ] [30m  Rendered [1mdirectors/index.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m2.8ms[0m
+[INFO ] Completed [32m200 OK[0m in 33ms [30m(Views: 28.3ms | ActiveRecord: 0.3ms)[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/directors/1" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 01:08:18 +1000[0m
+[INFO ] [35m===[0m Processing by [35mDirectorsController#show[0m as [33mHTML[0m
+[INFO ]   Parameters: {"id"=>"1"}
+[[1m[30mDEBUG[0m[0m]   [1m[36mDirector Load (0.1ms)[0m  [1m[34mSELECT  "directors".* FROM "directors" WHERE "directors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[INFO ]   Rendering directors/show.html.erb within layouts/application
+[INFO ] [30m  Rendered [1mdirectors/show.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m1.3ms[0m
+[INFO ] Completed [32m200 OK[0m in 25ms [30m(Views: 20.8ms | ActiveRecord: 0.1ms)[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/directors/1/edit" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 01:08:21 +1000[0m
+[INFO ] [35m===[0m Processing by [35mDirectorsController#edit[0m as [33mHTML[0m
+[INFO ]   Parameters: {"id"=>"1"}
+[[1m[30mDEBUG[0m[0m]   [1m[36mDirector Load (0.3ms)[0m  [1m[34mSELECT  "directors".* FROM "directors" WHERE "directors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[INFO ]   Rendering directors/edit.html.erb within layouts/application
+[INFO ] [30m  Rendered [1mdirectors/_form.html.erb[0m[0m [30m5.5ms[0m
+[INFO ] [30m  Rendered [1mdirectors/edit.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m10.4ms[0m
+[INFO ] Completed [32m200 OK[0m in 42ms [30m(Views: 35.7ms | ActiveRecord: 0.3ms)[0m
+[INFO ] [1m[32mPATCH  [0m[0m[1m[37m "/directors/1" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 01:08:26 +1000[0m
+[[41m[37mFATAL[0m[0m] [31mAbstractController::ActionNotFound (The action 'update' could not be found for DirectorsController):[0m
+[[41m[37mFATAL[0m[0m] [31mactionpack (5.1.3) lib/abstract_controller/base.rb:119:in `process'
+actionview (5.1.3) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.3) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.3) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.3) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.3) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.3) lib/action_dispatch/journey/router.rb:46:in `block in serve'
+actionpack (5.1.3) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.3) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.3) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.3) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.3) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.3) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.3) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.3) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'[0m
+[INFO ] [1m[32mPATCH  [0m[0m[1m[37m "/directors/1" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 01:12:13 +1000[0m
+[INFO ] [35m===[0m Processing by [35mDirectorsController#update[0m as [33mHTML[0m
+[INFO ]   Parameters: {"utf8"=>"✓", "authenticity_token"=>"q0GgPkKh1DcNFO43W/ASCD9ihkYjOWVLGDNxjYUxap/0sgrsSiIEMP6gx7Pw5TbHR2YDbznAjn0qp/Q8UBmoHw==", "director"=>{"name"=>"James Cameronnn", "nationality"=>"Canadian", "dob"=>"1954/08/16", "years_active"=>"1975-present", "image"=>"http://1.bp.blogspot.com/-ogHcP4ohPtY/UUajomEYgsI/AAAAAAAAAHg/LoWcd7fUeBA/s1600/James+Cameron.jpg"}, "commit"=>"Update Director", "id"=>"1"}
+[[1m[30mDEBUG[0m[0m]   [1m[36mDirector Load (0.5ms)[0m  [1m[34mSELECT  "directors".* FROM "directors" WHERE "directors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[INFO ] Completed [31m500 Internal Server Error[0m in 95ms [30m(ActiveRecord: 1.6ms)[0m
+[[41m[37mFATAL[0m[0m] [31mNoMethodError (undefined method `director' for #<DirectorsController:0x007fc557ce2f10>
+Did you mean?  director_url):[0m
+[[41m[37mFATAL[0m[0m] [31mapp/controllers/directors_controller.rb:17:in `update'[0m
+[INFO ] [1m[32mPATCH  [0m[0m[1m[37m "/directors/1" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 01:13:17 +1000[0m
+[INFO ] [35m===[0m Processing by [35mDirectorsController#update[0m as [33mHTML[0m
+[INFO ]   Parameters: {"utf8"=>"✓", "authenticity_token"=>"q0GgPkKh1DcNFO43W/ASCD9ihkYjOWVLGDNxjYUxap/0sgrsSiIEMP6gx7Pw5TbHR2YDbznAjn0qp/Q8UBmoHw==", "director"=>{"name"=>"James Cameronnn", "nationality"=>"Canadian", "dob"=>"1954/08/16", "years_active"=>"1975-present", "image"=>"http://1.bp.blogspot.com/-ogHcP4ohPtY/UUajomEYgsI/AAAAAAAAAHg/LoWcd7fUeBA/s1600/James+Cameron.jpg"}, "commit"=>"Update Director", "id"=>"1"}
+[[1m[30mDEBUG[0m[0m]   [1m[36mDirector Load (0.5ms)[0m  [1m[34mSELECT  "directors".* FROM "directors" WHERE "directors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[[1m[30mDEBUG[0m[0m]   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[[1m[30mDEBUG[0m[0m]   [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "directors" SET "name" = ?, "updated_at" = ? WHERE "directors"."id" = ?[0m  [["name", "James Cameronnn"], ["updated_at", "2017-08-23 15:13:17.818740"], ["id", 1]]
+[[1m[30mDEBUG[0m[0m]   [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+[INFO ] Redirected to http://localhost:3000/directors/1
+[INFO ] Completed [32m302 Found[0m in 18ms [30m(ActiveRecord: 2.5ms)[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/directors/1" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 01:13:17 +1000[0m
+[INFO ] [35m===[0m Processing by [35mDirectorsController#show[0m as [33mHTML[0m
+[INFO ]   Parameters: {"id"=>"1"}
+[[1m[30mDEBUG[0m[0m]   [1m[36mDirector Load (0.1ms)[0m  [1m[34mSELECT  "directors".* FROM "directors" WHERE "directors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[INFO ]   Rendering directors/show.html.erb within layouts/application
+[INFO ] [30m  Rendered [1mdirectors/show.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m0.9ms[0m
+[INFO ] Completed [32m200 OK[0m in 25ms [30m(Views: 22.4ms | ActiveRecord: 0.1ms)[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/directors/1/edit" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 01:13:21 +1000[0m
+[INFO ] [35m===[0m Processing by [35mDirectorsController#edit[0m as [33mHTML[0m
+[INFO ]   Parameters: {"id"=>"1"}
+[[1m[30mDEBUG[0m[0m]   [1m[36mDirector Load (0.2ms)[0m  [1m[34mSELECT  "directors".* FROM "directors" WHERE "directors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[INFO ]   Rendering directors/edit.html.erb within layouts/application
+[INFO ] [30m  Rendered [1mdirectors/_form.html.erb[0m[0m [30m2.9ms[0m
+[INFO ] [30m  Rendered [1mdirectors/edit.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m6.2ms[0m
+[INFO ] Completed [32m200 OK[0m in 39ms [30m(Views: 31.6ms | ActiveRecord: 0.2ms)[0m
+[INFO ] [1m[32mPATCH  [0m[0m[1m[37m "/directors/1" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 01:13:25 +1000[0m
+[INFO ] [35m===[0m Processing by [35mDirectorsController#update[0m as [33mHTML[0m
+[INFO ]   Parameters: {"utf8"=>"✓", "authenticity_token"=>"7xWyc7ywz4pwe+UVtEQiGPnk/qtZyKTqSNEtuBzp+X5kXxWvkpxIdLDheU03TYFQjq561n2fmw0VMeiOBQJp3A==", "director"=>{"name"=>"James Cameron", "nationality"=>"Canadian", "dob"=>"1954/08/16", "years_active"=>"1975-present", "image"=>"http://1.bp.blogspot.com/-ogHcP4ohPtY/UUajomEYgsI/AAAAAAAAAHg/LoWcd7fUeBA/s1600/James+Cameron.jpg"}, "commit"=>"Update Director", "id"=>"1"}
+[[1m[30mDEBUG[0m[0m]   [1m[36mDirector Load (0.5ms)[0m  [1m[34mSELECT  "directors".* FROM "directors" WHERE "directors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[[1m[30mDEBUG[0m[0m]   [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+[[1m[30mDEBUG[0m[0m]   [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "directors" SET "name" = ?, "updated_at" = ? WHERE "directors"."id" = ?[0m  [["name", "James Cameron"], ["updated_at", "2017-08-23 15:13:25.763437"], ["id", 1]]
+[[1m[30mDEBUG[0m[0m]   [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+[INFO ] Redirected to http://localhost:3000/directors/1
+[INFO ] Completed [32m302 Found[0m in 8ms [30m(ActiveRecord: 3.2ms)[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/directors/1" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 01:13:25 +1000[0m
+[INFO ] [35m===[0m Processing by [35mDirectorsController#show[0m as [33mHTML[0m
+[INFO ]   Parameters: {"id"=>"1"}
+[[1m[30mDEBUG[0m[0m]   [1m[36mDirector Load (0.1ms)[0m  [1m[34mSELECT  "directors".* FROM "directors" WHERE "directors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[INFO ]   Rendering directors/show.html.erb within layouts/application
+[INFO ] [30m  Rendered [1mdirectors/show.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m3.1ms[0m
+[INFO ] Completed [32m200 OK[0m in 46ms [30m(Views: 41.4ms | ActiveRecord: 0.1ms)[0m

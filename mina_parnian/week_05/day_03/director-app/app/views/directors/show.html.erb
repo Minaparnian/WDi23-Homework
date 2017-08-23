@@ -1,0 +1,14 @@
+<h1><%= @director.name %></h1>
+
+
+<ul>
+  <%= image_tag @director.image, :class => "feature" %>
+
+  <li>Nationality: <%= @director.nationality %></li>
+  <li>Date of birth: <%= @director.dob.to_time.strftime "%B %d, %Y" %></li>
+  <li>Years_active: <%= @director.years_active  %></li>
+  <div class="controls">
+    <%= link_to "Edit Director", edit_director_path(@director) %>
+  <%= link_to "Delete director", @director, :method => :delete, :data => {:confirm => "Are you sure to delete?"} %>
+</div>
+</ul>

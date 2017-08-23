@@ -8,7 +8,7 @@ class MountainsController < ApplicationController
   end
 
   def create
-    mountain = mountain.new
+    mountain = Mountain.new
     mountain.name = params[:name]
     mountain.height = params[:place]
     mountain.image = params[:image]
