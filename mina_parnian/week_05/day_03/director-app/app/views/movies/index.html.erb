@@ -1,0 +1,10 @@
+<h1>All Movies</h1>
+<% @movies .each do |movie| %>
+
+  <h1>Name:<%=link_to movie.name, movie %><h1>
+  <%= image_tag movie.image, :class => "thumb"%>
+
+
+
+
+<% end %>

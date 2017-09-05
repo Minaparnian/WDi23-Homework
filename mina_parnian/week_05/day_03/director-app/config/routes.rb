@@ -12,6 +12,15 @@
 #
 
 Rails.application.routes.draw do
+  get 'movies/index'
+
+  get 'movies/new'
+
+  get 'movies/edit'
+
+  get 'movies/show'
+
   # root :to => 'dorectors#index'
     resources :directors
+    resources :movies
 end

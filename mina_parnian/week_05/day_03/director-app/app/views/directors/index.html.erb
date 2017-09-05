@@ -1,13 +1,10 @@
 <h1>All Directors</h1>
 <% @directors.each do |director| %>
-<ul>
+<h1>Name: <%= link_to director.name, director %><h1>
   <%= image_tag director.image, :class => "thumb" %>
-  <li>Name: <%= link_to director.name, director %></li>
-  <li>Nationality: <%= director.nationality %></li>
-  <li>Date of birth: <%= director.dob.to_time.strftime "%B %d, %Y" %></li>
-  <li>Years_active: <%= director.years_active  %></li>
-</ul>
-  <% end %>
+
+
+<% end %>
 
 
 <!-- director_path(director.id) or director_path(director) or director -->

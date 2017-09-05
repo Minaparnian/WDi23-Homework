@@ -2122,3 +2122,615 @@ Did you mean?  director_url):[0m
 [INFO ]   Rendering directors/show.html.erb within layouts/application
 [INFO ] [30m  Rendered [1mdirectors/show.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m3.1ms[0m
 [INFO ] Completed [32m200 OK[0m in 46ms [30m(Views: 41.4ms | ActiveRecord: 0.1ms)[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/directors/1" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 09:09:47 +1000[0m
+[[1m[30mDEBUG[0m[0m]   [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+[INFO ] [35m===[0m Processing by [35mDirectorsController#show[0m as [33mHTML[0m
+[INFO ]   Parameters: {"id"=>"1"}
+[[1m[30mDEBUG[0m[0m]   [1m[36mDirector Load (0.2ms)[0m  [1m[34mSELECT  "directors".* FROM "directors" WHERE "directors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[INFO ]   Rendering directors/show.html.erb within layouts/application
+[INFO ] [30m  Rendered [1mdirectors/show.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m2.4ms[0m
+[INFO ] Completed [32m200 OK[0m in 223ms [30m(Views: 189.2ms | ActiveRecord: 0.8ms)[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/directors" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 09:09:54 +1000[0m
+[INFO ] [35m===[0m Processing by [35mDirectorsController#index[0m as [33mHTML[0m
+[INFO ]   Rendering directors/index.html.erb within layouts/application
+[[1m[30mDEBUG[0m[0m]   [1m[36mDirector Load (0.1ms)[0m  [1m[34mSELECT "directors".* FROM "directors"[0m
+[INFO ] [30m  Rendered [1mdirectors/index.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m3.0ms[0m
+[INFO ] Completed [32m200 OK[0m in 31ms [30m(Views: 26.4ms | ActiveRecord: 0.4ms)[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/directors/new" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 09:09:55 +1000[0m
+[INFO ] [35m===[0m Processing by [35mDirectorsController#new[0m as [33mHTML[0m
+[INFO ]   Rendering directors/new.html.erb within layouts/application
+[INFO ] [30m  Rendered [1mdirectors/_form.html.erb[0m[0m [30m19.0ms[0m
+[INFO ] [30m  Rendered [1mdirectors/new.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m21.7ms[0m
+[INFO ] Completed [32m200 OK[0m in 50ms [30m(Views: 45.9ms | ActiveRecord: 0.0ms)[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/directors" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 09:09:57 +1000[0m
+[INFO ] [35m===[0m Processing by [35mDirectorsController#index[0m as [33mHTML[0m
+[INFO ]   Rendering directors/index.html.erb within layouts/application
+[[1m[30mDEBUG[0m[0m]   [1m[36mDirector Load (0.2ms)[0m  [1m[34mSELECT "directors".* FROM "directors"[0m
+[INFO ] [30m  Rendered [1mdirectors/index.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m3.9ms[0m
+[INFO ] Completed [32m200 OK[0m in 50ms [30m(Views: 43.7ms | ActiveRecord: 0.2ms)[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/directors" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 09:10:51 +1000[0m
+[INFO ] [35m===[0m Processing by [35mDirectorsController#index[0m as [33mHTML[0m
+[INFO ]   Rendering directors/index.html.erb within layouts/application
+[[1m[30mDEBUG[0m[0m]   [1m[36mDirector Load (0.3ms)[0m  [1m[34mSELECT "directors".* FROM "directors"[0m
+[INFO ] [30m  Rendered [1mdirectors/index.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m3.2ms[0m
+[INFO ] Completed [32m200 OK[0m in 50ms [30m(Views: 45.5ms | ActiveRecord: 0.3ms)[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/directors/new" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 09:10:52 +1000[0m
+[INFO ] [35m===[0m Processing by [35mDirectorsController#new[0m as [33mHTML[0m
+[INFO ]   Rendering directors/new.html.erb within layouts/application
+[INFO ] [30m  Rendered [1mdirectors/_form.html.erb[0m[0m [30m7.7ms[0m
+[INFO ] [30m  Rendered [1mdirectors/new.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m13.7ms[0m
+[INFO ] Completed [32m200 OK[0m in 61ms [30m(Views: 55.7ms | ActiveRecord: 0.0ms)[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/directors" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 09:10:54 +1000[0m
+[INFO ] [35m===[0m Processing by [35mDirectorsController#index[0m as [33mHTML[0m
+[INFO ]   Rendering directors/index.html.erb within layouts/application
+[[1m[30mDEBUG[0m[0m]   [1m[36mDirector Load (0.3ms)[0m  [1m[34mSELECT "directors".* FROM "directors"[0m
+[INFO ] [30m  Rendered [1mdirectors/index.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m2.6ms[0m
+[INFO ] Completed [32m200 OK[0m in 33ms [30m(Views: 27.1ms | ActiveRecord: 0.3ms)[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 09:10:55 +1000[0m
+[INFO ] [35m===[0m Processing by [35mRails::WelcomeController#index[0m as [33mHTML[0m
+[INFO ]   Rendering /Users/admin/Mina/.rvm/gems/ruby-2.4.0/gems/railties-5.1.3/lib/rails/templates/rails/welcome/index.html.erb
+[INFO ] [30m  Rendered [1m/Users/admin/Mina/.rvm/gems/ruby-2.4.0/gems/railties-5.1.3/lib/rails/templates/rails/welcome/index.html.erb[0m[0m [30m2.9ms[0m
+[INFO ] Completed [32m200 OK[0m in 13ms [30m(Views: 7.2ms | ActiveRecord: 0.0ms)[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 09:10:55 +1000[0m
+[INFO ] [35m===[0m Processing by [35mRails::WelcomeController#index[0m as [33mHTML[0m
+[INFO ]   Rendering /Users/admin/Mina/.rvm/gems/ruby-2.4.0/gems/railties-5.1.3/lib/rails/templates/rails/welcome/index.html.erb
+[INFO ] [30m  Rendered [1m/Users/admin/Mina/.rvm/gems/ruby-2.4.0/gems/railties-5.1.3/lib/rails/templates/rails/welcome/index.html.erb[0m[0m [30m2.7ms[0m
+[INFO ] Completed [32m200 OK[0m in 8ms [30m(Views: 5.4ms | ActiveRecord: 0.0ms)[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/directors" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 09:11:01 +1000[0m
+[INFO ] [35m===[0m Processing by [35mDirectorsController#index[0m as [33mHTML[0m
+[INFO ]   Rendering directors/index.html.erb within layouts/application
+[[1m[30mDEBUG[0m[0m]   [1m[36mDirector Load (0.2ms)[0m  [1m[34mSELECT "directors".* FROM "directors"[0m
+[INFO ] [30m  Rendered [1mdirectors/index.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m1.7ms[0m
+[INFO ] Completed [32m200 OK[0m in 25ms [30m(Views: 22.2ms | ActiveRecord: 0.2ms)[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/directors/1" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 09:11:04 +1000[0m
+[INFO ] [35m===[0m Processing by [35mDirectorsController#show[0m as [33mHTML[0m
+[INFO ]   Parameters: {"id"=>"1"}
+[[1m[30mDEBUG[0m[0m]   [1m[36mDirector Load (2.5ms)[0m  [1m[34mSELECT  "directors".* FROM "directors" WHERE "directors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[INFO ]   Rendering directors/show.html.erb within layouts/application
+[INFO ] [30m  Rendered [1mdirectors/show.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m1.3ms[0m
+[INFO ] Completed [32m200 OK[0m in 30ms [30m(Views: 21.5ms | ActiveRecord: 2.5ms)[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/directors/1/edit" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 09:11:10 +1000[0m
+[INFO ] [35m===[0m Processing by [35mDirectorsController#edit[0m as [33mHTML[0m
+[INFO ]   Parameters: {"id"=>"1"}
+[[1m[30mDEBUG[0m[0m]   [1m[36mDirector Load (0.2ms)[0m  [1m[34mSELECT  "directors".* FROM "directors" WHERE "directors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[INFO ]   Rendering directors/edit.html.erb within layouts/application
+[INFO ] [30m  Rendered [1mdirectors/_form.html.erb[0m[0m [30m2.5ms[0m
+[INFO ] [30m  Rendered [1mdirectors/edit.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m5.5ms[0m
+[INFO ] Completed [32m200 OK[0m in 33ms [30m(Views: 27.5ms | ActiveRecord: 0.2ms)[0m
+[INFO ] [1m[32mPATCH  [0m[0m[1m[37m "/directors/1" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 09:11:15 +1000[0m
+[INFO ] [35m===[0m Processing by [35mDirectorsController#update[0m as [33mHTML[0m
+[INFO ]   Parameters: {"utf8"=>"✓", "authenticity_token"=>"cZX4GfM6qjmLn6dSZfVn/y/fDJkvscSthJ4uMn4Kww/631/F3RYtx0sFOwrm/MS3WJWI5Avm+0rZfusEZ+FTrQ==", "director"=>{"name"=>"James Cameron2", "nationality"=>"Canadian", "dob"=>"1954/08/16", "years_active"=>"1975-present", "image"=>"http://1.bp.blogspot.com/-ogHcP4ohPtY/UUajomEYgsI/AAAAAAAAAHg/LoWcd7fUeBA/s1600/James+Cameron.jpg"}, "commit"=>"Update Director", "id"=>"1"}
+[[1m[30mDEBUG[0m[0m]   [1m[36mDirector Load (0.1ms)[0m  [1m[34mSELECT  "directors".* FROM "directors" WHERE "directors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[[1m[30mDEBUG[0m[0m]   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[[1m[30mDEBUG[0m[0m]   [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "directors" SET "name" = ?, "updated_at" = ? WHERE "directors"."id" = ?[0m  [["name", "James Cameron2"], ["updated_at", "2017-08-23 23:11:15.638880"], ["id", 1]]
+[[1m[30mDEBUG[0m[0m]   [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+[INFO ] Redirected to http://localhost:3000/directors/1
+[INFO ] Completed [32m302 Found[0m in 6ms [30m(ActiveRecord: 1.4ms)[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/directors/1" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 09:11:15 +1000[0m
+[INFO ] [35m===[0m Processing by [35mDirectorsController#show[0m as [33mHTML[0m
+[INFO ]   Parameters: {"id"=>"1"}
+[[1m[30mDEBUG[0m[0m]   [1m[36mDirector Load (0.1ms)[0m  [1m[34mSELECT  "directors".* FROM "directors" WHERE "directors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[INFO ]   Rendering directors/show.html.erb within layouts/application
+[INFO ] [30m  Rendered [1mdirectors/show.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m1.3ms[0m
+[INFO ] Completed [32m200 OK[0m in 21ms [30m(Views: 17.3ms | ActiveRecord: 0.1ms)[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/directors/1/edit" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 09:11:17 +1000[0m
+[INFO ] [35m===[0m Processing by [35mDirectorsController#edit[0m as [33mHTML[0m
+[INFO ]   Parameters: {"id"=>"1"}
+[[1m[30mDEBUG[0m[0m]   [1m[36mDirector Load (0.2ms)[0m  [1m[34mSELECT  "directors".* FROM "directors" WHERE "directors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[INFO ]   Rendering directors/edit.html.erb within layouts/application
+[INFO ] [30m  Rendered [1mdirectors/_form.html.erb[0m[0m [30m2.7ms[0m
+[INFO ] [30m  Rendered [1mdirectors/edit.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m5.9ms[0m
+[INFO ] Completed [32m200 OK[0m in 33ms [30m(Views: 26.4ms | ActiveRecord: 0.2ms)[0m
+[INFO ] [1m[32mPATCH  [0m[0m[1m[37m "/directors/1" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 09:11:25 +1000[0m
+[INFO ] [35m===[0m Processing by [35mDirectorsController#update[0m as [33mHTML[0m
+[INFO ]   Parameters: {"utf8"=>"✓", "authenticity_token"=>"yUd+Ej5qAid+5NSFUdJdl3QRxpQMJK33zvlrk0WvIvRCDdnOEEaF2b5+SN3S2/7fA1tC6ShzkhCTGa6lXESyVg==", "director"=>{"name"=>"James Cameron", "nationality"=>"Canadian", "dob"=>"1954/08/16", "years_active"=>"1975-present", "image"=>"http://1.bp.blogspot.com/-ogHcP4ohPtY/UUajomEYgsI/AAAAAAAAAHg/LoWcd7fUeBA/s1600/James+Cameron.jpg"}, "commit"=>"Update Director", "id"=>"1"}
+[[1m[30mDEBUG[0m[0m]   [1m[36mDirector Load (0.2ms)[0m  [1m[34mSELECT  "directors".* FROM "directors" WHERE "directors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[[1m[30mDEBUG[0m[0m]   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[[1m[30mDEBUG[0m[0m]   [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "directors" SET "name" = ?, "updated_at" = ? WHERE "directors"."id" = ?[0m  [["name", "James Cameron"], ["updated_at", "2017-08-23 23:11:25.423800"], ["id", 1]]
+[[1m[30mDEBUG[0m[0m]   [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+[INFO ] Redirected to http://localhost:3000/directors/1
+[INFO ] Completed [32m302 Found[0m in 6ms [30m(ActiveRecord: 1.6ms)[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/directors/1" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 09:11:25 +1000[0m
+[INFO ] [35m===[0m Processing by [35mDirectorsController#show[0m as [33mHTML[0m
+[INFO ]   Parameters: {"id"=>"1"}
+[[1m[30mDEBUG[0m[0m]   [1m[36mDirector Load (0.2ms)[0m  [1m[34mSELECT  "directors".* FROM "directors" WHERE "directors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[INFO ]   Rendering directors/show.html.erb within layouts/application
+[INFO ] [30m  Rendered [1mdirectors/show.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m1.5ms[0m
+[INFO ] Completed [32m200 OK[0m in 29ms [30m(Views: 24.9ms | ActiveRecord: 0.2ms)[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/directors/new" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 09:11:38 +1000[0m
+[INFO ] [35m===[0m Processing by [35mDirectorsController#new[0m as [33mHTML[0m
+[INFO ]   Rendering directors/new.html.erb within layouts/application
+[INFO ] [30m  Rendered [1mdirectors/_form.html.erb[0m[0m [30m3.1ms[0m
+[INFO ] [30m  Rendered [1mdirectors/new.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m6.2ms[0m
+[INFO ] Completed [32m200 OK[0m in 31ms [30m(Views: 26.1ms | ActiveRecord: 0.0ms)[0m
+[INFO ] [1m[32mPOST   [0m[0m[1m[37m "/directors" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 09:11:55 +1000[0m
+[INFO ] [35m===[0m Processing by [35mDirectorsController#create[0m as [33mHTML[0m
+[INFO ]   Parameters: {"utf8"=>"✓", "authenticity_token"=>"hQVDB6TU3IdNy8Ee3M4zilLbMZnqGa427wsBIeKjilOJ/rTLGm/in0J9AOHXoqEhEJyL/9XgajZdTdvvw7b21g==", "director"=>{"name"=>"kjghjxdf", "nationality"=>"fab", "dob"=>"1954/08/16", "years_active"=>"1986-present", "image"=>"https://www.google.com.au/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=0ahUKEwjtmsHaxe3VAhUM9WMKHdVICP4QjBwIBA&url=http%3A%2F%2Fwww.chinadaily.com.cn%2Fworld%2Fimages%2Fattachement%2Fjpg%2Fsite1%2F20160302%2Fd8cb8a5155b01840833601.jpg&psig=AFQjCNGNsABWyNrTbs1BeFoFcvtA9m3m3w&ust=1503584176990467"}, "commit"=>"Create Director"}
+[[1m[30mDEBUG[0m[0m]   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[[1m[30mDEBUG[0m[0m]   [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "directors" ("name", "nationality", "dob", "years_active", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "kjghjxdf"], ["nationality", "fab"], ["dob", "1954/08/16"], ["years_active", "1986-present"], ["image", "https://www.google.com.au/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=0ahUKEwjtmsHaxe3VAhUM9WMKHdVICP4QjBwIBA&url=http%3A%2F%2Fwww.chinadaily.com.cn%2Fworld%2Fimages%2Fattachement%2Fjpg%2Fsite1%2F20160302%2Fd8cb8a5155b01840833601.jpg&psig=AFQjCNGNsABWyNrTbs1BeFoFcvtA9m3m3w&ust=1503584176990467"], ["created_at", "2017-08-23 23:11:55.002781"], ["updated_at", "2017-08-23 23:11:55.002781"]]
+[[1m[30mDEBUG[0m[0m]   [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+[INFO ] Redirected to http://localhost:3000/directors/7
+[INFO ] Completed [32m302 Found[0m in 5ms [30m(ActiveRecord: 2.0ms)[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/directors/7" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 09:11:55 +1000[0m
+[INFO ] [35m===[0m Processing by [35mDirectorsController#show[0m as [33mHTML[0m
+[INFO ]   Parameters: {"id"=>"7"}
+[[1m[30mDEBUG[0m[0m]   [1m[36mDirector Load (0.1ms)[0m  [1m[34mSELECT  "directors".* FROM "directors" WHERE "directors"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+[INFO ]   Rendering directors/show.html.erb within layouts/application
+[INFO ] [30m  Rendered [1mdirectors/show.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m1.3ms[0m
+[INFO ] Completed [32m200 OK[0m in 26ms [30m(Views: 22.3ms | ActiveRecord: 0.1ms)[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/directors/7/edit" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 09:11:58 +1000[0m
+[INFO ] [35m===[0m Processing by [35mDirectorsController#edit[0m as [33mHTML[0m
+[INFO ]   Parameters: {"id"=>"7"}
+[[1m[30mDEBUG[0m[0m]   [1m[36mDirector Load (0.2ms)[0m  [1m[34mSELECT  "directors".* FROM "directors" WHERE "directors"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+[INFO ]   Rendering directors/edit.html.erb within layouts/application
+[INFO ] [30m  Rendered [1mdirectors/_form.html.erb[0m[0m [30m2.4ms[0m
+[INFO ] [30m  Rendered [1mdirectors/edit.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m5.4ms[0m
+[INFO ] Completed [32m200 OK[0m in 30ms [30m(Views: 25.0ms | ActiveRecord: 0.2ms)[0m
+[INFO ] [1m[32mPATCH  [0m[0m[1m[37m "/directors/7" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 09:12:06 +1000[0m
+[INFO ] [35m===[0m Processing by [35mDirectorsController#update[0m as [33mHTML[0m
+[INFO ]   Parameters: {"utf8"=>"✓", "authenticity_token"=>"lbIVfu3SII4B824FKPvYgDR3jq5W+fDbZEjgNmaxTc0AvCSkkL/SMzrbtUks8gZMfvY6rYMhJrXetl1P75KPrg==", "director"=>{"name"=>"kjghjxdf", "nationality"=>"fab", "dob"=>"1954/08/16", "years_active"=>"1986-present", "image"=>"http://www.chinadaily.com.cn/world/images/attachement/jpg/site1/20160302/d8cb8a5155b01840833601.jpg"}, "commit"=>"Update Director", "id"=>"7"}
+[[1m[30mDEBUG[0m[0m]   [1m[36mDirector Load (0.1ms)[0m  [1m[34mSELECT  "directors".* FROM "directors" WHERE "directors"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+[[1m[30mDEBUG[0m[0m]   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[[1m[30mDEBUG[0m[0m]   [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "directors" SET "image" = ?, "updated_at" = ? WHERE "directors"."id" = ?[0m  [["image", "http://www.chinadaily.com.cn/world/images/attachement/jpg/site1/20160302/d8cb8a5155b01840833601.jpg"], ["updated_at", "2017-08-23 23:12:06.996316"], ["id", 7]]
+[[1m[30mDEBUG[0m[0m]   [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+[INFO ] Redirected to http://localhost:3000/directors/7
+[INFO ] Completed [32m302 Found[0m in 6ms [30m(ActiveRecord: 1.7ms)[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/directors/7" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 09:12:07 +1000[0m
+[INFO ] [35m===[0m Processing by [35mDirectorsController#show[0m as [33mHTML[0m
+[INFO ]   Parameters: {"id"=>"7"}
+[[1m[30mDEBUG[0m[0m]   [1m[36mDirector Load (0.2ms)[0m  [1m[34mSELECT  "directors".* FROM "directors" WHERE "directors"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+[INFO ]   Rendering directors/show.html.erb within layouts/application
+[INFO ] [30m  Rendered [1mdirectors/show.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m1.3ms[0m
+[INFO ] Completed [32m200 OK[0m in 27ms [30m(Views: 24.5ms | ActiveRecord: 0.2ms)[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/directors/7/edit" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 09:12:13 +1000[0m
+[INFO ] [35m===[0m Processing by [35mDirectorsController#edit[0m as [33mHTML[0m
+[INFO ]   Parameters: {"id"=>"7"}
+[[1m[30mDEBUG[0m[0m]   [1m[36mDirector Load (0.2ms)[0m  [1m[34mSELECT  "directors".* FROM "directors" WHERE "directors"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+[INFO ]   Rendering directors/edit.html.erb within layouts/application
+[INFO ] [30m  Rendered [1mdirectors/_form.html.erb[0m[0m [30m3.1ms[0m
+[INFO ] [30m  Rendered [1mdirectors/edit.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m6.4ms[0m
+[INFO ] Completed [32m200 OK[0m in 41ms [30m(Views: 35.2ms | ActiveRecord: 0.2ms)[0m
+[INFO ] [1m[32mPATCH  [0m[0m[1m[37m "/directors/7" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 09:12:20 +1000[0m
+[INFO ] [35m===[0m Processing by [35mDirectorsController#update[0m as [33mHTML[0m
+[INFO ]   Parameters: {"utf8"=>"✓", "authenticity_token"=>"YxwMdisyB43H+nEj0NQX1YbiKG08ElMYFlHJh5hLcaP2Ej2sVl/1MPzSqm/U3ckZzGOcbunKhXasr3T+EWizwA==", "director"=>{"name"=>"kjghjxdf", "nationality"=>"fab", "dob"=>"1954/08/16", "years_active"=>"1986-present", "image"=>"http://www.chinadaily.com.cn/world/images/attachement/jpg/site1/20160302/d8cb8a5155b01840833601.jpg"}, "commit"=>"Update Director", "id"=>"7"}
+[[1m[30mDEBUG[0m[0m]   [1m[36mDirector Load (0.2ms)[0m  [1m[34mSELECT  "directors".* FROM "directors" WHERE "directors"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+[[1m[30mDEBUG[0m[0m]   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[[1m[30mDEBUG[0m[0m]   [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+[INFO ] Redirected to http://localhost:3000/directors/7
+[INFO ] Completed [32m302 Found[0m in 3ms [30m(ActiveRecord: 0.3ms)[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/directors/7" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 09:12:20 +1000[0m
+[INFO ] [35m===[0m Processing by [35mDirectorsController#show[0m as [33mHTML[0m
+[INFO ]   Parameters: {"id"=>"7"}
+[[1m[30mDEBUG[0m[0m]   [1m[36mDirector Load (0.2ms)[0m  [1m[34mSELECT  "directors".* FROM "directors" WHERE "directors"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+[INFO ]   Rendering directors/show.html.erb within layouts/application
+[INFO ] [30m  Rendered [1mdirectors/show.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m0.9ms[0m
+[INFO ] Completed [32m200 OK[0m in 22ms [30m(Views: 19.1ms | ActiveRecord: 0.2ms)[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/directors/7" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 09:29:59 +1000[0m
+[INFO ] [35m===[0m Processing by [35mDirectorsController#show[0m as [33mHTML[0m
+[INFO ]   Parameters: {"id"=>"7"}
+[[1m[30mDEBUG[0m[0m]   [1m[36mDirector Load (1.2ms)[0m  [1m[34mSELECT  "directors".* FROM "directors" WHERE "directors"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+[INFO ]   Rendering directors/show.html.erb within layouts/application
+[INFO ] [30m  Rendered [1mdirectors/show.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m8.0ms[0m
+[INFO ] Completed [32m200 OK[0m in 92ms [30m(Views: 62.1ms | ActiveRecord: 1.2ms)[0m
+[[1m[30mDEBUG[0m[0m]   [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+[INFO ] Migrating to CreateMovies (20170823234210)
+[[1m[30mDEBUG[0m[0m]   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[[1m[30mDEBUG[0m[0m]   [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+[[1m[30mDEBUG[0m[0m]   [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" text, "genre" text, "release_date" text, "box_office" text, "image" text)[0m
+[[1m[30mDEBUG[0m[0m]   [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170823234210"]]
+[[1m[30mDEBUG[0m[0m]   [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+[[1m[30mDEBUG[0m[0m]   [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+[[1m[30mDEBUG[0m[0m]   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[[1m[30mDEBUG[0m[0m]   [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+[[1m[30mDEBUG[0m[0m]   [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+[[1m[30mDEBUG[0m[0m]   [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+[[1m[30mDEBUG[0m[0m]   [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/routes" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 09:52:52 +1000[0m
+[[1m[30mDEBUG[0m[0m]   [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+[[41m[37mFATAL[0m[0m] [31mActionController::RoutingError (No route matches [GET] "/routes"):[0m
+[[41m[37mFATAL[0m[0m] [31mactionpack (5.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.3) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.3) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 09:54:24 +1000[0m
+[INFO ] [35m===[0m Processing by [35mRails::WelcomeController#index[0m as [33mHTML[0m
+[INFO ]   Rendering /Users/admin/Mina/.rvm/gems/ruby-2.4.0/gems/railties-5.1.3/lib/rails/templates/rails/welcome/index.html.erb
+[INFO ] [30m  Rendered [1m/Users/admin/Mina/.rvm/gems/ruby-2.4.0/gems/railties-5.1.3/lib/rails/templates/rails/welcome/index.html.erb[0m[0m [30m5.2ms[0m
+[INFO ] Completed [32m200 OK[0m in 31ms [30m(Views: 9.8ms | ActiveRecord: 0.0ms)[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/directors" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 09:54:31 +1000[0m
+[INFO ] [35m===[0m Processing by [35mDirectorsController#index[0m as [33mHTML[0m
+[INFO ]   Rendering directors/index.html.erb within layouts/application
+[[1m[30mDEBUG[0m[0m]   [1m[36mDirector Load (1.0ms)[0m  [1m[34mSELECT "directors".* FROM "directors"[0m
+[INFO ] [30m  Rendered [1mdirectors/index.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m16.8ms[0m
+[INFO ] Completed [32m200 OK[0m in 94ms [30m(Views: 73.8ms | ActiveRecord: 1.9ms)[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/directors/new" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 09:54:38 +1000[0m
+[INFO ] [35m===[0m Processing by [35mDirectorsController#new[0m as [33mHTML[0m
+[INFO ]   Rendering directors/new.html.erb within layouts/application
+[INFO ] [30m  Rendered [1mdirectors/_form.html.erb[0m[0m [30m4.6ms[0m
+[INFO ] [30m  Rendered [1mdirectors/new.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m8.1ms[0m
+[INFO ] Completed [32m200 OK[0m in 37ms [30m(Views: 33.4ms | ActiveRecord: 0.0ms)[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/directors" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 09:54:40 +1000[0m
+[INFO ] [35m===[0m Processing by [35mDirectorsController#index[0m as [33mHTML[0m
+[INFO ]   Rendering directors/index.html.erb within layouts/application
+[[1m[30mDEBUG[0m[0m]   [1m[36mDirector Load (1.3ms)[0m  [1m[34mSELECT "directors".* FROM "directors"[0m
+[INFO ] [30m  Rendered [1mdirectors/index.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m5.0ms[0m
+[INFO ] Completed [32m200 OK[0m in 44ms [30m(Views: 38.0ms | ActiveRecord: 1.3ms)[0m
+[[1m[30mDEBUG[0m[0m]   [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+[[1m[30mDEBUG[0m[0m]   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[[1m[30mDEBUG[0m[0m]   [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "directors" ("name", "nationality", "dob", "years_active", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "James Cameron"], ["nationality", "Canadian"], ["dob", "1954/08/16"], ["years_active", "1975-present"], ["image", "http://1.bp.blogspot.com/-ogHcP4ohPtY/UUajomEYgsI/AAAAAAAAAHg/LoWcd7fUeBA/s1600/James+Cameron.jpg"], ["created_at", "2017-08-24 00:02:46.656828"], ["updated_at", "2017-08-24 00:02:46.656828"]]
+[[1m[30mDEBUG[0m[0m]   [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+[[1m[30mDEBUG[0m[0m]   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[[1m[30mDEBUG[0m[0m]   [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "movies" ("name", "genre", "release_date", "box_office", "image") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Avatar"], ["genre", " Fantasy/Science fiction"], ["release_date", "17 December 2009"], ["box_office", "2.788 billion USD"], ["image", "http://sciencefiction.com/wp-content/uploads/2012/06/wallpaper-2-james-camerons-avatar-9473513-900-563.jpeg"]]
+[[1m[30mDEBUG[0m[0m]   [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/movies" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 10:14:12 +1000[0m
+[INFO ] [35m===[0m Processing by [35mMoviesController#index[0m as [33mHTML[0m
+[INFO ]   Rendering movies/index.html.erb within layouts/application
+[INFO ] [30m  Rendered [1mmovies/index.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m2.3ms[0m
+[INFO ] Completed [31m500 Internal Server Error[0m in 16ms [30m[0m
+[[41m[37mFATAL[0m[0m] [31mSyntaxError (/Users/admin/Mina/Desktop/WDi23-Homework/mina_parnian/week_05/day_03/director-app/app/views/movies/index.html.erb:5: syntax error, unexpected '='
+( image_tag movie.image class="thumb");@output_buffer.safe_a
+                              ^
+/Users/admin/Mina/Desktop/WDi23-Homework/mina_parnian/week_05/day_03/director-app/app/views/movies/index.html.erb:6: syntax error, unexpected ')', expecting '='
+.append=( movie.name, movie  );@output_buffer.safe_append='<
+                              ^
+/Users/admin/Mina/Desktop/WDi23-Homework/mina_parnian/week_05/day_03/director-app/app/views/movies/index.html.erb:19: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/Users/admin/Mina/Desktop/WDi23-Homework/mina_parnian/week_05/day_03/director-app/app/views/movies/index.html.erb:21: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):[0m
+[[41m[37mFATAL[0m[0m] [31mapp/views/movies/index.html.erb:5: syntax error, unexpected '='
+app/views/movies/index.html.erb:6: syntax error, unexpected ')', expecting '='
+app/views/movies/index.html.erb:19: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/movies/index.html.erb:21: syntax error, unexpected keyword_end, expecting ')'[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/movies" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 10:14:38 +1000[0m
+[INFO ] [35m===[0m Processing by [35mMoviesController#index[0m as [33mHTML[0m
+[INFO ]   Rendering movies/index.html.erb within layouts/application
+[INFO ] [30m  Rendered [1mmovies/index.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m1.6ms[0m
+[INFO ] Completed [31m500 Internal Server Error[0m in 11ms [30m[0m
+[[41m[37mFATAL[0m[0m] [31mSyntaxError (/Users/admin/Mina/Desktop/WDi23-Homework/mina_parnian/week_05/day_03/director-app/app/views/movies/index.html.erb:5: syntax error, unexpected '='
+ image_tag movie.image, class="thumb");@output_buffer.safe_a
+                              ^
+/Users/admin/Mina/Desktop/WDi23-Homework/mina_parnian/week_05/day_03/director-app/app/views/movies/index.html.erb:6: syntax error, unexpected ')', expecting '='
+.append=( movie.name, movie  );@output_buffer.safe_append='<
+                              ^
+/Users/admin/Mina/Desktop/WDi23-Homework/mina_parnian/week_05/day_03/director-app/app/views/movies/index.html.erb:19: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/Users/admin/Mina/Desktop/WDi23-Homework/mina_parnian/week_05/day_03/director-app/app/views/movies/index.html.erb:21: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):[0m
+[[41m[37mFATAL[0m[0m] [31mapp/views/movies/index.html.erb:5: syntax error, unexpected '='
+app/views/movies/index.html.erb:6: syntax error, unexpected ')', expecting '='
+app/views/movies/index.html.erb:19: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/movies/index.html.erb:21: syntax error, unexpected keyword_end, expecting ')'[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/movies" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 10:15:34 +1000[0m
+[INFO ] [35m===[0m Processing by [35mMoviesController#index[0m as [33mHTML[0m
+[INFO ]   Rendering movies/index.html.erb within layouts/application
+[INFO ] [30m  Rendered [1mmovies/index.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m0.6ms[0m
+[INFO ] Completed [31m500 Internal Server Error[0m in 9ms [30m[0m
+[[41m[37mFATAL[0m[0m] [31mSyntaxError (/Users/admin/Mina/Desktop/WDi23-Homework/mina_parnian/week_05/day_03/director-app/app/views/movies/index.html.erb:6: syntax error, unexpected ')', expecting '='
+.append=( movie.name, movie  );@output_buffer.safe_append='<
+                              ^
+/Users/admin/Mina/Desktop/WDi23-Homework/mina_parnian/week_05/day_03/director-app/app/views/movies/index.html.erb:19: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/Users/admin/Mina/Desktop/WDi23-Homework/mina_parnian/week_05/day_03/director-app/app/views/movies/index.html.erb:21: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):[0m
+[[41m[37mFATAL[0m[0m] [31mapp/views/movies/index.html.erb:6: syntax error, unexpected ')', expecting '='
+app/views/movies/index.html.erb:19: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/movies/index.html.erb:21: syntax error, unexpected keyword_end, expecting ')'[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/movies" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 10:15:57 +1000[0m
+[INFO ] [35m===[0m Processing by [35mMoviesController#index[0m as [33mHTML[0m
+[INFO ]   Rendering movies/index.html.erb within layouts/application
+[INFO ] [30m  Rendered [1mmovies/index.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m1.7ms[0m
+[INFO ] Completed [31m500 Internal Server Error[0m in 10ms [30m[0m
+[[41m[37mFATAL[0m[0m] [31mSyntaxError (/Users/admin/Mina/Desktop/WDi23-Homework/mina_parnian/week_05/day_03/director-app/app/views/movies/index.html.erb:6: syntax error, unexpected ')', expecting '='
+.append=( movie.name, movie  );@output_buffer.safe_append='<
+                              ^
+/Users/admin/Mina/Desktop/WDi23-Homework/mina_parnian/week_05/day_03/director-app/app/views/movies/index.html.erb:19: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/Users/admin/Mina/Desktop/WDi23-Homework/mina_parnian/week_05/day_03/director-app/app/views/movies/index.html.erb:21: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):[0m
+[[41m[37mFATAL[0m[0m] [31mapp/views/movies/index.html.erb:6: syntax error, unexpected ')', expecting '='
+app/views/movies/index.html.erb:19: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/movies/index.html.erb:21: syntax error, unexpected keyword_end, expecting ')'[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/movies" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 10:16:46 +1000[0m
+[INFO ] [35m===[0m Processing by [35mMoviesController#index[0m as [33mHTML[0m
+[INFO ]   Rendering movies/index.html.erb within layouts/application
+[INFO ] [30m  Rendered [1mmovies/index.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m0.6ms[0m
+[INFO ] Completed [31m500 Internal Server Error[0m in 10ms [30m[0m
+[[41m[37mFATAL[0m[0m] [31mSyntaxError (/Users/admin/Mina/Desktop/WDi23-Homework/mina_parnian/week_05/day_03/director-app/app/views/movies/index.html.erb:6: syntax error, unexpected ')', expecting '='
+.append=( movie.name, movie  );@output_buffer.safe_append='<
+                              ^
+/Users/admin/Mina/Desktop/WDi23-Homework/mina_parnian/week_05/day_03/director-app/app/views/movies/index.html.erb:19: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/Users/admin/Mina/Desktop/WDi23-Homework/mina_parnian/week_05/day_03/director-app/app/views/movies/index.html.erb:21: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):[0m
+[[41m[37mFATAL[0m[0m] [31mapp/views/movies/index.html.erb:6: syntax error, unexpected ')', expecting '='
+app/views/movies/index.html.erb:19: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/movies/index.html.erb:21: syntax error, unexpected keyword_end, expecting ')'[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/movies" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 10:17:09 +1000[0m
+[INFO ] [35m===[0m Processing by [35mMoviesController#index[0m as [33mHTML[0m
+[INFO ]   Rendering movies/index.html.erb within layouts/application
+[INFO ] [30m  Rendered [1mmovies/index.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m0.7ms[0m
+[INFO ] Completed [31m500 Internal Server Error[0m in 10ms [30m[0m
+[[41m[37mFATAL[0m[0m] [31mSyntaxError (/Users/admin/Mina/Desktop/WDi23-Homework/mina_parnian/week_05/day_03/director-app/app/views/movies/index.html.erb:19: syntax error, unexpected keyword_ensure, expecting keyword_end
+          ensure
+                ^):[0m
+[[41m[37mFATAL[0m[0m] [31mapp/views/movies/index.html.erb:19: syntax error, unexpected keyword_ensure, expecting keyword_end[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/movies" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 10:17:54 +1000[0m
+[INFO ] [35m===[0m Processing by [35mMoviesController#index[0m as [33mHTML[0m
+[INFO ]   Rendering movies/index.html.erb within layouts/application
+[[1m[30mDEBUG[0m[0m]   [1m[36mMovie Load (0.1ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+[INFO ] [30m  Rendered [1mmovies/index.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m7.5ms[0m
+[INFO ] Completed [32m200 OK[0m in 115ms [30m(Views: 112.7ms | ActiveRecord: 0.9ms)[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/movies" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 10:18:23 +1000[0m
+[INFO ] [35m===[0m Processing by [35mMoviesController#index[0m as [33mHTML[0m
+[INFO ]   Rendering movies/index.html.erb within layouts/application
+[[1m[30mDEBUG[0m[0m]   [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+[INFO ] [30m  Rendered [1mmovies/index.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m1.4ms[0m
+[INFO ] Completed [32m200 OK[0m in 32ms [30m(Views: 27.9ms | ActiveRecord: 0.2ms)[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/movies" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 10:19:06 +1000[0m
+[INFO ] [35m===[0m Processing by [35mMoviesController#index[0m as [33mHTML[0m
+[INFO ]   Rendering movies/index.html.erb within layouts/application
+[[1m[30mDEBUG[0m[0m]   [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+[INFO ] [30m  Rendered [1mmovies/index.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m1.4ms[0m
+[INFO ] Completed [32m200 OK[0m in 27ms [30m(Views: 23.3ms | ActiveRecord: 0.2ms)[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/movies" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 10:19:17 +1000[0m
+[INFO ] [35m===[0m Processing by [35mMoviesController#index[0m as [33mHTML[0m
+[INFO ]   Rendering movies/index.html.erb within layouts/application
+[[1m[30mDEBUG[0m[0m]   [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+[INFO ] [30m  Rendered [1mmovies/index.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m2.1ms[0m
+[INFO ] Completed [32m200 OK[0m in 29ms [30m(Views: 25.3ms | ActiveRecord: 0.2ms)[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/movies" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 10:19:53 +1000[0m
+[INFO ] [35m===[0m Processing by [35mMoviesController#index[0m as [33mHTML[0m
+[INFO ]   Rendering movies/index.html.erb within layouts/application
+[[1m[30mDEBUG[0m[0m]   [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+[INFO ] [30m  Rendered [1mmovies/index.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m1.7ms[0m
+[INFO ] Completed [32m200 OK[0m in 29ms [30m(Views: 25.7ms | ActiveRecord: 0.2ms)[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/movies/1" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 10:19:55 +1000[0m
+[INFO ] [35m===[0m Processing by [35mMoviesController#show[0m as [33mHTML[0m
+[INFO ]   Parameters: {"id"=>"1"}
+[INFO ]   Rendering movies/show.html.erb within layouts/application
+[INFO ] [30m  Rendered [1mmovies/show.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m0.5ms[0m
+[INFO ] Completed [32m200 OK[0m in 31ms [30m(Views: 25.9ms | ActiveRecord: 0.0ms)[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/movies/1" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 10:20:09 +1000[0m
+[INFO ] [35m===[0m Processing by [35mMoviesController#show[0m as [33mHTML[0m
+[INFO ]   Parameters: {"id"=>"1"}
+[INFO ]   Rendering movies/show.html.erb within layouts/application
+[INFO ] [30m  Rendered [1mmovies/show.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m0.3ms[0m
+[INFO ] Completed [32m200 OK[0m in 29ms [30m(Views: 26.0ms | ActiveRecord: 0.0ms)[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/movies" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 10:20:11 +1000[0m
+[INFO ] [35m===[0m Processing by [35mMoviesController#index[0m as [33mHTML[0m
+[INFO ]   Rendering movies/index.html.erb within layouts/application
+[[1m[30mDEBUG[0m[0m]   [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+[INFO ] [30m  Rendered [1mmovies/index.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m2.8ms[0m
+[INFO ] Completed [32m200 OK[0m in 35ms [30m(Views: 30.6ms | ActiveRecord: 0.2ms)[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/movies/index" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 10:20:12 +1000[0m
+[INFO ] [35m===[0m Processing by [35mMoviesController#index[0m as [33mHTML[0m
+[INFO ]   Rendering movies/index.html.erb within layouts/application
+[[1m[30mDEBUG[0m[0m]   [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+[INFO ] [30m  Rendered [1mmovies/index.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m2.0ms[0m
+[INFO ] Completed [32m200 OK[0m in 37ms [30m(Views: 31.9ms | ActiveRecord: 0.2ms)[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/movies/index" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 10:20:13 +1000[0m
+[INFO ] [35m===[0m Processing by [35mMoviesController#index[0m as [33mHTML[0m
+[INFO ]   Rendering movies/index.html.erb within layouts/application
+[[1m[30mDEBUG[0m[0m]   [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+[INFO ] [30m  Rendered [1mmovies/index.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m2.2ms[0m
+[INFO ] Completed [32m200 OK[0m in 34ms [30m(Views: 28.8ms | ActiveRecord: 0.2ms)[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/movies/index" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 10:20:13 +1000[0m
+[INFO ] [35m===[0m Processing by [35mMoviesController#index[0m as [33mHTML[0m
+[INFO ]   Rendering movies/index.html.erb within layouts/application
+[[1m[30mDEBUG[0m[0m]   [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+[INFO ] [30m  Rendered [1mmovies/index.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m2.5ms[0m
+[INFO ] Completed [32m200 OK[0m in 39ms [30m(Views: 33.6ms | ActiveRecord: 0.3ms)[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/movies/index" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 10:20:13 +1000[0m
+[INFO ] [35m===[0m Processing by [35mMoviesController#index[0m as [33mHTML[0m
+[INFO ]   Rendering movies/index.html.erb within layouts/application
+[[1m[30mDEBUG[0m[0m]   [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+[INFO ] [30m  Rendered [1mmovies/index.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m2.5ms[0m
+[INFO ] Completed [32m200 OK[0m in 45ms [30m(Views: 41.0ms | ActiveRecord: 0.3ms)[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/movies/index" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 10:20:15 +1000[0m
+[INFO ] [35m===[0m Processing by [35mMoviesController#index[0m as [33mHTML[0m
+[INFO ]   Rendering movies/index.html.erb within layouts/application
+[[1m[30mDEBUG[0m[0m]   [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+[INFO ] [30m  Rendered [1mmovies/index.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m2.6ms[0m
+[INFO ] Completed [32m200 OK[0m in 32ms [30m(Views: 28.2ms | ActiveRecord: 0.3ms)[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/movies/index" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 10:20:15 +1000[0m
+[INFO ] [35m===[0m Processing by [35mMoviesController#index[0m as [33mHTML[0m
+[INFO ]   Rendering movies/index.html.erb within layouts/application
+[[1m[30mDEBUG[0m[0m]   [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+[INFO ] [30m  Rendered [1mmovies/index.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m2.5ms[0m
+[INFO ] Completed [32m200 OK[0m in 36ms [30m(Views: 31.6ms | ActiveRecord: 0.2ms)[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/movies/index" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 10:20:15 +1000[0m
+[INFO ] [35m===[0m Processing by [35mMoviesController#index[0m as [33mHTML[0m
+[INFO ]   Rendering movies/index.html.erb within layouts/application
+[[1m[30mDEBUG[0m[0m]   [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+[INFO ] [30m  Rendered [1mmovies/index.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m2.1ms[0m
+[INFO ] Completed [32m200 OK[0m in 35ms [30m(Views: 30.7ms | ActiveRecord: 0.2ms)[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/movies/index" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 10:20:16 +1000[0m
+[INFO ] [35m===[0m Processing by [35mMoviesController#index[0m as [33mHTML[0m
+[INFO ]   Rendering movies/index.html.erb within layouts/application
+[[1m[30mDEBUG[0m[0m]   [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+[INFO ] [30m  Rendered [1mmovies/index.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m2.6ms[0m
+[INFO ] Completed [32m200 OK[0m in 31ms [30m(Views: 27.0ms | ActiveRecord: 0.3ms)[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/movies/index" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 10:20:16 +1000[0m
+[INFO ] [35m===[0m Processing by [35mMoviesController#index[0m as [33mHTML[0m
+[INFO ]   Rendering movies/index.html.erb within layouts/application
+[[1m[30mDEBUG[0m[0m]   [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+[INFO ] [30m  Rendered [1mmovies/index.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m1.8ms[0m
+[INFO ] Completed [32m200 OK[0m in 36ms [30m(Views: 31.5ms | ActiveRecord: 0.2ms)[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/movies/index" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 10:20:16 +1000[0m
+[INFO ] [35m===[0m Processing by [35mMoviesController#index[0m as [33mHTML[0m
+[INFO ]   Rendering movies/index.html.erb within layouts/application
+[[1m[30mDEBUG[0m[0m]   [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+[INFO ] [30m  Rendered [1mmovies/index.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m3.4ms[0m
+[INFO ] Completed [32m200 OK[0m in 34ms [30m(Views: 30.3ms | ActiveRecord: 0.3ms)[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/movies/index" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 10:20:28 +1000[0m
+[INFO ] [35m===[0m Processing by [35mMoviesController#index[0m as [33mHTML[0m
+[INFO ]   Rendering movies/index.html.erb within layouts/application
+[[1m[30mDEBUG[0m[0m]   [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+[INFO ] [30m  Rendered [1mmovies/index.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m1.7ms[0m
+[INFO ] Completed [32m200 OK[0m in 24ms [30m(Views: 20.7ms | ActiveRecord: 0.2ms)[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/movies/1" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 10:20:29 +1000[0m
+[INFO ] [35m===[0m Processing by [35mMoviesController#show[0m as [33mHTML[0m
+[INFO ]   Parameters: {"id"=>"1"}
+[INFO ]   Rendering movies/show.html.erb within layouts/application
+[INFO ] [30m  Rendered [1mmovies/show.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m0.6ms[0m
+[INFO ] Completed [32m200 OK[0m in 31ms [30m(Views: 26.3ms | ActiveRecord: 0.0ms)[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/movies/1" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 10:25:02 +1000[0m
+[INFO ] [35m===[0m Processing by [35mMoviesController#show[0m as [33mHTML[0m
+[INFO ]   Parameters: {"id"=>"1"}
+[[1m[30mDEBUG[0m[0m]   [1m[36mMovie Load (0.1ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[INFO ]   Rendering movies/show.html.erb within layouts/application
+[INFO ] [30m  Rendered [1mmovies/show.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m0.5ms[0m
+[INFO ] Completed [32m200 OK[0m in 58ms [30m(Views: 34.2ms | ActiveRecord: 1.1ms)[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/movies/1" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 10:29:12 +1000[0m
+[INFO ] [35m===[0m Processing by [35mMoviesController#show[0m as [33mHTML[0m
+[INFO ]   Parameters: {"id"=>"1"}
+[[1m[30mDEBUG[0m[0m]   [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[INFO ]   Rendering movies/show.html.erb within layouts/application
+[INFO ] [30m  Rendered [1mmovies/show.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m0.8ms[0m
+[INFO ] Completed [32m200 OK[0m in 32ms [30m(Views: 28.4ms | ActiveRecord: 0.2ms)[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/movies" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 10:29:17 +1000[0m
+[INFO ] [35m===[0m Processing by [35mMoviesController#index[0m as [33mHTML[0m
+[INFO ]   Rendering movies/index.html.erb within layouts/application
+[[1m[30mDEBUG[0m[0m]   [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+[INFO ] [30m  Rendered [1mmovies/index.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m2.7ms[0m
+[INFO ] Completed [32m200 OK[0m in 33ms [30m(Views: 27.4ms | ActiveRecord: 0.3ms)[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/movies/1" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 10:29:25 +1000[0m
+[INFO ] [35m===[0m Processing by [35mMoviesController#show[0m as [33mHTML[0m
+[INFO ]   Parameters: {"id"=>"1"}
+[[1m[30mDEBUG[0m[0m]   [1m[36mMovie Load (1.9ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[INFO ]   Rendering movies/show.html.erb within layouts/application
+[INFO ] [30m  Rendered [1mmovies/show.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m0.7ms[0m
+[INFO ] Completed [32m200 OK[0m in 36ms [30m(Views: 28.9ms | ActiveRecord: 1.9ms)[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/movies/1" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 10:30:58 +1000[0m
+[INFO ] [35m===[0m Processing by [35mMoviesController#show[0m as [33mHTML[0m
+[INFO ]   Parameters: {"id"=>"1"}
+[[1m[30mDEBUG[0m[0m]   [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[INFO ]   Rendering movies/show.html.erb within layouts/application
+[INFO ] [30m  Rendered [1mmovies/show.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m0.6ms[0m
+[INFO ] Completed [32m200 OK[0m in 24ms [30m(Views: 19.3ms | ActiveRecord: 0.2ms)[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/movies/1" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 10:31:23 +1000[0m
+[INFO ] [35m===[0m Processing by [35mMoviesController#show[0m as [33mHTML[0m
+[INFO ]   Parameters: {"id"=>"1"}
+[[1m[30mDEBUG[0m[0m]   [1m[36mMovie Load (0.1ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[INFO ]   Rendering movies/show.html.erb within layouts/application
+[INFO ] [30m  Rendered [1mmovies/show.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m5.7ms[0m
+[INFO ] Completed [31m500 Internal Server Error[0m in 14ms [30m(ActiveRecord: 0.1ms)[0m
+[[41m[37mFATAL[0m[0m] [31mActionView::Template::Error (undefined method `name' for nil:NilClass):[0m
+[[41m[37mFATAL[0m[0m] [31m    3: <ul>
+    4: 
+    5:   <%= image_tag @movie.image, :class => "feature"%>
+    6:   <li>Director: <%= link_to @director.name %></li>
+    7:   <li>Genre:<%= @movie.genre %></li>
+    8:   <li>Release date:<%= @movie.release_date %></li>
+    9:   <li>Box office:<%= @movie.box_office %></li>[0m
+[[41m[37mFATAL[0m[0m] [31mapp/views/movies/show.html.erb:6:in `_app_views_movies_show_html_erb__3088229191731451421_70113532917000'[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/movies/1" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 10:31:35 +1000[0m
+[INFO ] [35m===[0m Processing by [35mMoviesController#show[0m as [33mHTML[0m
+[INFO ]   Parameters: {"id"=>"1"}
+[[1m[30mDEBUG[0m[0m]   [1m[36mMovie Load (0.1ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[INFO ]   Rendering movies/show.html.erb within layouts/application
+[INFO ] [30m  Rendered [1mmovies/show.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m0.6ms[0m
+[INFO ] Completed [32m200 OK[0m in 29ms [30m(Views: 26.1ms | ActiveRecord: 0.1ms)[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/movies" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 10:31:46 +1000[0m
+[INFO ] [35m===[0m Processing by [35mMoviesController#index[0m as [33mHTML[0m
+[INFO ]   Rendering movies/index.html.erb within layouts/application
+[[1m[30mDEBUG[0m[0m]   [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+[INFO ] [30m  Rendered [1mmovies/index.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m1.9ms[0m
+[INFO ] Completed [32m200 OK[0m in 37ms [30m(Views: 32.0ms | ActiveRecord: 0.3ms)[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/movies" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 10:33:02 +1000[0m
+[INFO ] [35m===[0m Processing by [35mMoviesController#index[0m as [33mHTML[0m
+[INFO ]   Rendering movies/index.html.erb within layouts/application
+[[1m[30mDEBUG[0m[0m]   [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+[INFO ] [30m  Rendered [1mmovies/index.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m1.4ms[0m
+[INFO ] Completed [32m200 OK[0m in 21ms [30m(Views: 18.7ms | ActiveRecord: 0.2ms)[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/movies/1" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 10:33:05 +1000[0m
+[INFO ] [35m===[0m Processing by [35mMoviesController#show[0m as [33mHTML[0m
+[INFO ]   Parameters: {"id"=>"1"}
+[[1m[30mDEBUG[0m[0m]   [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[INFO ]   Rendering movies/show.html.erb within layouts/application
+[INFO ] [30m  Rendered [1mmovies/show.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m0.9ms[0m
+[INFO ] Completed [32m200 OK[0m in 29ms [30m(Views: 22.9ms | ActiveRecord: 0.2ms)[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/movies" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 10:33:08 +1000[0m
+[INFO ] [35m===[0m Processing by [35mMoviesController#index[0m as [33mHTML[0m
+[INFO ]   Rendering movies/index.html.erb within layouts/application
+[[1m[30mDEBUG[0m[0m]   [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+[INFO ] [30m  Rendered [1mmovies/index.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m1.8ms[0m
+[INFO ] Completed [32m200 OK[0m in 33ms [30m(Views: 26.4ms | ActiveRecord: 0.2ms)[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/movies/1" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 10:33:11 +1000[0m
+[INFO ] [35m===[0m Processing by [35mMoviesController#show[0m as [33mHTML[0m
+[INFO ]   Parameters: {"id"=>"1"}
+[[1m[30mDEBUG[0m[0m]   [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[INFO ]   Rendering movies/show.html.erb within layouts/application
+[INFO ] [30m  Rendered [1mmovies/show.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m1.1ms[0m
+[INFO ] Completed [32m200 OK[0m in 34ms [30m(Views: 27.3ms | ActiveRecord: 0.3ms)[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/movies" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 10:33:20 +1000[0m
+[INFO ] [35m===[0m Processing by [35mMoviesController#index[0m as [33mHTML[0m
+[INFO ]   Rendering movies/index.html.erb within layouts/application
+[[1m[30mDEBUG[0m[0m]   [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+[INFO ] [30m  Rendered [1mmovies/index.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m2.8ms[0m
+[INFO ] Completed [32m200 OK[0m in 33ms [30m(Views: 27.3ms | ActiveRecord: 0.3ms)[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/movies" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 10:33:46 +1000[0m
+[INFO ] [35m===[0m Processing by [35mMoviesController#index[0m as [33mHTML[0m
+[INFO ]   Rendering movies/index.html.erb within layouts/application
+[[1m[30mDEBUG[0m[0m]   [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+[INFO ] [30m  Rendered [1mmovies/index.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m1.5ms[0m
+[INFO ] Completed [32m200 OK[0m in 33ms [30m(Views: 30.7ms | ActiveRecord: 0.2ms)[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/movies/1" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 10:33:47 +1000[0m
+[INFO ] [35m===[0m Processing by [35mMoviesController#show[0m as [33mHTML[0m
+[INFO ]   Parameters: {"id"=>"1"}
+[[1m[30mDEBUG[0m[0m]   [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[INFO ]   Rendering movies/show.html.erb within layouts/application
+[INFO ] [30m  Rendered [1mmovies/show.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m0.9ms[0m
+[INFO ] Completed [32m200 OK[0m in 45ms [30m(Views: 38.6ms | ActiveRecord: 0.2ms)[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/movies/1" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 10:34:24 +1000[0m
+[INFO ] [35m===[0m Processing by [35mMoviesController#show[0m as [33mHTML[0m
+[INFO ]   Parameters: {"id"=>"1"}
+[[1m[30mDEBUG[0m[0m]   [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[INFO ]   Rendering movies/show.html.erb within layouts/application
+[INFO ] [30m  Rendered [1mmovies/show.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m1.0ms[0m
+[INFO ] Completed [32m200 OK[0m in 38ms [30m(Views: 33.5ms | ActiveRecord: 0.2ms)[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/directors" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 10:34:34 +1000[0m
+[INFO ] [35m===[0m Processing by [35mDirectorsController#index[0m as [33mHTML[0m
+[INFO ]   Rendering directors/index.html.erb within layouts/application
+[[1m[30mDEBUG[0m[0m]   [1m[36mDirector Load (0.2ms)[0m  [1m[34mSELECT "directors".* FROM "directors"[0m
+[INFO ] [30m  Rendered [1mdirectors/index.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m10.8ms[0m
+[INFO ] Completed [32m200 OK[0m in 42ms [30m(Views: 32.0ms | ActiveRecord: 0.7ms)[0m
+[INFO ] [1m[32mGET    [0m[0m[1m[37m "/directors" [0m[0m for [33m127.0.0.1[0m[30m  at 2017-08-24 10:36:04 +1000[0m
+[INFO ] [35m===[0m Processing by [35mDirectorsController#index[0m as [33mHTML[0m
+[INFO ]   Rendering directors/index.html.erb within layouts/application
+[[1m[30mDEBUG[0m[0m]   [1m[36mDirector Load (0.3ms)[0m  [1m[34mSELECT "directors".* FROM "directors"[0m
+[INFO ] [30m  Rendered [1mdirectors/index.html.erb[0m[0m [30mwithin [0m[1m[30mlayouts/application[0m[0m [30m2.7ms[0m
+[INFO ] Completed [32m200 OK[0m in 31ms [30m(Views: 28.2ms | ActiveRecord: 0.3ms)[0m
