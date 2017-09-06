@@ -1,10 +1,49 @@
 body {
-color: white;
-  background-color: green;
+  color: white;
+  background-image: url('M2bBqu.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  font-family: arial;
 }
 
 
 .container {
   max-width: 960px;
   margin: 0 auto;
+
+}
+
+
+img {
+  padding: 20px;
+  height: 200px;
+  width: 200px;
+  border: 1px solid white;
+  margin: 20px;
+}
+
+
+.nav{
+  position: fixed;
+  height: 60px;
+  width: 100%;
+  background-color: black;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  padding-left: 20px;
+
+}
+
+#images {
+    padding-top: 100px;
+    padding-left: 50px;
+}
+
+input {
+  display: inline;
 }

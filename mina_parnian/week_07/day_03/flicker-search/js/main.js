@@ -71,6 +71,10 @@ $(document).ready(function () {
       const query = $('#query').val();
       // searchFlickr( query );
       throttle( query ); //slow the page when you get to the end of the page
+
+      $('#images').on('click', function(){
+        $(this).css({height: '+=10%', width: '+=10%'});
+      })
     }
    }
   });
