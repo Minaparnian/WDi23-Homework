@@ -58,7 +58,7 @@ $(document).ready(function () {
     searchFlickr( query );
   });
 
-  const throttle = _.throttle(searchFlickr, 5000);
+  const throttle = _.throttle(searchFlickr, 5000, { trailing: false});
 
   $(window).on('scroll', function () {
     const documentHeight = $(document).height();
@@ -75,6 +75,17 @@ $(document).ready(function () {
       $('#images').on('click', function(){
         $(this).css({height: '+=10%', width: '+=10%'});
       })
+
+
+      $(document).on('clicke', 'img', function (e){
+        $('#largeImageContainer').empty();
+        let largeImageURL = e.currentTarget.currentSrc.slice(0, -5);
+        largeImageURL += "b.jpg";
+
+
+        const $largeImg = $('<img>', {src: largeImageURL});
+        $largeImg.appendTo('#largeImageContainer');
+      });
     }
    }
   });
